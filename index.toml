@@ -5,12 +5,16 @@ file = ".claude/settings.local.json"
 hash = "c89850f2ff9f4b6e8eeeb75c2f8418f2e0431852a71f0d351ffdc15a13baa41c"
 
 [[files]]
+file = "CHANGELOG.md"
+hash = "25a9df9d0006c6a78be70c9b9176c77c62824b663bee0f8e825e9c1c2cc8acab"
+
+[[files]]
 file = "CLAUDE.md"
 hash = "d3f2ddad5271580f19b31bed47df929e6c790b0e0b67294994317d6d884409b2"
 
 [[files]]
 file = "README.md"
-hash = "a38571623a57543a1ce1f602dbd218e0da74decbad646b8598bb6c38143f9fa8"
+hash = "a9c179830f67cf3d1f44017f59b23b84a7a50a91a678c285c729528caebe2bcf"
 
 [[files]]
 file = "config/iris.properties"
