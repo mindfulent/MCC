@@ -28,7 +28,9 @@
       "Bash(./packwiz.exe remove:*)",
       "Bash(gh release delete:*)",
       "Bash(cat:*)",
-      "Bash(unzip:*)"
+      "Bash(unzip:*)",
+      "WebSearch",
+      "WebFetch(domain:inventory-profiles-next.github.io)"
     ]
   }
 }

@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = ".claude/settings.local.json"
-hash = "1270667af129ad33c14dd6816d97ce7b4f609db2c4f0a444caa429b1385bb8f7"
+hash = "c89850f2ff9f4b6e8eeeb75c2f8418f2e0431852a71f0d351ffdc15a13baa41c"
 
 [[files]]
 file = "CLAUDE.md"
@@ -10,11 +10,7 @@ hash = "d3f2ddad5271580f19b31bed47df929e6c790b0e0b67294994317d6d884409b2"
 
 [[files]]
 file = "README.md"
-hash = "6bd3ab240fb69835a6096dfbe885c556fd39363f2cec217733728fbe4f3f1116"
-
-[[files]]
-file = "config/inventoryprofilesnext/inventoryprofiles.json"
-hash = "972100bc7efd24f0654e717f0faa1558aed44e1c6d87fd37f0cb6f7201354a78"
+hash = "a38571623a57543a1ce1f602dbd218e0da74decbad646b8598bb6c38143f9fa8"
 
 [[files]]
 file = "config/iris.properties"
@@ -111,11 +107,6 @@ hash = "2600fb5f2efa6dffd1bcc04eea4c2646c101da4320da0c88d5616d5c2f41a439"
 metafile = true
 
 [[files]]
-file = "mods/inventory-profiles-next.pw.toml"
-hash = "ee030c80fe88f8be296865929343e43e42cf98be26025248ce02bf90b9c4dfb8"
-metafile = true
-
-[[files]]
 file = "mods/iris.pw.toml"
 hash = "5284f6d141a990f4ea021c12b851e07102f5cb22743cf7b33be6ad2eb4c8d3f5"
 metafile = true
@@ -133,11 +124,6 @@ metafile = true
 [[files]]
 file = "mods/krypton.pw.toml"
 hash = "c4e45594c8d1ab3dacc3b49142f16fb253178dd31d97cc917bf4a4d54f21e081"
-metafile = true
-
-[[files]]
-file = "mods/libipn.pw.toml"
-hash = "183d7866328971a71ef6948ef832afc4a43d6b807fdcafe682bc0265d5d651fa"
 metafile = true
 
 [[files]]

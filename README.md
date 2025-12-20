@@ -27,7 +27,6 @@ A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packw
 - **Xaero's Minimap & World Map** - Rotating minimap with waypoints
 - **Jade** - Block/entity tooltips (what am I looking at?)
 - **AppleSkin** - Food/hunger visualization
-- **Inventory Profiles Next** - Inventory sorting, locked slots, gear sets
 - **Mouse Tweaks** - Enhanced inventory controls
 - **Controlling** - Searchable keybinds with conflict detection
 
@@ -50,7 +49,6 @@ The modpack comes pre-configured with sensible defaults:
 - Dark Loading Screen: On
 - Shaders: BSL v10.0 enabled
 - Minimaps: Hidden by default (use keybinds to toggle)
-- IPN Locked Slot Indicators: Hidden
 
 ## Quick Start
 
@@ -108,8 +106,7 @@ MCServer/
 ├── config/                   # Mod configurations
 │   ├── iris.properties       # Shader settings (BSL enabled)
 │   ├── xaerominimap.txt      # Minimap hidden by default
-│   ├── xaeroworldmap.txt     # World map hidden by default
-│   └── inventoryprofilesnext/
+│   └── xaeroworldmap.txt     # World map hidden by default
 ├── shaderpacks/              # Bundled shaders
 │   ├── BSL_v10.0.zip
 │   └── ComplementaryReimagined_r5.6.1.zip
@@ -148,7 +145,7 @@ See [minecraft-college-setup-guide.md](docs/minecraft-college-setup-guide.md) fo
 
 | Side | Mods |
 |------|------|
-| **Client-only** | Sodium, Iris, Controlling, Mouse Tweaks, IPN, Xaero's maps |
+| **Client-only** | Sodium, Iris, Controlling, Mouse Tweaks, Xaero's maps |
 | **Server-only** | Flan, Universal Graves |
 | **Both** | Most content mods, Voice Chat, REI, JourneyMap |
 
