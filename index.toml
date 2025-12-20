@@ -2,15 +2,15 @@ hash-format = "sha256"
 
 [[files]]
 file = ".claude/settings.local.json"
-hash = "1b518d669b781aa9f2c92cf39ea646935f12561ca58375174dd4fbf323a8b99f"
+hash = "4d43b0d1ed98b2503f7c944ec961a64db0ea97657d73370372a77aebf52099cc"
 
 [[files]]
 file = "CLAUDE.md"
-hash = "653fbad6fbef12d875748c0b3e3008f96c6f4fa9ec73719206e24f3c092430db"
+hash = "37b3b161672e4bd985b6d92a4686cf038abcac834442ea4308cbc6a5bef5703a"
 
 [[files]]
 file = "README.md"
-hash = "78b584ef5757146a2e60b58c09ebc9e698ec1837d5bcc0fad17ab398440445c1"
+hash = "e0677a59b2ca4d69a6d49b95073676acadec5aad79039687ca4778cff9b451fd"
 
 [[files]]
 file = "docs/minecraft-college-setup-guide.md"
@@ -58,11 +58,6 @@ metafile = true
 [[files]]
 file = "mods/controlling.pw.toml"
 hash = "eecdc8127f69c74ff55fd183d1f1d7d5ef3e714d73845a239fe9e086147a67b1"
-metafile = true
-
-[[files]]
-file = "mods/effective.pw.toml"
-hash = "2a421f249e7022255938fafdebf4a9d6490d62aecbabd48a9e9a3e52aacd4d0b"
 metafile = true
 
 [[files]]

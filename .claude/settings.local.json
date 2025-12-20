@@ -23,7 +23,10 @@
       "Bash(git branch:*)",
       "Bash(git push:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(gh release create:*)",
+      "Bash(./packwiz.exe remove:*)",
+      "Bash(gh release delete:*)"
     ]
   }
 }
