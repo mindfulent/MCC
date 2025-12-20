@@ -1,1 +1,2 @@
-worldMapShown:false
+#INGAME SETTINGS
+displayMapOnLoad:false

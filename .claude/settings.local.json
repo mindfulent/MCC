@@ -30,7 +30,9 @@
       "Bash(cat:*)",
       "Bash(unzip:*)",
       "WebSearch",
-      "WebFetch(domain:inventory-profiles-next.github.io)"
+      "WebFetch(domain:inventory-profiles-next.github.io)",
+      "WebFetch(domain:teamjm.github.io)",
+      "WebFetch(domain:github.com)"
     ]
   }
 }

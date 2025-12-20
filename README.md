@@ -1,4 +1,4 @@
-# MCArtsAndCrafts v0.9.1
+# MCArtsAndCrafts v0.9.2
 
 A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
@@ -110,7 +110,7 @@ MCServer/
 ├── shaderpacks/              # Bundled shaders
 │   ├── BSL_v10.0.zip
 │   └── ComplementaryReimagined_r5.6.1.zip
-├── journeymap/               # JourneyMap config (minimap hidden)
+├── journeymap/config/6.0/    # JourneyMap config (minimap hidden)
 └── docs/
     ├── server-plan.md        # Mod ecosystem research
     └── minecraft-college-setup-guide.md  # Deployment guide
@@ -125,7 +125,7 @@ MCServer/
    ```json
    {
      "project_id": "mcartsandcrafts",
-     "version_id": "0.9.1"
+     "version_id": "0.9.2"
    }
    ```
 3. Set server jar to `mrpack4server.jar`

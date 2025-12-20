@@ -2,6 +2,15 @@
 
 All notable changes to MCArtsAndCrafts will be documented in this file.
 
+## [0.9.2] - 2025-12-20
+
+### Fixed
+- **Xaero's Minimap** - Fixed config format (`minimap:false` instead of `minimapShown:false`)
+- **Xaero's World Map** - Fixed config format (`displayMapOnLoad:false`)
+- **JourneyMap** - Fixed config path and format for v6.0 (`journeymap/config/6.0/journeymap.minimap.config`)
+
+Both minimaps should now be properly hidden by default on first launch.
+
 ## [0.9.1] - 2025-12-20
 
 ### Removed

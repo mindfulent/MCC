@@ -2,11 +2,11 @@ hash-format = "sha256"
 
 [[files]]
 file = ".claude/settings.local.json"
-hash = "c89850f2ff9f4b6e8eeeb75c2f8418f2e0431852a71f0d351ffdc15a13baa41c"
+hash = "ef622d43d8c6260fef784b512e2d58bfd37d55ebafdb633d051ad34fbf9aafd8"
 
 [[files]]
 file = "CHANGELOG.md"
-hash = "25a9df9d0006c6a78be70c9b9176c77c62824b663bee0f8e825e9c1c2cc8acab"
+hash = "d647e5f111ada3ef91f512029e13ba505d9e66b9b529ca407a75107c673ca367"
 
 [[files]]
 file = "CLAUDE.md"
@@ -14,7 +14,7 @@ hash = "d3f2ddad5271580f19b31bed47df929e6c790b0e0b67294994317d6d884409b2"
 
 [[files]]
 file = "README.md"
-hash = "a9c179830f67cf3d1f44017f59b23b84a7a50a91a678c285c729528caebe2bcf"
+hash = "4b873a45be71c3500d492c39b2926a23170a0c82407434b30c501aee94723086"
 
 [[files]]
 file = "config/iris.properties"
@@ -22,11 +22,11 @@ hash = "99ac8a2dfd17f7b4ed038c02255a279296ecad90e48a5b7196ac4f73260d57ee"
 
 [[files]]
 file = "config/xaerominimap.txt"
-hash = "7cc7fb6fa65eb074fda74d982b0c12ddcf7f4fa7a34eeff44a4e8b1036c1adf8"
+hash = "ec1f5c81842269bd7528afdb66f13997dbf4e8f2a21435e6afd33350a6e244ec"
 
 [[files]]
 file = "config/xaeroworldmap.txt"
-hash = "257de4a5e2e324d07b1c93d5ae91985a5413e76366cae40aed1fd2e312841baf"
+hash = "0cd7c4c514a8022f8977cb6994e44171081874f1d8905630834a67370f3a2d00"
 
 [[files]]
 file = "docs/minecraft-college-setup-guide.md"
@@ -37,8 +37,8 @@ file = "docs/server-plan.md"
 hash = "bf520f7154bfb854775ed476f781ad462cab86ca68b67c56f4a8936baf82b557"
 
 [[files]]
-file = "journeymap/config/5.9/journeymap.minimap.json"
-hash = "4a30c9be3f878a9b2ecf59f5e0ada934c9d7e390f09c232597a46d5b4e929a50"
+file = "journeymap/config/6.0/journeymap.minimap.config"
+hash = "c8028b13b8c5e1886dbe2aa74b0183ee02e89dca683534f3fdb0485dd6c17096"
 
 [[files]]
 file = "mods/appleskin.pw.toml"
