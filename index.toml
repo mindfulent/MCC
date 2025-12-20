@@ -13,6 +13,10 @@ file = "README.md"
 hash = "e0677a59b2ca4d69a6d49b95073676acadec5aad79039687ca4778cff9b451fd"
 
 [[files]]
+file = "config/inventoryprofilesnext/inventoryprofiles.json"
+hash = "972100bc7efd24f0654e717f0faa1558aed44e1c6d87fd37f0cb6f7201354a78"
+
+[[files]]
 file = "config/iris.properties"
 hash = "fb31c8e9b359db11d0d74dc2dec5b0728595f06f9df05c892df6bc6b2eb1ef9a"
 
