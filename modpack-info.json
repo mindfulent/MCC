@@ -1,11 +1,11 @@
 {
   "project_id": "mcartsandcrafts",
-  "version_id": "0.9.14",
+  "version_id": "0.9.15",
   "display_name": "MCArtsAndCrafts",
-  "display_version": "0.9.14",
-  "url": "https://github.com/mindfulent/MCArtsAndCrafts/releases/download/v0.9.14/MCArtsAndCrafts-0.9.14.mrpack",
-  "size": 3290865,
-  "sha512": "18091b1f8aa3adccf65680c71b7962116754fadfc6cb54f1e474fde4172a6d465899e094464cbecdb9a55ac6160261f9e54ce13d99a996a1446716ece3ac1ddd",
+  "display_version": "0.9.15",
+  "url": "https://github.com/mindfulent/MCArtsAndCrafts/releases/download/v0.9.15/MCArtsAndCrafts-0.9.15.mrpack",
+  "size": 3290937,
+  "sha512": "b35c1d5d2b562358df171328a27b918493caddfe7663847b93fdbc4ddda2b6396b356d7d57875d4265135d692e3b2f591cdb88c58287e7cf49188f5c50c42268",
   "whitelisted_domains": ["github.com", "objects.githubusercontent.com"],
   "non_overwritable_paths": ["world", "world_nether", "world_the_end", "server.properties", "ops.json", "whitelist.json", "banned-players.json", "banned-ips.json"]
 }
