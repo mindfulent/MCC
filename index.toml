@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = ".claude/settings.local.json"
-hash = "609ba17b08e0c5441e207cce3aa3a7127b5750ab56c3334ad89338adbfaf81d5"
+hash = "7f6419fcbfff6d3a82944e7864b9f7ffb6e8b3782d49b1da0d42b231b0c32b7f"
 
 [[files]]
 file = ".env"
@@ -2611,6 +2611,10 @@ hash = "67e7bd3037507c04ecfab8543222ad87552a81db85940c3c9935b2c517422fc4"
 [[files]]
 file = "config/bluemap/core.conf"
 hash = "b942611c074c37431c5c24d6d63faaf731e5e3b0a4f210370f3237617031b89e"
+
+[[files]]
+file = "config/bluemap/webserver.conf"
+hash = "8d873e188b88f5eb15af95caccb4eb2d9732ff1b4920c0ebe8facd97e956021e"
 
 [[files]]
 file = "config/fabric-seasons.json"

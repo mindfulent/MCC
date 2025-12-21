@@ -31,3 +31,9 @@ home/fabricord/config.yml
 # Claude Code
 CLAUDE.md
 .claude/
+
+# Downloaded mod jars (should be fetched from Modrinth)
+SimpleDiscordLink-*.jar
+
+# Backups
+backup_*/
