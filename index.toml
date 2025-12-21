@@ -82,7 +82,7 @@ hash = "fb392fed200fb97a293972a79eb96fbce6104b3ebd2ec669a3b9c1a120447025"
 
 [[files]]
 file = "modpack-info.json"
-hash = "edd0c0204f392a6afd8ce529ef4303c2b68b641b2f9e03b99a7534d8b0e205c7"
+hash = "48f85ed43be0d2136a9f4d5bc12d6483cff5b000c650c996a49b161afd8ad82e"
 
 [[files]]
 file = "mods/appleskin.pw.toml"
@@ -320,7 +320,7 @@ hash = "e89bdaafc3f0f5c07ed912cb29c6beab61716579960780eb7c5b7129bbaac65f"
 
 [[files]]
 file = "options.txt"
-hash = "5f30cc88a38375250345b391ce650516f78b73d8b2c041da4fca72c09e0f679d"
+hash = "abedd35219c3943cba8350ddc9eee1d1cda55e9ff5daff1b82c331a412b83cb2"
 
 [[files]]
 file = "server-config.py"
