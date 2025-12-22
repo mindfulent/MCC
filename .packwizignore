@@ -1,0 +1,53 @@
+# Packwiz binary
+packwiz.exe
+packwiz
+
+# Exported modpacks
+*.mrpack
+
+# mrpack4server deployment files
+mrpack4server*.jar
+local.mrpack
+
+# Windows artifacts
+nul
+
+# IDE
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.py[cod]
+server-config.py
+
+# Environment variables
+.env
+.env.local
+.env.example
+
+# Sensitive configs
+config/discord-mc-chat/discord-mc-chat.json
+home/fabricord/config.yml
+
+# Claude Code
+CLAUDE.md
+.claude/
+
+# Downloaded mod jars (fetched from Modrinth)
+SimpleDiscordLink-*.jar
+bluemap*.jar
+
+# Backups
+backup_*/
+
+# Git
+.git/
+.gitignore
+
+# Docs (not needed in pack)
+docs/
+README.md
+CHANGELOG.md
+LICENSE
+logo.png

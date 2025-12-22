@@ -2,6 +2,33 @@
 
 All notable changes to MCArtsAndCrafts will be documented in this file.
 
+## [0.9.19] - 2025-12-22
+
+### Added
+- **Connectible Chains** v2.5.5 - Decorative chain links between fences and walls
+- **Universal Sawmill** v1.7.2 - Sawmill workstation with Carpenter villager
+- **Underlay** v0.9.9 - Place carpets/blocks under chests, beds, stairs
+- **[Let's Do] Bakery** v2.1.2 - Pastries, cakes, and baking stations
+- **[Let's Do] Farm & Charm** v1.1.14 - Crops and cooking (Bakery dependency)
+- **Moonlight Lib** v2.28.3 - Library for Sawmill
+
+### Added (Infrastructure)
+- **`.packwizignore`** - Excludes build artifacts from .mrpack export
+- **`update-pack` command** - New server-config.py command for deployment
+- **`docs/DEPLOYMENT_GUIDE.md`** - Complete deployment documentation
+
+### Fixed
+- **Modpack export bloat** - .mrpack was 32MB due to including backup folders and stray jars, now ~1.5MB
+- **BlueMap not loading** - Server wasn't receiving BlueMap due to mrpack4server using stale modpack-info.json
+
+### Changed
+- Mod count increased from 46 to 52
+- Deployment workflow now uses GitHub releases with modpack-info.json pointing to release URLs
+- Server-side mrpack4server downloads from GitHub instead of using local.mrpack uploads
+
+### Known Issues
+- **Underlay + Jade** - Server logs harmless error about client-only Jade plugin
+
 ## [0.9.18] - 2025-12-21
 
 ### Changed

@@ -2,7 +2,7 @@
   <img src="logo.png" alt="MCArtsAndCrafts Logo" width="400">
 </p>
 
-# MCArtsAndCrafts v0.9.18
+# MCArtsAndCrafts v0.9.19
 
 A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
@@ -21,11 +21,18 @@ A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packw
 - **Chipped** - 11,000+ decorative block variants with connected textures
 - **Handcrafted** - 250+ furniture pieces (fantasy, steampunk, medieval styles)
 - **Macaw's Suite** - Doors, Windows, Bridges, Roofs, Fences, Trapdoors, Furniture, Lights
+- **Connectible Chains** - Decorative chain links between fences and walls
+- **Underlay** - Place carpets and blocks under chests, beds, stairs
 
 ### Content
 - **Farmer's Delight Refabricated** - Cooking and farming expansion
 - **Storage Drawers** - Compact item storage system
+- **Universal Sawmill** - Sawmill workstation with Carpenter villager
+- **[Let's Do] Bakery** - Pastries, cakes, and baking stations (includes Farm & Charm)
 - **Fabric Seasons** - Four seasons with visual and gameplay changes (currently locked to Winter)
+
+### Web Map
+- **BlueMap** - Live 3D web map of the server world (port 8100)
 
 ### Quality of Life
 - **Roughly Enough Items (REI)** - Recipe viewer and item browser
@@ -126,26 +133,27 @@ MCArtsAndCrafts/
 
 ## Server Deployment
 
-### Option 1: mrpack4server (Recommended)
+The server uses **mrpack4server** which downloads modpacks from GitHub releases. Updates are managed via `server-config.py`.
 
-1. Upload `mrpack4server.jar` to server root
-2. Create `modpack-info.json`:
-   ```json
-   {
-     "project_id": "mcartsandcrafts",
-     "version_id": "0.9.9"
-   }
-   ```
-3. Set server jar to `mrpack4server.jar`
-4. Start server - mods auto-download
+### Quick Deploy (for maintainers)
 
-### Option 2: Manual Installation
+```bash
+# After making changes:
+./packwiz.exe modrinth export
+git add -A && git commit -m "v0.9.X - description" && git push
+gh release create v0.9.X MCArtsAndCrafts-0.9.X.mrpack --title "v0.9.X"
+python server-config.py update-pack 0.9.X
+python server-config.py restart
+```
 
-1. Export: `./packwiz.exe modrinth export`
-2. Extract server-side mods from `.mrpack`
-3. Upload to server `/mods` folder
+### Initial Setup
 
-See [minecraft-college-setup-guide.md](docs/minecraft-college-setup-guide.md) for detailed Bloom.host instructions.
+1. Upload `mrpack4server-0.5.0.jar` to server root
+2. Create `modpack-info.json` pointing to GitHub release
+3. Set server jar to `mrpack4server-0.5.0.jar` in Bloom.host panel
+4. Start server - mods auto-download from GitHub
+
+See [docs/DEPLOYMENT_GUIDE.md](docs/DEPLOYMENT_GUIDE.md) for complete documentation.
 
 ### Fabricord Discord Setup
 

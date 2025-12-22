@@ -793,6 +793,85 @@ def deploy_mrpack4server():
     return True
 
 
+def update_modpack_info(version):
+    """Update modpack-info.json on server to point to a GitHub release"""
+    import hashlib
+
+    mrpack_file = os.path.join(SCRIPT_DIR, f"MCArtsAndCrafts-{version}.mrpack")
+
+    if not os.path.exists(mrpack_file):
+        console.print(f"[red]Error: {mrpack_file} not found![/red]")
+        console.print("[yellow]Run: ./packwiz.exe modrinth export[/yellow]")
+        return False
+
+    if not check_credentials():
+        return False
+
+    # Calculate hash and size
+    console.print(f"[cyan]Calculating hash for {os.path.basename(mrpack_file)}...[/cyan]")
+    file_size = os.path.getsize(mrpack_file)
+
+    sha512 = hashlib.sha512()
+    with open(mrpack_file, 'rb') as f:
+        for chunk in iter(lambda: f.read(8192), b''):
+            sha512.update(chunk)
+    file_hash = sha512.hexdigest()
+
+    # Build the config
+    github_url = f"https://github.com/mindfulent/MCArtsAndCrafts/releases/download/v{version}/MCArtsAndCrafts-{version}.mrpack"
+
+    new_config = {
+        "project_id": "mcartsandcrafts",
+        "version_id": version,
+        "display_name": "MCArtsAndCrafts",
+        "display_version": version,
+        "url": github_url,
+        "size": file_size,
+        "sha512": file_hash,
+        "whitelisted_domains": ["github.com", "objects.githubusercontent.com"],
+        "non_overwritable_paths": [
+            "world", "world_nether", "world_the_end",
+            "server.properties", "ops.json", "whitelist.json",
+            "banned-players.json", "banned-ips.json"
+        ]
+    }
+
+    # Upload to server
+    console.print(f"[cyan]Connecting to {hostname}:{port}...[/cyan]")
+
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+
+    try:
+        ssh.connect(hostname, port=port, username=username, password=password)
+        sftp = ssh.open_sftp()
+
+        with sftp.open("/modpack-info.json", "w") as f:
+            f.write(json.dumps(new_config, indent=2).encode())
+
+        sftp.close()
+        ssh.close()
+
+        console.print(Panel(
+            f"[bold green]Updated modpack-info.json to v{version}[/bold green]\n\n"
+            f"URL: {github_url}\n"
+            f"Size: {file_size / (1024*1024):.2f} MB\n"
+            f"SHA512: {file_hash[:32]}...",
+            title="[cyan]Modpack Info Updated[/cyan]",
+            border_style="green"
+        ))
+
+        console.print("\n[yellow]Next steps:[/yellow]")
+        console.print("  1. Ensure GitHub release v{} exists with the .mrpack attached".format(version))
+        console.print("  2. Run: python server-config.py restart")
+
+        return True
+
+    except Exception as e:
+        console.print(f"[red]Error: {e}[/red]")
+        return False
+
+
 def deploy_configs():
     """Upload config directory to server"""
     console.print("[bold]Uploading config directory...[/bold]")
@@ -971,18 +1050,26 @@ if __name__ == "__main__":
             for key, preset in BIOME_PRESETS.items():
                 table.add_row(key, preset["name"], preset["level_type"].replace("minecraft:", ""))
             console.print(table)
+        elif command == "update-pack" and len(sys.argv) > 2:
+            version = sys.argv[2]
+            update_modpack_info(version)
         else:
             console.print("[yellow]Usage:[/yellow]")
-            console.print("  python server-config.py          # Interactive menu")
-            console.print("  python server-config.py deploy   # Deploy mrpack4server")
-            console.print("  python server-config.py configs  # Upload configs")
-            console.print("  python server-config.py list     # List server files")
-            console.print("  python server-config.py status   # Server status")
-            console.print("  python server-config.py start    # Start server")
-            console.print("  python server-config.py stop     # Stop server")
-            console.print("  python server-config.py restart  # Restart server")
-            console.print("  python server-config.py cmd <command>  # Send command")
+            console.print("  python server-config.py              # Interactive menu")
+            console.print("  python server-config.py status       # Server status")
+            console.print("  python server-config.py start        # Start server")
+            console.print("  python server-config.py stop         # Stop server")
+            console.print("  python server-config.py restart      # Restart server")
+            console.print("  python server-config.py cmd <cmd>    # Send console command")
+            console.print("")
+            console.print("[yellow]Deployment:[/yellow]")
+            console.print("  python server-config.py update-pack <version>  # Update modpack-info.json")
+            console.print("  python server-config.py deploy       # Upload mrpack4server + local.mrpack")
+            console.print("  python server-config.py configs      # Upload config directory")
+            console.print("  python server-config.py list         # List server files")
+            console.print("")
+            console.print("[yellow]World Management:[/yellow]")
             console.print("  python server-config.py regenerate [preset] [seed] [-y]  # Regenerate world")
-            console.print("  python server-config.py presets  # List world presets")
+            console.print("  python server-config.py presets      # List world presets")
     else:
         interactive_menu()
