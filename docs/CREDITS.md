@@ -102,7 +102,7 @@ Many mod creators accept donations to support their work. Consider supporting yo
 
 | Mod | Author(s) | Version | Released | Donate |
 |-----|-----------|---------|----------|--------|
-| [Simple Voice Chat](https://modrinth.com/mod/simple-voice-chat) | henkelmax | 2.6.9 | Dec 17, 2025 | [Patreon](https://www.patreon.com/henkelmax) |
+| [Simple Voice Chat](https://modrinth.com/mod/simple-voice-chat) | henkelmax | 2.6.9 | Dec 17, 2025 | - |
 | [Universal Graves](https://modrinth.com/mod/universal-graves) | Patbox | 3.4.4 | Sep 9, 2024 | [Ko-fi](https://ko-fi.com/patbox) |
 | [Flan](https://modrinth.com/mod/flan) | flemmli97 | 1.12.4 | Nov 20, 2025 | [PayPal](https://www.paypal.com/paypalme/flemmli97), [Ko-fi](https://ko-fi.com/flemmli97), [Patreon](https://www.patreon.com/flemmli97) |
 | [Better Sleep](https://modrinth.com/mod/better-sleep) | Giselbaer | 2.2.2 | Aug 6, 2025 | - |
