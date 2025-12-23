@@ -47,7 +47,7 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | Mod | Author(s) | Version | Released | Donate |
 |-----|-----------|---------|----------|--------|
 | [JourneyMap](https://modrinth.com/mod/journeymap) | techbrew, mysticdrew | 6.0.0-beta.53 | Dec 11, 2025 | [Patreon](https://www.patreon.com/techbrew) |
-| [BlueMap](https://modrinth.com/mod/bluemap) | BlueColored | 5.6 | Feb 24, 2025 | [Patreon](https://www.patreon.com/BlueMap), [Ko-fi](https://ko-fi.com/bluemap) |
+| [BlueMap](https://modrinth.com/mod/bluemap) | BlueColored | 5.6 | Feb 24, 2025 | [Ko-fi](https://ko-fi.com/bluecolored), [Patreon](https://www.patreon.com/bluecolored) |
 
 ## Building Tools
 
