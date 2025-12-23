@@ -37,3 +37,6 @@ SimpleDiscordLink-*.jar
 
 # Backups
 backup_*/
+
+# Distant Horizons LOD cache (large binary, hosted externally)
+DistantHorizons.sqlite
