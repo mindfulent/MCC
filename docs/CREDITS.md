@@ -2,8 +2,8 @@
 
 This document credits all mod creators whose work makes this modpack possible. Thank you for your incredible contributions to the Minecraft modding community!
 
-**Last Updated:** December 22, 2025
-**Modpack Version:** 0.9.22 (61 mods)
+**Last Updated:** December 23, 2025
+**Modpack Version:** 0.9.23 (74 mods)
 
 ---
 
@@ -41,6 +41,10 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Searchables](https://modrinth.com/mod/searchables) | jaredlll08 | 1.0.2 | Oct 21, 2024 | - |
 | [Forge Config API Port](https://modrinth.com/mod/forge-config-api-port) | Fuzss | 21.1.6 | Nov 12, 2025 | - |
 | [Bad Packets](https://modrinth.com/mod/badpackets) | deirn | 0.8.2 | Jan 8, 2025 | - |
+| [Balm](https://modrinth.com/mod/balm) | BlayTheNinth | 21.0.55 | Nov 26, 2025 | [Ko-fi](https://ko-fi.com/blaytheninth), [Patreon](https://www.patreon.com/blay09) |
+| [Puzzles Lib](https://modrinth.com/mod/puzzles-lib) | Fuzs | 21.1.39 | Nov 15, 2025 | [Patreon](https://www.patreon.com/heyitsfuzs) |
+| [Konkrete](https://modrinth.com/mod/konkrete) | Keksuccino | 1.9.9 | Jun 18, 2025 | - |
+| [Lithostitched](https://modrinth.com/mod/lithostitched) | Apollo | 1.5.4 | Oct 7, 2025 | - |
 
 ## Map Mods
 
@@ -75,6 +79,13 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Adorn](https://modrinth.com/mod/adorn) | Juuz | 6.1.2 | Oct 4, 2025 | - |
 | [Connectible Chains](https://modrinth.com/mod/connectiblechains) | legoatoom | 2.5.5 | Oct 25, 2025 | - |
 | [Underlay](https://modrinth.com/mod/underlay) | Kir_Antipov | 0.9.9 | Dec 10, 2025 | - |
+| [Supplementaries](https://modrinth.com/mod/supplementaries) | MehVahdJukaar | 3.5.14 | Dec 6, 2025 | - |
+| [Arts & Crafts](https://modrinth.com/mod/artsandcrafts) | KekeCreations | 1.5.3 | Oct 14, 2025 | - |
+| [Reintegrated: Arts and Crafts](https://modrinth.com/mod/reintegrated-arts-and-crafts) | Apollo | 1.0.1 | Dec 2025 | - |
+| [ReFramed](https://modrinth.com/mod/reframed) | Adrien1106 | 1.6.6 | Nov 2025 | - |
+| [Armor Statues](https://modrinth.com/mod/armor-statues) | Fuzs | 21.1.0 | Jul 18, 2025 | [Patreon](https://www.patreon.com/heyitsfuzs) |
+| [Fairy Lights](https://modrinth.com/mod/fairy-lights-fabric) | lucalabs-de | 1.1.0 | Dec 10, 2025 | - |
+| [Little Joys](https://modrinth.com/mod/little-joys) | BlayTheNinth | 21.1.9 | Apr 19, 2025 | [Ko-fi](https://ko-fi.com/blaytheninth), [Patreon](https://www.patreon.com/blay09) |
 
 ## Content Mods
 
@@ -87,6 +98,7 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [[Let's Do] Bakery](https://modrinth.com/mod/lets-do-bakery-farmcharm-compat) | satisfyu, Cristelknight | 2.1.2 | Sep 25, 2025 | [PayPal](https://paypal.me/mrclbe), [Patreon](https://www.patreon.com/user?u=78595058) |
 | [[Let's Do] Farm & Charm](https://modrinth.com/mod/lets-do-farm-charm) | satisfyu, Cristelknight | 1.1.14 | Nov 23, 2025 | [PayPal](https://paypal.me/mrclbe), [Patreon](https://www.patreon.com/user?u=78595058) |
 | [Joy of Painting](https://modrinth.com/mod/joy-of-painting) | xerca | 1.0.1 | Nov 16, 2024 | - |
+| [Camerapture](https://modrinth.com/mod/camerapture) | chrrs | 1.10.8 | Dec 2025 | [Ko-fi](https://ko-fi.com/chrrs) |
 
 ## Quality of Life Mods
 
@@ -97,6 +109,8 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [AppleSkin](https://modrinth.com/mod/appleskin) | squeek502 | 3.0.6 | Nov 1, 2024 | [GitHub Sponsors](https://github.com/sponsors/squeek502) |
 | [Mouse Tweaks](https://modrinth.com/mod/mouse-tweaks) | YaLTeR | 2.26 | Jun 17, 2024 | [GitHub Sponsors](https://github.com/sponsors/YaLTeR) |
 | [Controlling](https://modrinth.com/mod/controlling) | jaredlll08 | 19.0.5 | Mar 30, 2025 | - |
+| [Just Zoom](https://modrinth.com/mod/just-zoom) | Keksuccino | 2.1.0 | Apr 25, 2025 | - |
+| [ItemSwapper](https://modrinth.com/plugin/itemswapper) | tr7zw | 0.8.5 | Dec 2025 | [Ko-fi](https://ko-fi.com/tr7zw) |
 
 ## Multiplayer Mods
 
@@ -148,7 +162,11 @@ Many mod creators accept donations to support their work. Consider supporting yo
 - **satisfyu & Cristelknight** - [Let's Do] series (Vinery, Bakery, Farm & Charm)
 - **masa** - Litematica, MaLiLib (essential building tools)
 - **CaffeineMC** (jellysquid3, IMS) - Sodium, Lithium (performance optimization)
-- **MehVahdJukaar** - Moonlight Lib, Universal Sawmill, Farmer's Delight contributions
+- **MehVahdJukaar** - Moonlight Lib, Supplementaries, Universal Sawmill, Farmer's Delight contributions
+- **Fuzs** - Puzzles Lib, Armor Statues, Forge Config API Port (multi-loader infrastructure)
+- **BlayTheNinth** - Balm, Little Joys, Waystones, Cooking for Blockheads (12+ years of modding)
+- **Keksuccino** - Konkrete, Just Zoom, FancyMenu (library and utility mods)
+- **Apollo** - Lithostitched, Reintegrated series (worldgen compatibility)
 
 ---
 
