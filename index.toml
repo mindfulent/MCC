@@ -438,6 +438,11 @@ hash = "5b27aeb2db9d4a77b78ec6d0b86a4b5c71d14b844e281731cbf07c6133ca88ef"
 metafile = true
 
 [[files]]
+file = "mods/windchime-unofficial-continued.pw.toml"
+hash = "29ea6f0446cc4cb26ec396ac761d95dca3378e3ffff1a4c23b64640c5f4c0357"
+metafile = true
+
+[[files]]
 file = "mods/worldedit.pw.toml"
 hash = "f1670113ba6c7687790c33c13521505caf0fb59a50a253e9533e9f6ebe3cf8c9"
 metafile = true

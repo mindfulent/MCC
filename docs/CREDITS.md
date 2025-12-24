@@ -3,7 +3,7 @@
 This document credits all mod creators whose work makes this modpack possible. Thank you for your incredible contributions to the Minecraft modding community!
 
 **Last Updated:** December 24, 2025
-**Modpack Version:** 0.9.29 (80 mods)
+**Modpack Version:** 0.9.30 (81 mods)
 
 ---
 
@@ -88,6 +88,7 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Armor Statues](https://modrinth.com/mod/armor-statues) | Fuzs | 21.1.0 | Jul 18, 2025 | [Patreon](https://www.patreon.com/heyitsfuzs) |
 | [Fairy Lights](https://modrinth.com/mod/fairy-lights-fabric) | lucalabs-de | 1.1.0 | Dec 10, 2025 | - |
 | [Little Joys](https://modrinth.com/mod/little-joys) | BlayTheNinth | 21.1.9 | Apr 19, 2025 | [Ko-fi](https://ko-fi.com/blaytheninth), [Patreon](https://www.patreon.com/blay09) |
+| [WindChime Unofficial Continued](https://modrinth.com/mod/windchime-unofficial-continued) | NightEpiphany0401 | 1.3.7 | Dec 2025 | - |
 
 ## Content Mods
 

@@ -2,6 +2,14 @@
 
 All notable changes to MCC will be documented in this file.
 
+## [0.9.30] - 2025-12-24
+
+### Added
+- **WindChime Unofficial Continued** v1.3.7 - Decorative wind chimes (bamboo, glass, amethyst, copper, iron, gold, diamond, netherite, echo) placeable on ceilings or walls
+
+### Changed
+- Mod count increased from 80 to 81
+
 ## [0.9.29] - 2025-12-24
 
 ### Added
