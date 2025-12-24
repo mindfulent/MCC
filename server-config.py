@@ -955,6 +955,8 @@ def interactive_menu():
         table.add_row("6", "Restart Server")
         table.add_row("7", "Send Console Command")
         table.add_row("", "")
+        table.add_row("b", "[cyan]Backup Menu →[/cyan]")
+        table.add_row("", "")
         table.add_row("8", "[red]Regenerate World[/red]")
         table.add_row("", "")
         table.add_row("q", "Quit")
@@ -962,7 +964,7 @@ def interactive_menu():
         console.print(table)
         console.print()
 
-        choice = Prompt.ask("Select", choices=["1", "2", "3", "4", "5", "6", "7", "8", "q"], default="q")
+        choice = Prompt.ask("Select", choices=["1", "2", "3", "4", "5", "6", "7", "8", "b", "q"], default="q")
 
         if choice == "1":
             deploy_mrpack4server()
@@ -995,12 +997,68 @@ def interactive_menu():
                     console.print("[green]✓ Command sent[/green]")
             Prompt.ask("\n[dim]Press Enter to continue[/dim]")
 
+        elif choice == "b":
+            backup_menu()
+
         elif choice == "8":
             regenerate_world()
             Prompt.ask("\n[dim]Press Enter to continue[/dim]")
 
         elif choice == "q":
             console.print("[dim]Goodbye![/dim]")
+            break
+
+
+def backup_menu():
+    """Show backup management submenu"""
+    from rich.prompt import Prompt
+
+    while True:
+        console.clear()
+        console.print(Panel.fit(
+            "[bold cyan]Backup Management[/bold cyan]\n"
+            "[dim]Advanced Backups Control[/dim]",
+            border_style="cyan"
+        ))
+
+        console.print()
+
+        # Menu options
+        table = Table(show_header=False, box=box.SIMPLE, padding=(0, 2))
+        table.add_column("Key", style="bold yellow")
+        table.add_column("Action", style="white")
+
+        table.add_row("1", "List Backups")
+        table.add_row("2", "Create Backup")
+        table.add_row("3", "Create Snapshot (immune to purge)")
+        table.add_row("4", "[yellow]Restore from Backup[/yellow]")
+        table.add_row("", "")
+        table.add_row("b", "← Back to Main Menu")
+
+        console.print(table)
+        console.print()
+
+        choice = Prompt.ask("Select", choices=["1", "2", "3", "4", "b"], default="b")
+
+        if choice == "1":
+            backup_list()
+            Prompt.ask("\n[dim]Press Enter to continue[/dim]")
+
+        elif choice == "2":
+            comment = Prompt.ask("Backup comment (optional)", default="")
+            backup_create(comment)
+            Prompt.ask("\n[dim]Press Enter to continue[/dim]")
+
+        elif choice == "3":
+            comment = Prompt.ask("Snapshot comment (optional)", default="")
+            backup_snapshot(comment)
+            Prompt.ask("\n[dim]Press Enter to continue[/dim]")
+
+        elif choice == "4":
+            backup_restore()
+            Prompt.ask("\n[dim]Press Enter to continue[/dim]")
+
+        elif choice == "b":
             break
 
 
