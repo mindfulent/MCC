@@ -2,6 +2,14 @@
 
 All notable changes to MCArtsAndCrafts will be documented in this file.
 
+## [0.9.25] - 2025-12-23
+
+### Removed
+- **Immersive Aircraft** - Caused creative mode crash (DecoderException on set_creative_mode_slot packet)
+
+### Changed
+- Mod count reduced from 76 to 75
+
 ## [0.9.24] - 2025-12-23
 
 ### Added
