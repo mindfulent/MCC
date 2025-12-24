@@ -1005,6 +1005,344 @@ def interactive_menu():
 
 
 # =============================================================================
+# Backup Management Functions
+# =============================================================================
+
+def get_sftp_connection():
+    """Create and return an SFTP connection"""
+    if not check_credentials():
+        return None, None
+
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    ssh.connect(hostname, port=port, username=username, password=password)
+    sftp = ssh.open_sftp()
+    return ssh, sftp
+
+
+def backup_list():
+    """List all available backups"""
+    console.print("[cyan]Fetching backup list...[/cyan]\n")
+
+    ssh, sftp = get_sftp_connection()
+    if not sftp:
+        return None
+
+    backups = []
+
+    try:
+        # Check differential backups
+        try:
+            for item in sftp.listdir_attr('/backups/world/differential'):
+                if item.filename.endswith('.zip'):
+                    backup_type = "full" if "-full.zip" in item.filename else "partial"
+                    backups.append({
+                        'name': item.filename,
+                        'path': f'/backups/world/differential/{item.filename}',
+                        'size': item.st_size,
+                        'type': f'differential-{backup_type}',
+                        'mtime': item.st_mtime
+                    })
+        except IOError:
+            pass
+
+        # Check zip backups
+        try:
+            for item in sftp.listdir_attr('/backups/world/zips'):
+                if item.filename.endswith('.zip'):
+                    backups.append({
+                        'name': item.filename,
+                        'path': f'/backups/world/zips/{item.filename}',
+                        'size': item.st_size,
+                        'type': 'zip',
+                        'mtime': item.st_mtime
+                    })
+        except IOError:
+            pass
+
+        # Check snapshots (manual backups immune to auto-delete)
+        try:
+            for item in sftp.listdir_attr('/backups/world/snapshots'):
+                if item.filename.endswith('.zip'):
+                    backups.append({
+                        'name': item.filename,
+                        'path': f'/backups/world/snapshots/{item.filename}',
+                        'size': item.st_size,
+                        'type': 'snapshot',
+                        'mtime': item.st_mtime
+                    })
+        except IOError:
+            pass
+
+        sftp.close()
+        ssh.close()
+
+        if not backups:
+            console.print("[yellow]No backups found.[/yellow]")
+            return []
+
+        # Sort by modification time (newest first)
+        backups.sort(key=lambda x: x['mtime'], reverse=True)
+
+        # Display table
+        table = Table(title="Available Backups", box=box.ROUNDED)
+        table.add_column("#", style="dim", width=3)
+        table.add_column("Name", style="cyan")
+        table.add_column("Type", style="yellow")
+        table.add_column("Size", style="green", justify="right")
+        table.add_column("Date", style="white")
+
+        for i, backup in enumerate(backups, 1):
+            size = backup['size']
+            if size > 1024*1024*1024:
+                size_str = f"{size/(1024*1024*1024):.2f} GB"
+            elif size > 1024*1024:
+                size_str = f"{size/(1024*1024):.1f} MB"
+            else:
+                size_str = f"{size/1024:.1f} KB"
+
+            date_str = datetime.fromtimestamp(backup['mtime']).strftime('%Y-%m-%d %H:%M')
+            table.add_row(str(i), backup['name'], backup['type'], size_str, date_str)
+
+        console.print(table)
+        return backups
+
+    except Exception as e:
+        console.print(f"[red]Error listing backups: {e}[/red]")
+        sftp.close()
+        ssh.close()
+        return None
+
+
+def backup_create(comment=""):
+    """Trigger a manual backup via server command"""
+    status = get_server_status()
+    if status != "running":
+        console.print(f"[red]Server is not running (status: {status})[/red]")
+        console.print("[yellow]Start the server first to create a backup.[/yellow]")
+        return False
+
+    cmd = f"backup start {comment}".strip()
+    console.print(f"[cyan]Sending: {cmd}[/cyan]")
+
+    if send_console_command(cmd):
+        console.print("[green]✓ Backup command sent[/green]")
+        console.print("[dim]Check server console for progress.[/dim]")
+        return True
+    return False
+
+
+def backup_snapshot(comment=""):
+    """Create a snapshot backup (immune to auto-purging)"""
+    status = get_server_status()
+    if status != "running":
+        console.print(f"[red]Server is not running (status: {status})[/red]")
+        return False
+
+    cmd = f"backup snapshot {comment}".strip()
+    console.print(f"[cyan]Sending: {cmd}[/cyan]")
+
+    if send_console_command(cmd):
+        console.print("[green]✓ Snapshot command sent[/green]")
+        console.print("[dim]Snapshots are immune to automatic purging.[/dim]")
+        return True
+    return False
+
+
+def backup_restore(backup_index=None, auto_confirm=False):
+    """Restore from a backup"""
+    import tempfile
+    import zipfile
+    import time
+
+    # List backups first
+    backups = backup_list()
+    if not backups:
+        return False
+
+    # Select backup
+    if backup_index is None:
+        from rich.prompt import Prompt
+        console.print()
+        selection = Prompt.ask("Select backup number to restore", default="1")
+        try:
+            backup_index = int(selection)
+        except ValueError:
+            console.print("[red]Invalid selection[/red]")
+            return False
+
+    if backup_index < 1 or backup_index > len(backups):
+        console.print(f"[red]Invalid backup number. Choose 1-{len(backups)}[/red]")
+        return False
+
+    selected = backups[backup_index - 1]
+
+    # For partial differential, find the chain
+    restore_chain = [selected]
+    if selected['type'] == 'differential-partial':
+        # Need to find the most recent full backup before this one
+        full_backups = [b for b in backups if b['type'] == 'differential-full' and b['mtime'] < selected['mtime']]
+        if not full_backups:
+            console.print("[red]Error: No full backup found before this partial![/red]")
+            console.print("[yellow]Cannot restore a partial backup without its base full backup.[/yellow]")
+            return False
+        # Get the most recent full backup before this partial
+        full_backup = max(full_backups, key=lambda x: x['mtime'])
+        restore_chain = [full_backup, selected]
+        console.print(f"\n[yellow]This is a partial backup. Will restore chain:[/yellow]")
+        console.print(f"  1. {full_backup['name']} (full)")
+        console.print(f"  2. {selected['name']} (partial)")
+
+    # Calculate total download size
+    total_size = sum(b['size'] for b in restore_chain)
+    size_str = f"{total_size/(1024*1024*1024):.2f} GB" if total_size > 1024*1024*1024 else f"{total_size/(1024*1024):.1f} MB"
+
+    console.print(Panel(
+        f"[bold]Restore: {selected['name']}[/bold]\n\n"
+        f"Download size: [cyan]{size_str}[/cyan]\n"
+        f"Backups in chain: [cyan]{len(restore_chain)}[/cyan]\n\n"
+        "[red]WARNING: This will replace the current world![/red]",
+        title="[yellow]⚠ Backup Restore[/yellow]",
+        border_style="yellow"
+    ))
+
+    if not auto_confirm:
+        from rich.prompt import Confirm
+        if not Confirm.ask("\nProceed with restore?"):
+            console.print("[yellow]Cancelled.[/yellow]")
+            return False
+
+    # Step 1: Stop server
+    console.print("\n[bold]Step 1/5: Stopping server...[/bold]")
+    status = get_server_status()
+    if status == "running" or status == "starting":
+        server_stop()
+        console.print("[cyan]Waiting for server to stop...[/cyan]")
+        for i in range(30):
+            time.sleep(2)
+            status = get_server_status()
+            if status == "offline":
+                break
+        if status != "offline":
+            console.print("[yellow]Server didn't stop gracefully, sending kill signal...[/yellow]")
+            send_power_action("kill")
+            time.sleep(5)
+
+    console.print("[green]✓ Server stopped[/green]")
+
+    # Step 2: Download backups
+    console.print("\n[bold]Step 2/5: Downloading backup(s)...[/bold]")
+
+    ssh, sftp = get_sftp_connection()
+    if not sftp:
+        return False
+
+    temp_dir = tempfile.mkdtemp(prefix="mc_restore_")
+    downloaded_files = []
+
+    try:
+        for backup in restore_chain:
+            local_path = os.path.join(temp_dir, backup['name'])
+            console.print(f"[cyan]Downloading {backup['name']}...[/cyan]")
+
+            with RichProgressTracker(total_files=1, total_size=backup['size']) as tracker:
+                tracker.start_file(backup['name'], backup['size'])
+                sftp.get(backup['path'], local_path, callback=progress_callback(tracker))
+                tracker.file_complete(success=True)
+
+            downloaded_files.append(local_path)
+            console.print(f"[green]✓ Downloaded {backup['name']}[/green]")
+
+        # Step 3: Extract backups
+        console.print("\n[bold]Step 3/5: Extracting backup(s)...[/bold]")
+        extract_dir = os.path.join(temp_dir, "world")
+        os.makedirs(extract_dir, exist_ok=True)
+
+        for zip_path in downloaded_files:
+            console.print(f"[cyan]Extracting {os.path.basename(zip_path)}...[/cyan]")
+            with zipfile.ZipFile(zip_path, 'r') as zf:
+                zf.extractall(extract_dir)
+            console.print(f"[green]✓ Extracted[/green]")
+
+        # Step 4: Delete remote world folder
+        console.print("\n[bold]Step 4/5: Clearing remote world folder...[/bold]")
+        delete_world_folders()
+
+        # Recreate world folder
+        try:
+            sftp.mkdir("/world")
+        except IOError:
+            pass
+
+        # Step 5: Upload restored files
+        console.print("\n[bold]Step 5/5: Uploading restored world...[/bold]")
+
+        # Count files for progress
+        file_count = 0
+        total_upload_size = 0
+        for root, dirs, files in os.walk(extract_dir):
+            for file in files:
+                file_path = os.path.join(root, file)
+                file_count += 1
+                total_upload_size += os.path.getsize(file_path)
+
+        console.print(f"[cyan]Uploading {file_count} files ({total_upload_size/(1024*1024):.1f} MB)...[/cyan]")
+
+        with RichProgressTracker(total_files=file_count, total_size=total_upload_size) as tracker:
+            def upload_recursive(local_path, remote_path):
+                for item in os.listdir(local_path):
+                    local_item = os.path.join(local_path, item)
+                    remote_item = remote_path + "/" + item
+
+                    if os.path.isfile(local_item):
+                        try:
+                            file_size = os.path.getsize(local_item)
+                            rel_path = os.path.relpath(local_item, extract_dir)
+                            tracker.start_file(rel_path, file_size)
+                            sftp.put(local_item, remote_item, callback=progress_callback(tracker))
+                            tracker.file_complete(success=True)
+                        except Exception as e:
+                            tracker.file_complete(success=False)
+                            console.print(f"[red]Error uploading {item}: {e}[/red]")
+                    elif os.path.isdir(local_item):
+                        try:
+                            sftp.mkdir(remote_item)
+                        except IOError:
+                            pass
+                        upload_recursive(local_item, remote_item)
+
+            upload_recursive(extract_dir, "/world")
+
+        console.print("[green]✓ World restored[/green]")
+
+        sftp.close()
+        ssh.close()
+
+        # Cleanup temp files
+        import shutil
+        shutil.rmtree(temp_dir, ignore_errors=True)
+
+        # Start server
+        console.print("\n[bold]Starting server...[/bold]")
+        server_start()
+
+        console.print("\n" + "="*50)
+        console.print("[bold green]✓ Backup restore complete![/bold green]")
+        console.print(f"[cyan]Restored from: {selected['name']}[/cyan]")
+        console.print("="*50)
+
+        return True
+
+    except Exception as e:
+        console.print(f"[red]Error during restore: {e}[/red]")
+        import shutil
+        shutil.rmtree(temp_dir, ignore_errors=True)
+        sftp.close()
+        ssh.close()
+        return False
+
+
+# =============================================================================
 # Main
 # =============================================================================
 
@@ -1053,6 +1391,37 @@ if __name__ == "__main__":
         elif command == "update-pack" and len(sys.argv) > 2:
             version = sys.argv[2]
             update_modpack_info(version)
+        elif command == "backup":
+            # Backup subcommands
+            if len(sys.argv) < 3:
+                console.print("[yellow]Backup commands:[/yellow]")
+                console.print("  python server-config.py backup list              # List all backups")
+                console.print("  python server-config.py backup create [comment]  # Create manual backup")
+                console.print("  python server-config.py backup snapshot [comment] # Create snapshot (immune to purge)")
+                console.print("  python server-config.py backup restore [number]  # Restore from backup")
+            else:
+                subcmd = sys.argv[2]
+                if subcmd == "list":
+                    backup_list()
+                elif subcmd == "create":
+                    comment = " ".join(sys.argv[3:]) if len(sys.argv) > 3 else ""
+                    backup_create(comment)
+                elif subcmd == "snapshot":
+                    comment = " ".join(sys.argv[3:]) if len(sys.argv) > 3 else ""
+                    backup_snapshot(comment)
+                elif subcmd == "restore":
+                    backup_index = None
+                    auto_confirm = "-y" in sys.argv or "--yes" in sys.argv
+                    args = [a for a in sys.argv[3:] if a not in ("-y", "--yes")]
+                    if args:
+                        try:
+                            backup_index = int(args[0])
+                        except ValueError:
+                            console.print(f"[red]Invalid backup number: {args[0]}[/red]")
+                            sys.exit(1)
+                    backup_restore(backup_index, auto_confirm)
+                else:
+                    console.print(f"[red]Unknown backup command: {subcmd}[/red]")
         else:
             console.print("[yellow]Usage:[/yellow]")
             console.print("  python server-config.py              # Interactive menu")
@@ -1067,6 +1436,12 @@ if __name__ == "__main__":
             console.print("  python server-config.py deploy       # Upload mrpack4server + local.mrpack")
             console.print("  python server-config.py configs      # Upload config directory")
             console.print("  python server-config.py list         # List server files")
+            console.print("")
+            console.print("[yellow]Backup Management:[/yellow]")
+            console.print("  python server-config.py backup list              # List all backups")
+            console.print("  python server-config.py backup create [comment]  # Create manual backup")
+            console.print("  python server-config.py backup snapshot [comment] # Create snapshot (immune to purge)")
+            console.print("  python server-config.py backup restore [number]  # Restore from backup")
             console.print("")
             console.print("[yellow]World Management:[/yellow]")
             console.print("  python server-config.py regenerate [preset] [seed] [-y]  # Regenerate world")
