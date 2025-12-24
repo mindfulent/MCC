@@ -41,6 +41,14 @@ file = "journeymap/config/6.0/journeymap.minimap2.config"
 hash = "408e7f0df62763aa355abbca8293e5e4ee8fe3ac687657768fd51fd96f164d78"
 
 [[files]]
+file = "mcc_com.png"
+hash = "5f863af43a9d70fb16869d49f51f1df91677140da84b09f4bdc17815e3c9c34f"
+
+[[files]]
+file = "mcc_square.png"
+hash = "58f04aaad383a08b9ddbe72280b1db0acf995ec1c3510581db49b7bb87c0778d"
+
+[[files]]
 file = "modpack-info.json"
 hash = "661a5bee9195c7c6bf3a62cfab61b2334cd026214034f0b8ecdb759216b489ff"
 
@@ -82,6 +90,11 @@ metafile = true
 [[files]]
 file = "mods/athena-ctm.pw.toml"
 hash = "dbc1220d5b4e4a1615ccecfb7d482349020919700ad9bafb5f690c2d4adbb5b2"
+metafile = true
+
+[[files]]
+file = "mods/autowhitelist.pw.toml"
+hash = "3a631fd09fe5973933295b7ad068366d6015c10c97a4d098c4993b3e4e77ce2a"
 metafile = true
 
 [[files]]
@@ -161,7 +174,7 @@ metafile = true
 
 [[files]]
 file = "mods/fabric-language-kotlin.pw.toml"
-hash = "2831d2be7f52107b8cb23145f8812485c7ee12107a4eabf47d39d5b5d778cf04"
+hash = "61afd7af5c645ffd966b2bd86be944eacd1e48a8044e8f67082225d4d9989f0c"
 metafile = true
 
 [[files]]
