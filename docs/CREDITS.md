@@ -2,8 +2,8 @@
 
 This document credits all mod creators whose work makes this modpack possible. Thank you for your incredible contributions to the Minecraft modding community!
 
-**Last Updated:** December 23, 2025
-**Modpack Version:** 0.9.23 (74 mods)
+**Last Updated:** December 24, 2025
+**Modpack Version:** 0.9.29 (80 mods)
 
 ---
 
@@ -80,7 +80,9 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Connectible Chains](https://modrinth.com/mod/connectiblechains) | legoatoom | 2.5.5 | Oct 25, 2025 | - |
 | [Underlay](https://modrinth.com/mod/underlay) | Kir_Antipov | 0.9.9 | Dec 10, 2025 | - |
 | [Supplementaries](https://modrinth.com/mod/supplementaries) | MehVahdJukaar | 3.5.14 | Dec 6, 2025 | - |
+| [Amendments](https://modrinth.com/mod/amendments) | MehVahdJukaar | 2.0.13 | Dec 2025 | - |
 | [Arts & Crafts](https://modrinth.com/mod/artsandcrafts) | KekeCreations | 1.5.3 | Oct 14, 2025 | - |
+| [JinxedLib](https://modrinth.com/mod/jinxed-lib) | KekeCreations | 1.0.4 | Dec 2025 | - |
 | [Reintegrated: Arts and Crafts](https://modrinth.com/mod/reintegrated-arts-and-crafts) | Apollo | 1.0.1 | Dec 2025 | - |
 | [ReFramed](https://modrinth.com/mod/reframed) | Adrien1106 | 1.6.6 | Nov 2025 | - |
 | [Armor Statues](https://modrinth.com/mod/armor-statues) | Fuzs | 21.1.0 | Jul 18, 2025 | [Patreon](https://www.patreon.com/heyitsfuzs) |
@@ -121,6 +123,8 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Flan](https://modrinth.com/mod/flan) | flemmli97 | 1.12.4 | Nov 20, 2025 | [PayPal](https://www.paypal.com/donate/?hosted_button_id=2PNHRS9X7YCDS), [Ko-fi](https://ko-fi.com/flemmli97), [Patreon](https://www.patreon.com/flemmli97) |
 | [Better Sleep](https://modrinth.com/mod/better-sleep) | Giselbaer | 2.2.2 | Aug 6, 2025 | - |
 | [Fabricord](https://modrinth.com/mod/fabricord) | HypherionSA | 4.2.1 | Mar 8, 2025 | [Buy Me a Coffee](https://www.buymeacoffee.com/hypherionsa) |
+| [AutoWhitelist](https://modrinth.com/mod/autowhitelist) | Awakened-Redstone | 1.3.2 | Dec 2025 | - |
+| [Advanced Backups](https://modrinth.com/mod/advanced-backups) | RyanMoodGAMING | 3.7.1 | Dec 2025 | - |
 | [spark](https://modrinth.com/mod/spark) | lucko | 1.10.109 | Sep 26, 2024 | - |
 | [Chunky](https://modrinth.com/mod/chunky) | pop4959 | 1.4.23 | Apr 4, 2025 | - |
 
