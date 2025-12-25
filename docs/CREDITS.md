@@ -148,7 +148,7 @@ Many mod creators accept donations to support their work. Consider supporting yo
 
 | Mod | Author(s) | Version | Released | Donate |
 |-----|-----------|---------|----------|--------|
-| [Minescript](https://modrinth.com/mod/minescript) | maxuser0 | 4.0 | Sep 26, 2024 | - |
+| [Minescript](https://modrinth.com/mod/minescript) | maxuser0 | 4.0 | Sep 26, 2024 | [Patreon](https://www.patreon.com/Minescript) |
 
 ---
 
