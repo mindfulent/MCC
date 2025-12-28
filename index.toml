@@ -50,7 +50,7 @@ hash = "4dcf7855abb3439f00d76ba676653eeb01ffc529babc0a2bdd1bb37d144a6833"
 
 [[files]]
 file = "modpack-info.json"
-hash = "1c7980231bba2a5c381eab7fc27c480a727929a4b43595a3b792aa7ec846fc70"
+hash = "9e539863bea59d041fa9b6109bf750c21f6e22357fe0e9eeb4fcb96afd73e3e6"
 
 [[files]]
 file = "mods/adorn.pw.toml"
@@ -169,7 +169,7 @@ metafile = true
 
 [[files]]
 file = "mods/effortless.pw.toml"
-hash = "fb15c2081315f5d57a085056246f0f2c221e318bb81564ca631220fea650bb35"
+hash = "0345586c4c71c3edd20a0e099c2a818a679289e8eaee91b7c6bb6fadb0bc71d0"
 metafile = true
 
 [[files]]
@@ -189,12 +189,12 @@ metafile = true
 
 [[files]]
 file = "mods/fabric-seasons-extras.pw.toml"
-hash = "7833078d6daef78131f8cc43425ef5292413e966154ac3ce305e17196bd530e2"
+hash = "c68ad2b807b6867ed17e6633000d447441ea5d0e831536c96abe9d6d8b5e11d4"
 metafile = true
 
 [[files]]
 file = "mods/fabric-seasons.pw.toml"
-hash = "d40faa8d75ec7b4741146b033dca1d47368868985da3dcc6dc32fd9def5841d9"
+hash = "4b4bd067a0ede224fc89340b383f34780229628821912d4d7b9502a410bdbb2e"
 metafile = true
 
 [[files]]
@@ -233,8 +233,8 @@ hash = "00eaafc399810122b7522b172e12aec41f8d8b787192a78362f77e1274c21451"
 metafile = true
 
 [[files]]
-file = "mods/iris.pw.toml"
-hash = "c86e0fe57fbe042c8444a9c63933e89b5fdd50f325bb8a9796d0e7cca8735c89"
+file = "mods/irisshaders.pw.toml"
+hash = "b31e45972ba08291e168f9d93ed14d679a8799983b7bce7ca38faa795a85bf3a"
 metafile = true
 
 [[files]]
@@ -289,12 +289,12 @@ metafile = true
 
 [[files]]
 file = "mods/litematica.pw.toml"
-hash = "804bd885dd40336596175503d631ab7f529ad12e152872462b1c25f15b2f89bd"
+hash = "084365491a525dccd7a0274d5cb0a4b00af3dd4deb55ddcd53d0663783db426d"
 metafile = true
 
 [[files]]
 file = "mods/lithium.pw.toml"
-hash = "0f8827c966b0d439692f3b8d578a47c203cd0aec0043ea4fd3fc00025a13ab79"
+hash = "94944bc843327b8c13b34ee3ea4c16671d3102d5ae6845a48e5c86592d9696bb"
 metafile = true
 
 [[files]]
@@ -349,7 +349,7 @@ metafile = true
 
 [[files]]
 file = "mods/malilib.pw.toml"
-hash = "d9221689ffa47dcd27e6c0590ba7b3227f83d48a6e9592cd09e1835f143d793a"
+hash = "dd766c9ebeaf93db8b869f6bcaa83a07040a1413e5171be0577dd9a3dd8d3b04"
 metafile = true
 
 [[files]]
@@ -459,12 +459,12 @@ metafile = true
 
 [[files]]
 file = "mods/watermedia-yt-plugin.pw.toml"
-hash = "e0b5d86b63b2aa52bf50d3b58280fed584f8cfef65edc32e7a8b317690e877bc"
+hash = "0a124d952a34781cc8b511bd56a7468b24e75c5a8d3510a016737525594965a7"
 metafile = true
 
 [[files]]
 file = "mods/watermedia.pw.toml"
-hash = "9c14d2011a343872dfa72aee64ef7beb2f9f9e47867807b4b03726cfa8e429b7"
+hash = "0528731743be7df4ba5a8952264861920f90475ed333f914fddea75473cd6012"
 metafile = true
 
 [[files]]

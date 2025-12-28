@@ -3,11 +3,11 @@ filename = "fabric-seasons-2.4.2-BETA+1.21.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/KJe6y9Eu/versions/2mIvRTNp/fabric-seasons-2.4.2-BETA%2B1.21.jar"
-hash-format = "sha512"
-hash = "1fa611aecdeb7d3a7dbf46b29b3fcb747f02d8c3ebd58ffa47ecb6b07c049990b54843c207db4814ae1ab6b3ccfa2854864d245bdc3074fe52faa9097c3619d3"
+hash-format = "sha1"
+hash = "14899b2fd77be1e30fa3b17c6b0da620bb241233"
+mode = "metadata:curseforge"
 
 [update]
-[update.modrinth]
-mod-id = "KJe6y9Eu"
-version = "2mIvRTNp"
+[update.curseforge]
+file-id = 5789846
+project-id = 413523
