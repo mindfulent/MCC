@@ -2,6 +2,17 @@
 
 All notable changes to MCC will be documented in this file.
 
+## [0.9.39] - 2025-12-28
+
+### Added
+- **ReplayMod** v2.6.23 - Timeline-based recording, keyframed cameras, and video export for cinematics and replays (client-side, requires FFmpeg for rendering)
+- **Better Third Person** v1.9.0 - Independent camera rotation in third person, 360° orbit, 8-direction movement (client-side)
+- **Stable Cam** v1.0.0 - Stable camera perspective mode for recording cinematics (client-side)
+
+### Notes
+- All 3 new mods are client-side only - players without them can still connect normally
+- Mod count increased from 87 to 90
+
 ## [0.9.38] - 2025-12-28
 
 ### Fixed

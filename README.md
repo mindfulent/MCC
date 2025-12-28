@@ -2,7 +2,7 @@
   <img src="mcc_com.png" alt="MCC Logo" width="100%">
 </p>
 
-# MCC (MinecraftCollege.com) v0.9.38
+# MCC (MinecraftCollege.com) v0.9.39
 
 A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
@@ -21,6 +21,11 @@ A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packw
 - **Axiom** - All-in-one building/editing tool with real-time previews, terraforming, sculpting (Right-Shift for Editor Mode)
 - **Litematica** - Schematic mod for displaying build guides/holograms
 - **Effortless Structure** - Mirrors, arrays, build modes, block randomizer
+
+### Cinematics & Recording
+- **ReplayMod** - Timeline-based recording with keyframed cameras and video export (requires FFmpeg)
+- **Better Third Person** - Independent camera rotation, 360° orbit, enhanced third-person controls
+- **Stable Cam** - Stable camera perspective mode for smooth cinematic recordings
 
 ### Building & Decoration
 - **Chipped** - 11,000+ decorative block variants with connected textures

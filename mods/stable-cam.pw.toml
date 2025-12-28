@@ -1,0 +1,13 @@
+name = "Stable Cam"
+filename = "stablecam-1.0.0-mc1.21-1.21.1.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/Nh7uM6Qg/versions/RW8gHsPa/stablecam-1.0.0-mc1.21-1.21.1.jar"
+hash-format = "sha512"
+hash = "a67ff2a41afb8f91a75d409bf311354c7e2d3cbb308f84614e2ebf234d8ebde9a81a5a2b196ddbf1a631929f1580b254894c8a83945865fe68f75e5826e47154"
+
+[update]
+[update.modrinth]
+mod-id = "Nh7uM6Qg"
+version = "RW8gHsPa"
