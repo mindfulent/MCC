@@ -1,0 +1,22 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "reframed:block/framed_block",
+    "top": "reframed:block/framed_block",
+    "side": "reframed:block/framed_block"
+  },
+  "elements": [
+    {
+      "from": [0, 0, 0],
+      "to": [8, 8, 16],
+      "faces": {
+        "down":  {"texture": "#bottom", "cullface": "down"},
+        "up":    {"texture": "#top"},
+        "north": {"texture": "#side", "cullface": "north"},
+        "south": {"texture": "#side", "cullface": "south"},
+        "west":  {"texture": "#side", "cullface": "west"},
+        "east":  {"texture": "#side"}
+      }
+    }
+  ]
+}

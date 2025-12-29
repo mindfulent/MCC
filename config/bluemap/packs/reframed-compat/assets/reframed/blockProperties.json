@@ -1,0 +1,19 @@
+{
+  "*": {
+    "culling": true,
+    "occluding": false,
+    "cullingIdentical": true
+  },
+  "cube": {
+    "occluding": true
+  },
+  "slabs_cube": {
+    "occluding": true
+  },
+  "stairs_cube": {
+    "occluding": true
+  },
+  "half_stairs_cube_stair": {
+    "occluding": true
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "axis=x": {"model": "reframed:bluemap/block/post", "x": 90, "y": 90},
+    "axis=y": {"model": "reframed:bluemap/block/post"},
+    "axis=z": {"model": "reframed:bluemap/block/post", "x": 90}
+  }
+}

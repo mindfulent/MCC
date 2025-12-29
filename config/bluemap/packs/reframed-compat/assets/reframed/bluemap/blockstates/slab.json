@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "facing=down": {"model": "reframed:bluemap/block/slab"},
+    "facing=up": {"model": "reframed:bluemap/block/slab_top"},
+    "facing=north": {"model": "reframed:bluemap/block/slab", "x": 90, "y": 180},
+    "facing=south": {"model": "reframed:bluemap/block/slab", "x": 90},
+    "facing=west": {"model": "reframed:bluemap/block/slab", "x": 90, "y": 90},
+    "facing=east": {"model": "reframed:bluemap/block/slab", "x": 90, "y": 270}
+  }
+}
