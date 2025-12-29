@@ -2,25 +2,26 @@
 
 All notable changes to MCC will be documented in this file.
 
+## [0.9.43] - 2025-12-28
+
+### Fixed
+- **CurseForge + ReplayMod compatibility** - Pinned versions now sourced from CurseForge
+  - Moonlight Lib: 2.28.0 (CF file 7324529)
+  - Supplementaries: 3.4.18 (CF file 7114488)
+  - Amendments: 2.0.8 (CF file 7054320)
+
+### Notes
+- CurseForge export has only 1 override (ReFramed)
+- ReplayMod playback works correctly with these pinned versions
+- Best of both worlds: CF-clean submission + working cinematics
+
 ## [0.9.42] - 2025-12-28
 
 ### Fixed
-- **CurseForge compatibility** - All mods now use CurseForge metadata (except ReFramed which is Modrinth-only)
-  - ReplayMod 2.6.23 → 2.6.19 (CurseForge version)
-  - Stable Cam: now references CF project ID
-  - Fabric API: now references CF project ID
-  - Moonlight Lib, Supplementaries, Amendments: reverted to latest CF versions
-
-### Changed
-- **Reverted ReplayMod compatibility downgrades** - Using latest CurseForge versions:
-  - Moonlight Lib 2.28.0 → 2.29.3
-  - Supplementaries 3.4.18 → 3.5.16
-  - Amendments 2.0.8 → 2.0.13
+- **CurseForge compatibility** - All mods now use CurseForge metadata
 
 ### Notes
-- This ensures the CurseForge modpack export passes moderation
-- Only ReFramed remains as a Modrinth-only override (bundled JAR)
-- ReplayMod playback may have issues with newer Supplementaries - test before recording important content
+- Superseded by v0.9.43 - newer CF versions broke ReplayMod playback
 
 ## [0.9.41] - 2025-12-28
 

@@ -2,9 +2,11 @@
   <img src="mcc_com.png" alt="MCC Logo" width="100%">
 </p>
 
-# MCC (MinecraftCollege.com) v0.9.41
+# MCC (MinecraftCollege.com) v0.9.42
 
 A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
+
+**89 mods total** (87 client-side, 3 server-only) — see [Mod Distribution](#mod-distribution) for details.
 
 ## Features
 
@@ -228,15 +230,31 @@ After first server start, configure Discord integration:
 
 4. **Restart the server**
 
+## Mod Distribution
+
+The modpack has two exports for different purposes:
+
+| Export | Format | For | Mod Count |
+|--------|--------|-----|-----------|
+| `MCC-X.Y.Z.zip` | CurseForge | CurseForge App users | 87 mods |
+| `MCC-X.Y.Z.mrpack` | Modrinth | Prism Launcher + Server | 89 mods |
+
+**Server-only mods** (included in `.mrpack`, excluded from `.zip`):
+- **AutoWhitelist** - Discord `/register` command for whitelist
+- **Better Sleep** - Sleep voting for multiplayer nights
+- **Fabricord** - Bridges server chat ↔ Discord channel
+
+These run on the server only — players don't need them installed.
+
 ## Mod Compatibility
 
 ### Client/Server Sides
 
 | Side | Mods |
 |------|------|
-| **Client-only** | Sodium, Iris, Controlling, Mouse Tweaks |
-| **Server-only** | Flan, Universal Graves, Fabricord |
-| **Both** | Most content mods, Voice Chat, REI, JourneyMap |
+| **Client-only** | Better Third Person |
+| **Server-only** | AutoWhitelist, Better Sleep, Fabricord |
+| **Both** | Most mods (85 total) |
 
 ### Not Available for 1.21.1
 - **Create** - NeoForge only (no Fabric port)
