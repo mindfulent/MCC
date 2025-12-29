@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "layers=1": {"model": "reframed:block/layer_2"},
+    "layers=2": {"model": "reframed:block/layer_4"},
+    "layers=3": {"model": "reframed:block/slab"},
+    "layers=4": {"model": "reframed:block/slab"},
+    "layers=5": {"model": "reframed:block/slab"},
+    "layers=6": {"model": "reframed:block/slab"},
+    "layers=7": {"model": "reframed:block/slab"},
+    "layers=8": {"model": "reframed:block/cube"}
+  }
+}

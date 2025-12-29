@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "facing=down": {"model": "reframed:block/slab"},
+    "facing=up": {"model": "reframed:block/slab_top"},
+    "facing=north": {"model": "reframed:block/slab", "x": 90, "y": 180},
+    "facing=south": {"model": "reframed:block/slab", "x": 90},
+    "facing=west": {"model": "reframed:block/slab", "x": 90, "y": 90},
+    "facing=east": {"model": "reframed:block/slab", "x": 90, "y": 270}
+  }
+}
