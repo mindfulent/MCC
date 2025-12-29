@@ -257,6 +257,84 @@ Hence the need for static model fallbacks.
 
 ---
 
+## Implementation Attempts (Work in Progress)
+
+This section documents our attempts to implement the solution described above. **As of December 2024, we have not achieved full success.** The approaches below are documented for future reference.
+
+### Attempt 1: Simple Blockstates with Catch-All Variants
+
+**Approach:** Create simplified blockstates using `""` catch-all variants pointing to static models.
+
+```json
+// cube.json
+{
+  "variants": {
+    "": {"model": "reframed:block/cube"}
+  }
+}
+```
+
+**Result:** ❌ Blocks rendered invisible. The `bluemap/` override folder was missing, so the mod's original blockstates (referencing `*_special` dynamic models) took priority.
+
+### Attempt 2: Added bluemap/ Override Folder
+
+**Approach:** Place blockstates in `assets/reframed/bluemap/blockstates/` to use BlueMap's override system.
+
+**Result:** ⚠️ Partial success. Blocks were no longer invisible but rendered incorrectly (appeared as flat trapdoor-like shapes). The simplified blockstates lost rotation/orientation transforms.
+
+### Attempt 3: Preserved Original Multipart Format
+
+**Approach:** Extract original ReFramed blockstates and replace only the model references (`*_special` → `block/*`), preserving all multipart conditions, rotations, and uvlock settings.
+
+```bash
+# Conversion command used
+unzip -p ReFramed-1.6.6.jar "assets/reframed/blockstates/*.json" | \
+  sed 's/reframed:\([a-z_]*\)_special/reframed:block\/\1/g'
+```
+
+**Result:** ❌ Did not have the intended effect. Blocks still render incorrectly.
+
+### Current Pack Structure
+
+```
+config/bluemap/packs/zzz-reframed-compat/
+├── pack.mcmeta
+└── assets/reframed/
+    ├── blockstates/           # 35 files (fallback)
+    ├── bluemap/blockstates/   # 35 files (overrides, multipart format)
+    ├── models/block/          # 35 static models
+    ├── textures/block/        # 2 PNG textures (framed_block, framed_accent_block)
+    └── blockProperties.json
+```
+
+### Observations
+
+1. **BlueMap IS loading our pack** - Confirmed in debug.log
+2. **Override IS working** - Blocks changed from invisible to visible (wrong shape)
+3. **Models exist** - Static models reference vanilla parents (cube_all, slab, stairs, etc.)
+4. **Textures exist** - Frame textures extracted from ReFramed JAR
+
+### Suspected Issues
+
+1. **Model path format** - ReFramed's `*_special` models may use a different path format than standard `block/*`
+2. **Multipart vs Variants** - BlueMap may handle multipart differently than expected
+3. **Missing model files** - Our static models may not cover all the model names referenced in blockstates
+4. **Block state properties** - ReFramed uses custom properties (e.g., `edge`, `shape`) that may not map correctly
+
+### Next Steps to Investigate
+
+1. **Check what models the blockstates actually reference** - The original blockstates reference models like `reframed:slab_special` (no `block/` prefix). Need to verify if our models should match this naming.
+
+2. **Debug specific block rendering** - Use BlueMap's debug commands to see what model it's trying to use for a specific ReFramed block.
+
+3. **Compare with working examples** - Look at other BlueMap compatibility packs (like Rechiseled) to see their exact structure.
+
+4. **Check ReFramed's model structure** - The `*_special` models in ReFramed may have a different structure than standard Minecraft models.
+
+5. **Contact mod authors** - Consider reaching out to ReFramed or BlueMap developers for guidance.
+
+---
+
 ## Credits
 
 Guide created for [MCC (MinecraftCollege.com)](https://github.com/mindfulent/MCC) modpack.
