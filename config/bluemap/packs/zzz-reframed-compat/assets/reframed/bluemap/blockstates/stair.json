@@ -1,5 +1,1627 @@
 {
-  "variants": {
-    "": {"model": "reframed:block/stairs"}
-  }
+  "multipart": [
+    {
+      "apply": {
+        "model": "reframed:block/stairs",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "edge": "down_east"
+          },
+          {
+            "shape": "straight"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/stairs",
+        "uvlock": true,
+        "x": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "edge": "east_up"
+          },
+          {
+            "shape": "straight"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/stairs",
+        "uvlock": true,
+        "x": 180,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "edge": "up_west"
+          },
+          {
+            "shape": "straight"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/stairs",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "edge": "west_down"
+          },
+          {
+            "shape": "straight"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/stairs",
+        "uvlock": true,
+        "x": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "edge": "east_south"
+          },
+          {
+            "shape": "straight"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/stairs",
+        "uvlock": true,
+        "x": 90,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "edge": "south_west"
+          },
+          {
+            "shape": "straight"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/stairs",
+        "uvlock": true,
+        "x": 90,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "edge": "west_north"
+          },
+          {
+            "shape": "straight"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/stairs",
+        "uvlock": true,
+        "x": 90,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "edge": "north_east"
+          },
+          {
+            "shape": "straight"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/stairs",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "edge": "down_south"
+          },
+          {
+            "shape": "straight"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/stairs",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "edge": "north_down"
+          },
+          {
+            "shape": "straight"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/stairs",
+        "uvlock": true,
+        "x": 180,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "edge": "up_north"
+          },
+          {
+            "shape": "straight"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/stairs",
+        "uvlock": true,
+        "x": 180,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "edge": "south_up"
+          },
+          {
+            "shape": "straight"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:inner_stair_special",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "north_down"
+              },
+              {
+                "shape": "inner_right"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "west_north"
+              },
+              {
+                "shape": "inner_right"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "west_down"
+              },
+              {
+                "shape": "inner_right"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:inner_stair_special",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "north_down"
+              },
+              {
+                "shape": "inner_left"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "north_east"
+              },
+              {
+                "shape": "inner_right"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "down_east"
+              },
+              {
+                "shape": "inner_right"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:inner_stair_special",
+        "uvlock": true
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "down_south"
+              },
+              {
+                "shape": "inner_left"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "east_south"
+              },
+              {
+                "shape": "inner_right"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "down_east"
+              },
+              {
+                "shape": "inner_left"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:inner_stair_special",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "down_south"
+              },
+              {
+                "shape": "inner_right"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "south_west"
+              },
+              {
+                "shape": "inner_right"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "west_down"
+              },
+              {
+                "shape": "inner_left"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:inner_stair_special",
+        "uvlock": true,
+        "x": 180
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "east_up"
+              },
+              {
+                "shape": "inner_right"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "north_east"
+              },
+              {
+                "shape": "inner_left"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "up_north"
+              },
+              {
+                "shape": "inner_left"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:inner_stair_special",
+        "uvlock": true,
+        "x": 180,
+        "y": 90
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "east_up"
+              },
+              {
+                "shape": "inner_left"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "east_south"
+              },
+              {
+                "shape": "inner_left"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "south_up"
+              },
+              {
+                "shape": "inner_left"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:inner_stair_special",
+        "uvlock": true,
+        "x": 180,
+        "y": 180
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "south_up"
+              },
+              {
+                "shape": "inner_right"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "south_west"
+              },
+              {
+                "shape": "inner_left"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "up_west"
+              },
+              {
+                "shape": "inner_left"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:inner_stair_special",
+        "uvlock": true,
+        "x": 180,
+        "y": 270
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "up_north"
+              },
+              {
+                "shape": "inner_right"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "west_north"
+              },
+              {
+                "shape": "inner_left"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "up_west"
+              },
+              {
+                "shape": "inner_right"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:outer_stair_special",
+        "uvlock": true
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "down_south"
+              },
+              {
+                "shape": "second_outer_left"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "down_east"
+              },
+              {
+                "shape": "second_outer_left"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:outer_stair_special",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "down_south"
+              },
+              {
+                "shape": "second_outer_right"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "west_down"
+              },
+              {
+                "shape": "first_outer_left"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:outer_stair_special",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "north_down"
+              },
+              {
+                "shape": "first_outer_right"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "west_down"
+              },
+              {
+                "shape": "first_outer_right"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:outer_stair_special",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "north_down"
+              },
+              {
+                "shape": "first_outer_left"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "down_east"
+              },
+              {
+                "shape": "second_outer_right"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:outer_stair_special",
+        "uvlock": true,
+        "x": 180
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "up_north"
+              },
+              {
+                "shape": "second_outer_left"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "east_up"
+              },
+              {
+                "shape": "first_outer_right"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:outer_stair_special",
+        "uvlock": true,
+        "x": 180,
+        "y": 90
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "south_up"
+              },
+              {
+                "shape": "first_outer_left"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "east_up"
+              },
+              {
+                "shape": "first_outer_left"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:outer_stair_special",
+        "uvlock": true,
+        "x": 180,
+        "y": 180
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "south_up"
+              },
+              {
+                "shape": "first_outer_right"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "up_west"
+              },
+              {
+                "shape": "second_outer_left"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:outer_stair_special",
+        "uvlock": true,
+        "x": 180,
+        "y": 270
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "up_north"
+              },
+              {
+                "shape": "second_outer_right"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "up_west"
+              },
+              {
+                "shape": "second_outer_right"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:outer_side_stair_special",
+        "uvlock": true
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "east_south"
+              },
+              {
+                "shape": "second_outer_right"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "down_east"
+              },
+              {
+                "shape": "first_outer_left"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:outer_side_stair_special",
+        "uvlock": true,
+        "x": 90
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "east_south"
+              },
+              {
+                "shape": "second_outer_left"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "east_up"
+              },
+              {
+                "shape": "second_outer_left"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:outer_side_stair_special",
+        "uvlock": true,
+        "x": 180
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "north_east"
+              },
+              {
+                "shape": "first_outer_left"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "east_up"
+              },
+              {
+                "shape": "second_outer_right"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:outer_side_stair_special",
+        "uvlock": true,
+        "x": 270
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "north_east"
+              },
+              {
+                "shape": "first_outer_right"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "down_east"
+              },
+              {
+                "shape": "first_outer_right"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:outer_side_stair_special",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "south_west"
+              },
+              {
+                "shape": "second_outer_right"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "down_south"
+              },
+              {
+                "shape": "first_outer_right"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:outer_side_stair_special",
+        "uvlock": true,
+        "x": 90,
+        "y": 90
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "south_west"
+              },
+              {
+                "shape": "second_outer_left"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "south_up"
+              },
+              {
+                "shape": "second_outer_right"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:outer_side_stair_special",
+        "uvlock": true,
+        "x": 180,
+        "y": 90
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "east_south"
+              },
+              {
+                "shape": "first_outer_left"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "south_up"
+              },
+              {
+                "shape": "second_outer_left"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:outer_side_stair_special",
+        "uvlock": true,
+        "x": 270,
+        "y": 90
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "east_south"
+              },
+              {
+                "shape": "first_outer_right"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "down_south"
+              },
+              {
+                "shape": "first_outer_left"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:outer_side_stair_special",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "west_north"
+              },
+              {
+                "shape": "second_outer_right"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "west_down"
+              },
+              {
+                "shape": "second_outer_right"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:outer_side_stair_special",
+        "uvlock": true,
+        "x": 90,
+        "y": 180
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "west_north"
+              },
+              {
+                "shape": "second_outer_left"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "up_west"
+              },
+              {
+                "shape": "first_outer_right"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:outer_side_stair_special",
+        "uvlock": true,
+        "x": 180,
+        "y": 180
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "south_west"
+              },
+              {
+                "shape": "first_outer_left"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "up_west"
+              },
+              {
+                "shape": "first_outer_left"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:outer_side_stair_special",
+        "uvlock": true,
+        "x": 270,
+        "y": 180
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "south_west"
+              },
+              {
+                "shape": "first_outer_right"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "west_down"
+              },
+              {
+                "shape": "second_outer_left"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:outer_side_stair_special",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "north_east"
+              },
+              {
+                "shape": "second_outer_right"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "north_down"
+              },
+              {
+                "shape": "second_outer_left"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:outer_side_stair_special",
+        "uvlock": true,
+        "x": 90,
+        "y": 270
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "north_east"
+              },
+              {
+                "shape": "second_outer_left"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "up_north"
+              },
+              {
+                "shape": "first_outer_left"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:outer_side_stair_special",
+        "uvlock": true,
+        "x": 180,
+        "y": 270
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "west_north"
+              },
+              {
+                "shape": "first_outer_left"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "up_north"
+              },
+              {
+                "shape": "first_outer_right"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:outer_side_stair_special",
+        "uvlock": true,
+        "x": 270,
+        "y": 270
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "west_north"
+              },
+              {
+                "shape": "first_outer_right"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "north_down"
+              },
+              {
+                "shape": "second_outer_right"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:outers_stair_special",
+        "uvlock": true
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "down_south"
+              },
+              {
+                "shape": "outer_left"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "down_east"
+              },
+              {
+                "shape": "outer_left"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "east_south"
+              },
+              {
+                "shape": "outer_right"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:outers_stair_special",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "down_south"
+              },
+              {
+                "shape": "outer_right"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "west_down"
+              },
+              {
+                "shape": "outer_left"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "south_west"
+              },
+              {
+                "shape": "outer_right"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:outers_stair_special",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "north_down"
+              },
+              {
+                "shape": "outer_right"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "west_down"
+              },
+              {
+                "shape": "outer_right"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "west_north"
+              },
+              {
+                "shape": "outer_right"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:outers_stair_special",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "north_down"
+              },
+              {
+                "shape": "outer_left"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "down_east"
+              },
+              {
+                "shape": "outer_right"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "north_east"
+              },
+              {
+                "shape": "outer_right"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:outers_stair_special",
+        "uvlock": true,
+        "x": 180
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "up_north"
+              },
+              {
+                "shape": "outer_left"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "east_up"
+              },
+              {
+                "shape": "outer_right"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "north_east"
+              },
+              {
+                "shape": "outer_left"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:outers_stair_special",
+        "uvlock": true,
+        "x": 180,
+        "y": 90
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "south_up"
+              },
+              {
+                "shape": "outer_left"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "east_up"
+              },
+              {
+                "shape": "outer_left"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "east_south"
+              },
+              {
+                "shape": "outer_left"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:outers_stair_special",
+        "uvlock": true,
+        "x": 180,
+        "y": 180
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "south_up"
+              },
+              {
+                "shape": "outer_right"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "up_west"
+              },
+              {
+                "shape": "outer_left"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "south_west"
+              },
+              {
+                "shape": "outer_left"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:outers_stair_special",
+        "uvlock": true,
+        "x": 180,
+        "y": 270
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "edge": "up_north"
+              },
+              {
+                "shape": "outer_right"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "up_west"
+              },
+              {
+                "shape": "outer_right"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "edge": "west_north"
+              },
+              {
+                "shape": "outer_left"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
 }

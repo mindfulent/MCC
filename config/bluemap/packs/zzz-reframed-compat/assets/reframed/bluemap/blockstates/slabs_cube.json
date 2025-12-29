@@ -1,5 +1,34 @@
 {
-  "variants": {
-    "": {"model": "reframed:block/cube"}
-  }
+  "multipart": [
+    {
+      "apply": {
+        "model": "reframed:block/double_slab",
+        "uvlock": true
+      },
+      "when": {
+        "axis": "y"
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/double_slab",
+        "uvlock": true,
+        "x": 270
+      },
+      "when": {
+        "axis": "z"
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/double_slab",
+        "uvlock": true,
+        "x": 90,
+        "y": 90
+      },
+      "when": {
+        "axis": "x"
+      }
+    }
+  ]
 }

@@ -1,5 +1,214 @@
 {
-  "variants": {
-    "": {"model": "reframed:block/slab"}
-  }
+  "multipart": [
+    {
+      "apply": {
+        "model": "reframed:block/steps_slab",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "down"
+          },
+          {
+            "axis": "x"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/steps_slab",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "down"
+          },
+          {
+            "axis": "z"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/steps_slab",
+        "uvlock": true,
+        "x": 180,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "up"
+          },
+          {
+            "axis": "x"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/steps_slab",
+        "uvlock": true,
+        "x": 180,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "up"
+          },
+          {
+            "axis": "z"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/steps_slab_side",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "east"
+          },
+          {
+            "axis": "z"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/steps_slab_side",
+        "uvlock": true,
+        "x": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "east"
+          },
+          {
+            "axis": "y"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/steps_slab_side",
+        "uvlock": true,
+        "x": 180,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "south"
+          },
+          {
+            "axis": "x"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/steps_slab_side",
+        "uvlock": true,
+        "x": 90,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "south"
+          },
+          {
+            "axis": "y"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/steps_slab_side",
+        "uvlock": true,
+        "x": 180,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "west"
+          },
+          {
+            "axis": "z"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/steps_slab_side",
+        "uvlock": true,
+        "x": 90,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "west"
+          },
+          {
+            "axis": "y"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/steps_slab_side",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "north"
+          },
+          {
+            "axis": "x"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/steps_slab_side",
+        "uvlock": true,
+        "x": 90,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "north"
+          },
+          {
+            "axis": "y"
+          }
+        ]
+      }
+    }
+  ]
 }

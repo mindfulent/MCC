@@ -1,5 +1,86 @@
 {
-  "variants": {
-    "": {"model": "reframed:block/small_cube"}
-  }
+  "multipart": [
+    {
+      "apply": {
+        "model": "reframed:block/small_cube",
+        "uvlock": true
+      },
+      "when": {
+        "corner": "north_east_down"
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/small_cube",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "corner": "east_south_down"
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/small_cube",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "corner": "south_west_down"
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/small_cube",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "corner": "west_north_down"
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/small_cube",
+        "uvlock": true,
+        "x": 180
+      },
+      "when": {
+        "corner": "east_south_up"
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/small_cube",
+        "uvlock": true,
+        "x": 180,
+        "y": 90
+      },
+      "when": {
+        "corner": "south_west_up"
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/small_cube",
+        "uvlock": true,
+        "x": 180,
+        "y": 180
+      },
+      "when": {
+        "corner": "west_north_up"
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/small_cube",
+        "uvlock": true,
+        "x": 180,
+        "y": 270
+      },
+      "when": {
+        "corner": "north_east_up"
+      }
+    }
+  ]
 }

@@ -1,5 +1,8 @@
 {
   "variants": {
-    "": {"model": "reframed:block/cube"}
+    "": {
+      "model": "reframed:block/cube",
+      "uvlock": true
+    }
   }
 }

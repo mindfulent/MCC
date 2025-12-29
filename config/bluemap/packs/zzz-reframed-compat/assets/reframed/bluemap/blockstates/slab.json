@@ -1,10 +1,65 @@
 {
-  "variants": {
-    "facing=down": {"model": "reframed:block/slab"},
-    "facing=up": {"model": "reframed:block/slab_top"},
-    "facing=north": {"model": "reframed:block/slab", "x": 90, "y": 180},
-    "facing=south": {"model": "reframed:block/slab", "x": 90},
-    "facing=west": {"model": "reframed:block/slab", "x": 90, "y": 90},
-    "facing=east": {"model": "reframed:block/slab", "x": 90, "y": 270}
-  }
+  "multipart": [
+    {
+      "apply": {
+        "model": "reframed:block/slab",
+        "uvlock": true
+      },
+      "when": {
+        "facing": "down"
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/slab",
+        "uvlock": true,
+        "x": 90
+      },
+      "when": {
+        "facing": "south"
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/slab",
+        "uvlock": true,
+        "x": 180
+      },
+      "when": {
+        "facing": "up"
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/slab",
+        "uvlock": true,
+        "x": 270
+      },
+      "when": {
+        "facing": "north"
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/slab",
+        "uvlock": true,
+        "x": 90,
+        "y": 90
+      },
+      "when": {
+        "facing": "west"
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/slab",
+        "uvlock": true,
+        "x": 90,
+        "y": 270
+      },
+      "when": {
+        "facing": "east"
+      }
+    }
+  ]
 }

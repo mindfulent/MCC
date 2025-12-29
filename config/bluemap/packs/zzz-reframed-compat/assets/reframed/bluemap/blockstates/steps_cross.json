@@ -1,5 +1,129 @@
 {
-  "variants": {
-    "": {"model": "reframed:block/slab"}
-  }
+  "multipart": [
+    {
+      "apply": {
+        "model": "reframed:block/steps_cross",
+        "uvlock": true
+      },
+      "when": {
+        "edge": "down_east"
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/steps_cross",
+        "uvlock": true,
+        "x": 180
+      },
+      "when": {
+        "edge": "east_up"
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/steps_cross",
+        "uvlock": true,
+        "x": 180,
+        "y": 180
+      },
+      "when": {
+        "edge": "up_west"
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/steps_cross",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "edge": "west_down"
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/steps_cross",
+        "uvlock": true,
+        "x": 90
+      },
+      "when": {
+        "edge": "east_south"
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/steps_cross",
+        "uvlock": true,
+        "x": 90,
+        "y": 90
+      },
+      "when": {
+        "edge": "south_west"
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/steps_cross",
+        "uvlock": true,
+        "x": 90,
+        "y": 180
+      },
+      "when": {
+        "edge": "west_north"
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/steps_cross",
+        "uvlock": true,
+        "x": 90,
+        "y": 270
+      },
+      "when": {
+        "edge": "north_east"
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/steps_cross",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "edge": "down_south"
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/steps_cross",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "edge": "north_down"
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/steps_cross",
+        "uvlock": true,
+        "x": 180,
+        "y": 270
+      },
+      "when": {
+        "edge": "up_north"
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/steps_cross",
+        "uvlock": true,
+        "x": 180,
+        "y": 90
+      },
+      "when": {
+        "edge": "south_up"
+      }
+    }
+  ]
 }

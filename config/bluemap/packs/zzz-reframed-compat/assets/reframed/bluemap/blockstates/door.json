@@ -1,36 +1,191 @@
 {
-  "variants": {
-    "facing=east,half=lower,hinge=left,open=false": {"model": "reframed:block/door_bottom_left"},
-    "facing=south,half=lower,hinge=left,open=false": {"model": "reframed:block/door_bottom_left", "y": 90},
-    "facing=west,half=lower,hinge=left,open=false": {"model": "reframed:block/door_bottom_left", "y": 180},
-    "facing=north,half=lower,hinge=left,open=false": {"model": "reframed:block/door_bottom_left", "y": 270},
-    "facing=east,half=lower,hinge=right,open=false": {"model": "reframed:block/door_bottom_right"},
-    "facing=south,half=lower,hinge=right,open=false": {"model": "reframed:block/door_bottom_right", "y": 90},
-    "facing=west,half=lower,hinge=right,open=false": {"model": "reframed:block/door_bottom_right", "y": 180},
-    "facing=north,half=lower,hinge=right,open=false": {"model": "reframed:block/door_bottom_right", "y": 270},
-    "facing=east,half=lower,hinge=left,open=true": {"model": "reframed:block/door_bottom_left_open", "y": 90},
-    "facing=south,half=lower,hinge=left,open=true": {"model": "reframed:block/door_bottom_left_open", "y": 180},
-    "facing=west,half=lower,hinge=left,open=true": {"model": "reframed:block/door_bottom_left_open", "y": 270},
-    "facing=north,half=lower,hinge=left,open=true": {"model": "reframed:block/door_bottom_left_open"},
-    "facing=east,half=lower,hinge=right,open=true": {"model": "reframed:block/door_bottom_right_open", "y": 270},
-    "facing=south,half=lower,hinge=right,open=true": {"model": "reframed:block/door_bottom_right_open"},
-    "facing=west,half=lower,hinge=right,open=true": {"model": "reframed:block/door_bottom_right_open", "y": 90},
-    "facing=north,half=lower,hinge=right,open=true": {"model": "reframed:block/door_bottom_right_open", "y": 180},
-    "facing=east,half=upper,hinge=left,open=false": {"model": "reframed:block/door_top_left"},
-    "facing=south,half=upper,hinge=left,open=false": {"model": "reframed:block/door_top_left", "y": 90},
-    "facing=west,half=upper,hinge=left,open=false": {"model": "reframed:block/door_top_left", "y": 180},
-    "facing=north,half=upper,hinge=left,open=false": {"model": "reframed:block/door_top_left", "y": 270},
-    "facing=east,half=upper,hinge=right,open=false": {"model": "reframed:block/door_top_right"},
-    "facing=south,half=upper,hinge=right,open=false": {"model": "reframed:block/door_top_right", "y": 90},
-    "facing=west,half=upper,hinge=right,open=false": {"model": "reframed:block/door_top_right", "y": 180},
-    "facing=north,half=upper,hinge=right,open=false": {"model": "reframed:block/door_top_right", "y": 270},
-    "facing=east,half=upper,hinge=left,open=true": {"model": "reframed:block/door_top_left_open", "y": 90},
-    "facing=south,half=upper,hinge=left,open=true": {"model": "reframed:block/door_top_left_open", "y": 180},
-    "facing=west,half=upper,hinge=left,open=true": {"model": "reframed:block/door_top_left_open", "y": 270},
-    "facing=north,half=upper,hinge=left,open=true": {"model": "reframed:block/door_top_left_open"},
-    "facing=east,half=upper,hinge=right,open=true": {"model": "reframed:block/door_top_right_open", "y": 270},
-    "facing=south,half=upper,hinge=right,open=true": {"model": "reframed:block/door_top_right_open"},
-    "facing=west,half=upper,hinge=right,open=true": {"model": "reframed:block/door_top_right_open", "y": 90},
-    "facing=north,half=upper,hinge=right,open=true": {"model": "reframed:block/door_top_right_open", "y": 180}
-  }
+  "multipart": [
+    {
+      "apply": {
+        "model": "reframed:block/trapdoor_open",
+        "uvlock": true
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "open": "false"
+              },
+              {
+                "facing": "south"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "open": "true"
+              },
+              {
+                "facing": "east"
+              },
+              {
+                "hinge": "left"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "open": "true"
+              },
+              {
+                "facing": "west"
+              },
+              {
+                "hinge": "right"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/trapdoor_open",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "open": "false"
+              },
+              {
+                "facing": "west"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "open": "true"
+              },
+              {
+                "facing": "south"
+              },
+              {
+                "hinge": "left"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "open": "true"
+              },
+              {
+                "facing": "north"
+              },
+              {
+                "hinge": "right"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/trapdoor_open",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "open": "false"
+              },
+              {
+                "facing": "north"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "open": "true"
+              },
+              {
+                "facing": "west"
+              },
+              {
+                "hinge": "left"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "open": "true"
+              },
+              {
+                "facing": "east"
+              },
+              {
+                "hinge": "right"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/trapdoor_open",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "OR": [
+          {
+            "AND": [
+              {
+                "open": "false"
+              },
+              {
+                "facing": "east"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "open": "true"
+              },
+              {
+                "facing": "north"
+              },
+              {
+                "hinge": "left"
+              }
+            ]
+          },
+          {
+            "AND": [
+              {
+                "open": "true"
+              },
+              {
+                "facing": "south"
+              },
+              {
+                "hinge": "right"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
 }

@@ -1,12 +1,828 @@
 {
-  "variants": {
-    "layers=1": {"model": "reframed:block/layer_2"},
-    "layers=2": {"model": "reframed:block/layer_4"},
-    "layers=3": {"model": "reframed:block/slab"},
-    "layers=4": {"model": "reframed:block/slab"},
-    "layers=5": {"model": "reframed:block/slab"},
-    "layers=6": {"model": "reframed:block/slab"},
-    "layers=7": {"model": "reframed:block/slab"},
-    "layers=8": {"model": "reframed:block/cube"}
-  }
+  "multipart": [
+    {
+      "apply": {
+        "model": "reframed:layer_1_special",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "down"
+          },
+          {
+            "layers": "1"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_1_special",
+        "uvlock": true,
+        "x": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "south"
+          },
+          {
+            "layers": "1"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_1_special",
+        "uvlock": true,
+        "x": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "up"
+          },
+          {
+            "layers": "1"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_1_special",
+        "uvlock": true,
+        "x": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "north"
+          },
+          {
+            "layers": "1"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_1_special",
+        "uvlock": true,
+        "x": 90,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "west"
+          },
+          {
+            "layers": "1"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_1_special",
+        "uvlock": true,
+        "x": 90,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "east"
+          },
+          {
+            "layers": "1"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_2_special",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "down"
+          },
+          {
+            "layers": "2"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_2_special",
+        "uvlock": true,
+        "x": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "south"
+          },
+          {
+            "layers": "2"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_2_special",
+        "uvlock": true,
+        "x": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "up"
+          },
+          {
+            "layers": "2"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_2_special",
+        "uvlock": true,
+        "x": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "north"
+          },
+          {
+            "layers": "2"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_2_special",
+        "uvlock": true,
+        "x": 90,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "west"
+          },
+          {
+            "layers": "2"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_2_special",
+        "uvlock": true,
+        "x": 90,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "east"
+          },
+          {
+            "layers": "2"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_3_special",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "down"
+          },
+          {
+            "layers": "3"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_3_special",
+        "uvlock": true,
+        "x": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "south"
+          },
+          {
+            "layers": "3"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_3_special",
+        "uvlock": true,
+        "x": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "up"
+          },
+          {
+            "layers": "3"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_3_special",
+        "uvlock": true,
+        "x": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "north"
+          },
+          {
+            "layers": "3"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_3_special",
+        "uvlock": true,
+        "x": 90,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "west"
+          },
+          {
+            "layers": "3"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_3_special",
+        "uvlock": true,
+        "x": 90,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "east"
+          },
+          {
+            "layers": "3"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_4_special",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "down"
+          },
+          {
+            "layers": "4"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_4_special",
+        "uvlock": true,
+        "x": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "south"
+          },
+          {
+            "layers": "4"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_4_special",
+        "uvlock": true,
+        "x": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "up"
+          },
+          {
+            "layers": "4"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_4_special",
+        "uvlock": true,
+        "x": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "north"
+          },
+          {
+            "layers": "4"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_4_special",
+        "uvlock": true,
+        "x": 90,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "west"
+          },
+          {
+            "layers": "4"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_4_special",
+        "uvlock": true,
+        "x": 90,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "east"
+          },
+          {
+            "layers": "4"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_5_special",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "down"
+          },
+          {
+            "layers": "5"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_5_special",
+        "uvlock": true,
+        "x": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "south"
+          },
+          {
+            "layers": "5"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_5_special",
+        "uvlock": true,
+        "x": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "up"
+          },
+          {
+            "layers": "5"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_5_special",
+        "uvlock": true,
+        "x": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "north"
+          },
+          {
+            "layers": "5"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_5_special",
+        "uvlock": true,
+        "x": 90,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "west"
+          },
+          {
+            "layers": "5"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_5_special",
+        "uvlock": true,
+        "x": 90,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "east"
+          },
+          {
+            "layers": "5"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_6_special",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "down"
+          },
+          {
+            "layers": "6"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_6_special",
+        "uvlock": true,
+        "x": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "south"
+          },
+          {
+            "layers": "6"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_6_special",
+        "uvlock": true,
+        "x": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "up"
+          },
+          {
+            "layers": "6"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_6_special",
+        "uvlock": true,
+        "x": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "north"
+          },
+          {
+            "layers": "6"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_6_special",
+        "uvlock": true,
+        "x": 90,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "west"
+          },
+          {
+            "layers": "6"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_6_special",
+        "uvlock": true,
+        "x": 90,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "east"
+          },
+          {
+            "layers": "6"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_7_special",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "down"
+          },
+          {
+            "layers": "7"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_7_special",
+        "uvlock": true,
+        "x": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "south"
+          },
+          {
+            "layers": "7"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_7_special",
+        "uvlock": true,
+        "x": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "up"
+          },
+          {
+            "layers": "7"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_7_special",
+        "uvlock": true,
+        "x": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "north"
+          },
+          {
+            "layers": "7"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_7_special",
+        "uvlock": true,
+        "x": 90,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "west"
+          },
+          {
+            "layers": "7"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_7_special",
+        "uvlock": true,
+        "x": 90,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "east"
+          },
+          {
+            "layers": "7"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_8_special",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "down"
+          },
+          {
+            "layers": "8"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_8_special",
+        "uvlock": true,
+        "x": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "south"
+          },
+          {
+            "layers": "8"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_8_special",
+        "uvlock": true,
+        "x": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "up"
+          },
+          {
+            "layers": "8"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_8_special",
+        "uvlock": true,
+        "x": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "north"
+          },
+          {
+            "layers": "8"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_8_special",
+        "uvlock": true,
+        "x": 90,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "west"
+          },
+          {
+            "layers": "8"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:layer_8_special",
+        "uvlock": true,
+        "x": 90,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "facing": "east"
+          },
+          {
+            "layers": "8"
+          }
+        ]
+      }
+    }
+  ]
 }

@@ -1,13 +1,2349 @@
 {
   "multipart": [
-    {"when": {"up": "true"}, "apply": {"model": "reframed:block/wall_post"}},
-    {"when": {"north": "low"}, "apply": {"model": "reframed:block/wall_side", "uvlock": true}},
-    {"when": {"east": "low"}, "apply": {"model": "reframed:block/wall_side", "y": 90, "uvlock": true}},
-    {"when": {"south": "low"}, "apply": {"model": "reframed:block/wall_side", "y": 180, "uvlock": true}},
-    {"when": {"west": "low"}, "apply": {"model": "reframed:block/wall_side", "y": 270, "uvlock": true}},
-    {"when": {"north": "tall"}, "apply": {"model": "reframed:block/wall_side_tall", "uvlock": true}},
-    {"when": {"east": "tall"}, "apply": {"model": "reframed:block/wall_side_tall", "y": 90, "uvlock": true}},
-    {"when": {"south": "tall"}, "apply": {"model": "reframed:block/wall_side_tall", "y": 180, "uvlock": true}},
-    {"when": {"west": "tall"}, "apply": {"model": "reframed:block/wall_side_tall", "y": 270, "uvlock": true}}
+    {
+      "apply": {
+        "model": "reframed:block/wall_core",
+        "uvlock": true
+      },
+      "when": {
+        "up": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_side_low",
+        "uvlock": true
+      },
+      "when": {
+        "north": "low"
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_side_low",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "east": "low"
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_side_low",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "south": "low"
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_side_low",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "west": "low"
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_side_tall",
+        "uvlock": true
+      },
+      "when": {
+        "north": "tall"
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_side_tall",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "east": "tall"
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_side_tall",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "south": "tall"
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_side_tall",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "west": "tall"
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_pillar_low",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "low"
+          },
+          {
+            "up": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_pillar_low",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "east": "low"
+          },
+          {
+            "up": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_pillar_low",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "south": "low"
+          },
+          {
+            "up": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_pillar_low",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "west": "low"
+          },
+          {
+            "up": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_pillar_tall",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "tall"
+          },
+          {
+            "up": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_pillar_tall",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "east": "tall"
+          },
+          {
+            "up": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_pillar_tall",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "south": "tall"
+          },
+          {
+            "up": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_pillar_tall",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "west": "tall"
+          },
+          {
+            "up": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_pillar_none",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "none"
+          },
+          {
+            "up": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_pillar_none",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "east": "none"
+          },
+          {
+            "up": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_pillar_none",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "south": "none"
+          },
+          {
+            "up": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_pillar_none",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "west": "none"
+          },
+          {
+            "up": "true"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_low_e",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "low"
+          },
+          {
+            "east": "none"
+          },
+          {
+            "south": "none"
+          },
+          {
+            "west": "none"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_low_e",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "none"
+          },
+          {
+            "east": "low"
+          },
+          {
+            "south": "none"
+          },
+          {
+            "west": "none"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_low_e",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "none"
+          },
+          {
+            "east": "none"
+          },
+          {
+            "south": "low"
+          },
+          {
+            "west": "none"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_low_e",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "none"
+          },
+          {
+            "east": "none"
+          },
+          {
+            "south": "none"
+          },
+          {
+            "west": "low"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_e",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "tall"
+          },
+          {
+            "east": "none"
+          },
+          {
+            "south": "none"
+          },
+          {
+            "west": "none"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_e",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "none"
+          },
+          {
+            "east": "tall"
+          },
+          {
+            "south": "none"
+          },
+          {
+            "west": "none"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_e",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "none"
+          },
+          {
+            "east": "none"
+          },
+          {
+            "south": "tall"
+          },
+          {
+            "west": "none"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_e",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "none"
+          },
+          {
+            "east": "none"
+          },
+          {
+            "south": "none"
+          },
+          {
+            "west": "tall"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_low_i",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "low"
+          },
+          {
+            "east": "none"
+          },
+          {
+            "south": "low"
+          },
+          {
+            "west": "none"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_low_i",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "none"
+          },
+          {
+            "east": "low"
+          },
+          {
+            "south": "none"
+          },
+          {
+            "west": "low"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_i",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "tall"
+          },
+          {
+            "east": "none"
+          },
+          {
+            "south": "tall"
+          },
+          {
+            "west": "none"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_i",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "none"
+          },
+          {
+            "east": "tall"
+          },
+          {
+            "south": "none"
+          },
+          {
+            "west": "tall"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_low_tall_i",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "low"
+          },
+          {
+            "east": "none"
+          },
+          {
+            "south": "tall"
+          },
+          {
+            "west": "none"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_low_tall_i",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "none"
+          },
+          {
+            "east": "low"
+          },
+          {
+            "south": "none"
+          },
+          {
+            "west": "tall"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_low_tall_i",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "tall"
+          },
+          {
+            "east": "none"
+          },
+          {
+            "south": "low"
+          },
+          {
+            "west": "none"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_low_tall_i",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "none"
+          },
+          {
+            "east": "tall"
+          },
+          {
+            "south": "none"
+          },
+          {
+            "west": "low"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_low_c",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "low"
+          },
+          {
+            "east": "none"
+          },
+          {
+            "south": "none"
+          },
+          {
+            "west": "low"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_low_c",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "low"
+          },
+          {
+            "east": "low"
+          },
+          {
+            "south": "none"
+          },
+          {
+            "west": "none"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_low_c",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "none"
+          },
+          {
+            "east": "low"
+          },
+          {
+            "south": "low"
+          },
+          {
+            "west": "none"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_low_c",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "none"
+          },
+          {
+            "east": "none"
+          },
+          {
+            "south": "low"
+          },
+          {
+            "west": "low"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_c",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "tall"
+          },
+          {
+            "east": "none"
+          },
+          {
+            "south": "none"
+          },
+          {
+            "west": "tall"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_c",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "tall"
+          },
+          {
+            "east": "tall"
+          },
+          {
+            "south": "none"
+          },
+          {
+            "west": "none"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_c",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "none"
+          },
+          {
+            "east": "tall"
+          },
+          {
+            "south": "tall"
+          },
+          {
+            "west": "none"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_c",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "none"
+          },
+          {
+            "east": "none"
+          },
+          {
+            "south": "tall"
+          },
+          {
+            "west": "tall"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_low_tall_c",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "low"
+          },
+          {
+            "east": "none"
+          },
+          {
+            "south": "none"
+          },
+          {
+            "west": "tall"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_low_tall_c",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "tall"
+          },
+          {
+            "east": "low"
+          },
+          {
+            "south": "none"
+          },
+          {
+            "west": "none"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_low_tall_c",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "none"
+          },
+          {
+            "east": "tall"
+          },
+          {
+            "south": "low"
+          },
+          {
+            "west": "none"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_low_tall_c",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "none"
+          },
+          {
+            "east": "none"
+          },
+          {
+            "south": "tall"
+          },
+          {
+            "west": "low"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_low_c",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "tall"
+          },
+          {
+            "east": "none"
+          },
+          {
+            "south": "none"
+          },
+          {
+            "west": "low"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_low_c",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "low"
+          },
+          {
+            "east": "tall"
+          },
+          {
+            "south": "none"
+          },
+          {
+            "west": "none"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_low_c",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "none"
+          },
+          {
+            "east": "low"
+          },
+          {
+            "south": "tall"
+          },
+          {
+            "west": "none"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_low_c",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "none"
+          },
+          {
+            "east": "none"
+          },
+          {
+            "south": "low"
+          },
+          {
+            "west": "tall"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_low_t",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "low"
+          },
+          {
+            "east": "low"
+          },
+          {
+            "south": "none"
+          },
+          {
+            "west": "low"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_low_t",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "low"
+          },
+          {
+            "east": "low"
+          },
+          {
+            "south": "low"
+          },
+          {
+            "west": "none"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_low_t",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "none"
+          },
+          {
+            "east": "low"
+          },
+          {
+            "south": "low"
+          },
+          {
+            "west": "low"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_low_t",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "low"
+          },
+          {
+            "east": "none"
+          },
+          {
+            "south": "low"
+          },
+          {
+            "west": "low"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_t",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "tall"
+          },
+          {
+            "east": "tall"
+          },
+          {
+            "south": "none"
+          },
+          {
+            "west": "tall"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_t",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "tall"
+          },
+          {
+            "east": "tall"
+          },
+          {
+            "south": "tall"
+          },
+          {
+            "west": "none"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_t",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "none"
+          },
+          {
+            "east": "tall"
+          },
+          {
+            "south": "tall"
+          },
+          {
+            "west": "tall"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_t",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "tall"
+          },
+          {
+            "east": "none"
+          },
+          {
+            "south": "tall"
+          },
+          {
+            "west": "tall"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_low_c_t",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "low"
+          },
+          {
+            "east": "tall"
+          },
+          {
+            "south": "none"
+          },
+          {
+            "west": "low"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_low_c_t",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "low"
+          },
+          {
+            "east": "low"
+          },
+          {
+            "south": "tall"
+          },
+          {
+            "west": "none"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_low_c_t",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "none"
+          },
+          {
+            "east": "low"
+          },
+          {
+            "south": "low"
+          },
+          {
+            "west": "tall"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_low_c_t",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "tall"
+          },
+          {
+            "east": "none"
+          },
+          {
+            "south": "low"
+          },
+          {
+            "west": "low"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_i_low_t",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "low"
+          },
+          {
+            "east": "tall"
+          },
+          {
+            "south": "none"
+          },
+          {
+            "west": "tall"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_i_low_t",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "tall"
+          },
+          {
+            "east": "low"
+          },
+          {
+            "south": "tall"
+          },
+          {
+            "west": "none"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_i_low_t",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "none"
+          },
+          {
+            "east": "tall"
+          },
+          {
+            "south": "low"
+          },
+          {
+            "west": "tall"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_i_low_t",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "tall"
+          },
+          {
+            "east": "none"
+          },
+          {
+            "south": "tall"
+          },
+          {
+            "west": "low"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_low_i_tall_t",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "tall"
+          },
+          {
+            "east": "low"
+          },
+          {
+            "south": "none"
+          },
+          {
+            "west": "low"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_low_i_tall_t",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "low"
+          },
+          {
+            "east": "tall"
+          },
+          {
+            "south": "low"
+          },
+          {
+            "west": "none"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_low_i_tall_t",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "none"
+          },
+          {
+            "east": "low"
+          },
+          {
+            "south": "tall"
+          },
+          {
+            "west": "low"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_low_i_tall_t",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "low"
+          },
+          {
+            "east": "none"
+          },
+          {
+            "south": "low"
+          },
+          {
+            "west": "tall"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_low_tall_c_t",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "tall"
+          },
+          {
+            "east": "low"
+          },
+          {
+            "south": "none"
+          },
+          {
+            "west": "tall"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_low_tall_c_t",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "tall"
+          },
+          {
+            "east": "tall"
+          },
+          {
+            "south": "low"
+          },
+          {
+            "west": "none"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_low_tall_c_t",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "none"
+          },
+          {
+            "east": "tall"
+          },
+          {
+            "south": "tall"
+          },
+          {
+            "west": "low"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_low_tall_c_t",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "low"
+          },
+          {
+            "east": "none"
+          },
+          {
+            "south": "tall"
+          },
+          {
+            "west": "tall"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_low_c_tall_t",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "low"
+          },
+          {
+            "east": "low"
+          },
+          {
+            "south": "none"
+          },
+          {
+            "west": "tall"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_low_c_tall_t",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "tall"
+          },
+          {
+            "east": "low"
+          },
+          {
+            "south": "low"
+          },
+          {
+            "west": "none"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_low_c_tall_t",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "none"
+          },
+          {
+            "east": "tall"
+          },
+          {
+            "south": "low"
+          },
+          {
+            "west": "low"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_low_c_tall_t",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "low"
+          },
+          {
+            "east": "none"
+          },
+          {
+            "south": "tall"
+          },
+          {
+            "west": "low"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_c_low_t",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "tall"
+          },
+          {
+            "east": "tall"
+          },
+          {
+            "south": "none"
+          },
+          {
+            "west": "low"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_c_low_t",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "low"
+          },
+          {
+            "east": "tall"
+          },
+          {
+            "south": "tall"
+          },
+          {
+            "west": "none"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_c_low_t",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "none"
+          },
+          {
+            "east": "low"
+          },
+          {
+            "south": "tall"
+          },
+          {
+            "west": "tall"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_c_low_t",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "tall"
+          },
+          {
+            "east": "none"
+          },
+          {
+            "south": "low"
+          },
+          {
+            "west": "tall"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_low_x",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "low"
+          },
+          {
+            "east": "low"
+          },
+          {
+            "south": "low"
+          },
+          {
+            "west": "low"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_x",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "tall"
+          },
+          {
+            "east": "tall"
+          },
+          {
+            "south": "tall"
+          },
+          {
+            "west": "tall"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_i_low_i_x",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "low"
+          },
+          {
+            "east": "tall"
+          },
+          {
+            "south": "low"
+          },
+          {
+            "west": "tall"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_i_low_i_x",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "tall"
+          },
+          {
+            "east": "low"
+          },
+          {
+            "south": "tall"
+          },
+          {
+            "west": "low"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_low_t_x",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "low"
+          },
+          {
+            "east": "tall"
+          },
+          {
+            "south": "low"
+          },
+          {
+            "west": "low"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_low_t_x",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "low"
+          },
+          {
+            "east": "low"
+          },
+          {
+            "south": "tall"
+          },
+          {
+            "west": "low"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_low_t_x",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "low"
+          },
+          {
+            "east": "low"
+          },
+          {
+            "south": "low"
+          },
+          {
+            "west": "tall"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_low_t_x",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "tall"
+          },
+          {
+            "east": "low"
+          },
+          {
+            "south": "low"
+          },
+          {
+            "west": "low"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_c_low_c_x",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "tall"
+          },
+          {
+            "east": "tall"
+          },
+          {
+            "south": "low"
+          },
+          {
+            "west": "low"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_c_low_c_x",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "low"
+          },
+          {
+            "east": "tall"
+          },
+          {
+            "south": "tall"
+          },
+          {
+            "west": "low"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_c_low_c_x",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "low"
+          },
+          {
+            "east": "low"
+          },
+          {
+            "south": "tall"
+          },
+          {
+            "west": "tall"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_c_low_c_x",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "tall"
+          },
+          {
+            "east": "low"
+          },
+          {
+            "south": "low"
+          },
+          {
+            "west": "tall"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_t_low_x",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "tall"
+          },
+          {
+            "east": "tall"
+          },
+          {
+            "south": "low"
+          },
+          {
+            "west": "tall"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_t_low_x",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "tall"
+          },
+          {
+            "east": "tall"
+          },
+          {
+            "south": "tall"
+          },
+          {
+            "west": "low"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_t_low_x",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "low"
+          },
+          {
+            "east": "tall"
+          },
+          {
+            "south": "tall"
+          },
+          {
+            "west": "tall"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:block/wall_tall_t_low_x",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "north": "tall"
+          },
+          {
+            "east": "low"
+          },
+          {
+            "south": "tall"
+          },
+          {
+            "west": "tall"
+          },
+          {
+            "up": "false"
+          }
+        ]
+      }
+    }
   ]
 }

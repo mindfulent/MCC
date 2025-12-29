@@ -1,5 +1,984 @@
 {
-  "variants": {
-    "": {"model": "reframed:block/stairs"}
-  }
+  "multipart": [
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_1_special",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "east_south_down"
+          },
+          {
+            "face": "2"
+          },
+          {
+            "corner_feature": "0"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_1_special",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "south_west_down"
+          },
+          {
+            "face": "2"
+          },
+          {
+            "corner_feature": "0"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_1_special",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "west_north_down"
+          },
+          {
+            "face": "2"
+          },
+          {
+            "corner_feature": "0"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_1_special",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "north_east_down"
+          },
+          {
+            "face": "2"
+          },
+          {
+            "corner_feature": "0"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_2_special",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "east_south_down"
+          },
+          {
+            "face": "2"
+          },
+          {
+            "corner_feature": "1"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_2_special",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "south_west_down"
+          },
+          {
+            "face": "2"
+          },
+          {
+            "corner_feature": "1"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_2_special",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "west_north_down"
+          },
+          {
+            "face": "2"
+          },
+          {
+            "corner_feature": "1"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_2_special",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "north_east_down"
+          },
+          {
+            "face": "2"
+          },
+          {
+            "corner_feature": "1"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_1_special",
+        "uvlock": true,
+        "x": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "north_east_up"
+          },
+          {
+            "face": "2"
+          },
+          {
+            "corner_feature": "1"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_1_special",
+        "uvlock": true,
+        "x": 180,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "east_south_up"
+          },
+          {
+            "face": "2"
+          },
+          {
+            "corner_feature": "1"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_1_special",
+        "uvlock": true,
+        "x": 180,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "south_west_up"
+          },
+          {
+            "face": "2"
+          },
+          {
+            "corner_feature": "1"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_1_special",
+        "uvlock": true,
+        "x": 180,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "west_north_up"
+          },
+          {
+            "face": "2"
+          },
+          {
+            "corner_feature": "1"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_2_special",
+        "uvlock": true,
+        "x": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "north_east_up"
+          },
+          {
+            "face": "2"
+          },
+          {
+            "corner_feature": "0"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_2_special",
+        "uvlock": true,
+        "x": 180,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "east_south_up"
+          },
+          {
+            "face": "2"
+          },
+          {
+            "corner_feature": "0"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_2_special",
+        "uvlock": true,
+        "x": 180,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "south_west_up"
+          },
+          {
+            "face": "2"
+          },
+          {
+            "corner_feature": "0"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_2_special",
+        "uvlock": true,
+        "x": 180,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "west_north_up"
+          },
+          {
+            "face": "2"
+          },
+          {
+            "corner_feature": "0"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_side_1_special",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "east_south_down"
+          },
+          {
+            "face": "0"
+          },
+          {
+            "corner_feature": "0"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_side_1_special",
+        "uvlock": true,
+        "x": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "east_south_up"
+          },
+          {
+            "face": "0"
+          },
+          {
+            "corner_feature": "1"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_side_1_special",
+        "uvlock": true,
+        "x": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "north_east_up"
+          },
+          {
+            "face": "1"
+          },
+          {
+            "corner_feature": "0"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_side_1_special",
+        "uvlock": true,
+        "x": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "north_east_down"
+          },
+          {
+            "face": "1"
+          },
+          {
+            "corner_feature": "1"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_side_2_special",
+        "uvlock": true
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "east_south_down"
+          },
+          {
+            "face": "0"
+          },
+          {
+            "corner_feature": "1"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_side_2_special",
+        "uvlock": true,
+        "x": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "east_south_up"
+          },
+          {
+            "face": "0"
+          },
+          {
+            "corner_feature": "0"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_side_2_special",
+        "uvlock": true,
+        "x": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "north_east_up"
+          },
+          {
+            "face": "1"
+          },
+          {
+            "corner_feature": "1"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_side_2_special",
+        "uvlock": true,
+        "x": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "north_east_down"
+          },
+          {
+            "face": "1"
+          },
+          {
+            "corner_feature": "0"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_side_1_special",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "south_west_down"
+          },
+          {
+            "face": "0"
+          },
+          {
+            "corner_feature": "0"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_side_1_special",
+        "uvlock": true,
+        "x": 90,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "south_west_up"
+          },
+          {
+            "face": "0"
+          },
+          {
+            "corner_feature": "1"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_side_1_special",
+        "uvlock": true,
+        "x": 180,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "east_south_up"
+          },
+          {
+            "face": "1"
+          },
+          {
+            "corner_feature": "0"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_side_1_special",
+        "uvlock": true,
+        "x": 270,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "east_south_down"
+          },
+          {
+            "face": "1"
+          },
+          {
+            "corner_feature": "1"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_side_2_special",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "south_west_down"
+          },
+          {
+            "face": "0"
+          },
+          {
+            "corner_feature": "1"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_side_2_special",
+        "uvlock": true,
+        "x": 90,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "south_west_up"
+          },
+          {
+            "face": "0"
+          },
+          {
+            "corner_feature": "0"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_side_2_special",
+        "uvlock": true,
+        "x": 180,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "east_south_up"
+          },
+          {
+            "face": "1"
+          },
+          {
+            "corner_feature": "1"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_side_2_special",
+        "uvlock": true,
+        "x": 270,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "east_south_down"
+          },
+          {
+            "face": "1"
+          },
+          {
+            "corner_feature": "0"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_side_1_special",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "west_north_down"
+          },
+          {
+            "face": "0"
+          },
+          {
+            "corner_feature": "0"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_side_1_special",
+        "uvlock": true,
+        "x": 90,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "west_north_up"
+          },
+          {
+            "face": "0"
+          },
+          {
+            "corner_feature": "1"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_side_1_special",
+        "uvlock": true,
+        "x": 180,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "south_west_up"
+          },
+          {
+            "face": "1"
+          },
+          {
+            "corner_feature": "0"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_side_1_special",
+        "uvlock": true,
+        "x": 270,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "south_west_down"
+          },
+          {
+            "face": "1"
+          },
+          {
+            "corner_feature": "1"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_side_2_special",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "west_north_down"
+          },
+          {
+            "face": "0"
+          },
+          {
+            "corner_feature": "1"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_side_2_special",
+        "uvlock": true,
+        "x": 90,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "west_north_up"
+          },
+          {
+            "face": "0"
+          },
+          {
+            "corner_feature": "0"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_side_2_special",
+        "uvlock": true,
+        "x": 180,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "south_west_up"
+          },
+          {
+            "face": "1"
+          },
+          {
+            "corner_feature": "1"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_side_2_special",
+        "uvlock": true,
+        "x": 270,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "south_west_down"
+          },
+          {
+            "face": "1"
+          },
+          {
+            "corner_feature": "0"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_side_1_special",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "north_east_down"
+          },
+          {
+            "face": "0"
+          },
+          {
+            "corner_feature": "0"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_side_1_special",
+        "uvlock": true,
+        "x": 90,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "north_east_up"
+          },
+          {
+            "face": "0"
+          },
+          {
+            "corner_feature": "1"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_side_1_special",
+        "uvlock": true,
+        "x": 180,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "west_north_up"
+          },
+          {
+            "face": "1"
+          },
+          {
+            "corner_feature": "0"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_side_1_special",
+        "uvlock": true,
+        "x": 270,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "west_north_down"
+          },
+          {
+            "face": "1"
+          },
+          {
+            "corner_feature": "1"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_side_2_special",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "north_east_down"
+          },
+          {
+            "face": "0"
+          },
+          {
+            "corner_feature": "1"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_side_2_special",
+        "uvlock": true,
+        "x": 90,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "north_east_up"
+          },
+          {
+            "face": "0"
+          },
+          {
+            "corner_feature": "0"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_side_2_special",
+        "uvlock": true,
+        "x": 180,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "west_north_up"
+          },
+          {
+            "face": "1"
+          },
+          {
+            "corner_feature": "1"
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "reframed:half_stairs_step_stair_side_2_special",
+        "uvlock": true,
+        "x": 270,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "corner": "west_north_down"
+          },
+          {
+            "face": "1"
+          },
+          {
+            "corner_feature": "0"
+          }
+        ]
+      }
+    }
+  ]
 }
