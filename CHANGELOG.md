@@ -2,6 +2,14 @@
 
 All notable changes to MCC will be documented in this file.
 
+## [0.9.51] - 2025-12-31
+
+### Removed
+- **Brewin' And Chewin'** - Removed (was Modrinth-only, causing CurseForge export issues)
+
+### Notes
+- Mod count: 125 total (122 client, 3 server-only)
+
 ## [0.9.50] - 2025-12-31
 
 ### Added

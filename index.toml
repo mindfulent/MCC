@@ -587,11 +587,6 @@ hash = "6f530660a6b3bc694db34a852c17f4c67f64264fb22e33b0b45c46facbb7fbb2"
 metafile = true
 
 [[files]]
-file = "mods/brewin-and-chewin.pw.toml"
-hash = "4030ef46ebf2eb0396c9eb6c9f228fe6be4556be0d8632ef3d9e7d0f3c27b74a"
-metafile = true
-
-[[files]]
 file = "mods/camera-utils.pw.toml"
 hash = "055d69e9a0a5607b59b7340d606002b0580ed28b72aacce0ca646dea4a870c6a"
 metafile = true
