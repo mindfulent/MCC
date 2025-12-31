@@ -6,7 +6,7 @@
 
 A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
-**119 mods total** (116 client-side, 3 server-only) — see [Mod Distribution](#mod-distribution) for details.
+**121 mods total** (118 client-side, 3 server-only) — see [Mod Distribution](#mod-distribution) for details.
 
 ## Features
 
@@ -75,7 +75,6 @@ A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packw
 - **WTHIT** - Block/entity tooltips (what am I looking at?)
 - **AppleSkin** - Food/hunger visualization
 - **Mouse Tweaks** - Enhanced inventory controls
-- **Mouse Wheelie** - Scroll to move items, sort inventories
 - **Controlling** - Searchable keybinds with conflict detection
 - **Just Zoom** - Configurable camera zoom (C key by default)
 - **ItemSwapper** - Quick item palette for swapping similar blocks
@@ -262,8 +261,8 @@ The modpack has two exports for different purposes:
 
 | Export | Format | For | Mod Count |
 |--------|--------|-----|-----------|
-| `MCC-X.Y.Z.zip` | CurseForge | CurseForge App users | 87 mods |
-| `MCC-X.Y.Z.mrpack` | Modrinth | Prism Launcher + Server | 89 mods |
+| `MCC-X.Y.Z.zip` | CurseForge | CurseForge App users | 118 mods |
+| `MCC-X.Y.Z.mrpack` | Modrinth | Prism Launcher + Server | 121 mods |
 
 **Server-only mods** (included in `.mrpack`, excluded from `.zip`):
 - **AutoWhitelist** - Discord `/register` command for whitelist
@@ -280,7 +279,7 @@ These run on the server only — players don't need them installed.
 |------|------|
 | **Client-only** | Better Third Person |
 | **Server-only** | AutoWhitelist, Better Sleep, Fabricord |
-| **Both** | Most mods (85 total) |
+| **Both** | Most mods (117 total) |
 
 ### Not Available for 1.21.1
 - **Create** - NeoForge only (no Fabric port)

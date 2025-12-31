@@ -757,6 +757,11 @@ hash = "ba71e8e6fb12af4d7c9348f572fea999ea6b614356b12b708ce99a1157e82e00"
 metafile = true
 
 [[files]]
+file = "mods/geckolib.pw.toml"
+hash = "eba84c0fa4bdcc4ebca816482af78ab50cba8362591d4354b490da8f563bbe89"
+metafile = true
+
+[[files]]
 file = "mods/handcrafted.pw.toml"
 hash = "00eaafc399810122b7522b172e12aec41f8d8b787192a78362f77e1274c21451"
 metafile = true
@@ -922,13 +927,13 @@ hash = "3cd8155341a4233955ff9892a3b7b5da6dc6d8d892863b2f544328f2731f7f03"
 metafile = true
 
 [[files]]
-file = "mods/mouse-wheelie.pw.toml"
-hash = "52bfcf1fd87b680881c11e90efd779d3f906f75efd36adec18c60bb0df8ca2aa"
+file = "mods/not-enough-animations.pw.toml"
+hash = "ae0783f3455e72023fac34f0ebe965ad1b3dbd813f155e2f7fb97e2da029e103"
 metafile = true
 
 [[files]]
-file = "mods/not-enough-animations.pw.toml"
-hash = "ae0783f3455e72023fac34f0ebe965ad1b3dbd813f155e2f7fb97e2da029e103"
+file = "mods/playeranimator.pw.toml"
+hash = "0d3e127187193d803aa350bc5843fa7c794433afbc994fe5de9d5ff8d61e6031"
 metafile = true
 
 [[files]]
@@ -1089,6 +1094,11 @@ metafile = true
 [[files]]
 file = "mods/wthit.pw.toml"
 hash = "0ad78994efa02d9de2cb4ee015b2db4f927f92217848d882c14c24f4c1224b4a"
+metafile = true
+
+[[files]]
+file = "mods/yacl.pw.toml"
+hash = "f8b22a3818eb55e9b7eafa4cc6b1b44482b88524d4134d544dfb795d9aea058d"
 metafile = true
 
 [[files]]
