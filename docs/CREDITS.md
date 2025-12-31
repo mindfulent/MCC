@@ -2,8 +2,8 @@
 
 This document credits all mod creators whose work makes this modpack possible. Thank you for your incredible contributions to the Minecraft modding community!
 
-**Last Updated:** December 28, 2025
-**Modpack Version:** 0.9.42 (89 mods total — 87 client, 3 server-only)
+**Last Updated:** December 31, 2025
+**Modpack Version:** 0.9.45 (117 mods total — 114 client, 3 server-only)
 
 ---
 
@@ -49,6 +49,12 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [WATERMeDIA Youtube Plugin](https://modrinth.com/mod/watermedia-youtube-plugin) | SrRapero720 | 2.1.1 | Dec 2025 | - |
 | [WATERViSION](https://modrinth.com/mod/watervision) | SrRapero720 | 0.1.0-alpha | Dec 2025 | - |
 | [CreativeCore](https://modrinth.com/mod/creativecore) | CreativeMD | 2.13.14 | Dec 2025 | [Patreon](https://www.patreon.com/creativemd) |
+| [Cardinal Components API](https://www.curseforge.com/minecraft/mc-mods/cardinal-components-api) | Pyrofab, OnyxStudios | 6.1.3 | Dec 2024 | - |
+| [Fzzy Config](https://www.curseforge.com/minecraft/mc-mods/fzzy-config) | Fzzy | 0.7.4 | Dec 2025 | - |
+| [Cupboard](https://www.curseforge.com/minecraft/mc-mods/cupboard) | someaddon | 2.9 | Dec 2025 | - |
+| [Entity Model Features](https://www.curseforge.com/minecraft/mc-mods/entity-model-features) | Traben | 3.0.10 | Dec 2025 | - |
+| [Entity Texture Features](https://www.curseforge.com/minecraft/mc-mods/entity-texture-features-fabric) | Traben | 7.0.8 | Dec 2025 | - |
+| [Text Placeholder API](https://www.curseforge.com/minecraft/mc-mods/placeholder-api) | Patbox | 2.4.2 | Dec 2024 | [Ko-fi](https://ko-fi.com/patbox) |
 
 ## Map Mods
 
@@ -92,6 +98,8 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Armor Statues](https://modrinth.com/mod/armor-statues) | Fuzs | 21.1.0 | Jul 18, 2025 | [Patreon](https://www.patreon.com/heyitsfuzs) |
 | [Little Joys](https://modrinth.com/mod/little-joys) | BlayTheNinth | 21.1.9 | Apr 19, 2025 | [Ko-fi](https://ko-fi.com/blaytheninth), [Patreon](https://www.patreon.com/blay09) |
 | [WindChime Unofficial Continued](https://modrinth.com/mod/windchime-unofficial-continued) | NightEpiphany0401 | 1.3.7 | Dec 2025 | - |
+| [Diagonal Walls](https://www.curseforge.com/minecraft/mc-mods/diagonal-walls) | Fuzss | 21.1.2 | Sep 2024 | [Patreon](https://www.patreon.com/heyitsfuzs) |
+| [Falling Leaves](https://www.curseforge.com/minecraft/mc-mods/falling-leaves-fabric) | RandomMcSomethin | 1.17.1 | Nov 2024 | - |
 
 ## Content Mods
 
@@ -106,6 +114,9 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Joy of Painting](https://modrinth.com/mod/joy-of-painting) | xerca | 1.0.1 | Nov 16, 2024 | - |
 | [Camerapture](https://modrinth.com/mod/camerapture) | chrrs | 1.10.8 | Dec 2025 | [Ko-fi](https://ko-fi.com/chrrs) |
 | [WATERFrAMES](https://modrinth.com/mod/waterframes) | SrRapero720 | 2.1.22 | Dec 2025 | - |
+| [More Delight](https://www.curseforge.com/minecraft/mc-mods/more-delight-fabric) | axperty | 25.01.13 | Jan 2025 | - |
+| [Traveler's Backpack](https://www.curseforge.com/minecraft/mc-mods/travelers-backpack-fabric) | Tiviacz1337 | 10.1.29 | Dec 2025 | - |
+| [Lootr](https://www.curseforge.com/minecraft/mc-mods/lootr-fabric) | noobanidus | 1.11.36.108 | Dec 2025 | - |
 
 ## Quality of Life Mods
 
@@ -119,12 +130,23 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Just Zoom](https://modrinth.com/mod/just-zoom) | Keksuccino | 2.1.0 | Apr 25, 2025 | - |
 | [ItemSwapper](https://modrinth.com/plugin/itemswapper) | tr7zw | 0.8.5 | Dec 2025 | [Ko-fi](https://ko-fi.com/tr7zw) |
 | [Gamemode Unrestrictor](https://modrinth.com/mod/gamemode-unrestrictor) | Attie | 1.0.2 | Dec 2025 | - |
+| [Mouse Wheelie](https://www.curseforge.com/minecraft/mc-mods/mouse-wheelie) | Siphalor | 1.15.0 | Dec 2025 | - |
+| [InvMove](https://www.curseforge.com/minecraft/mc-mods/invmove) | PieKing1215 | 0.9.2 | Dec 2025 | - |
+| [Mod Menu](https://www.curseforge.com/minecraft/mc-mods/modmenu) | Prospector, TerraformersMC | 11.0.3 | Nov 2024 | - |
+| [Carry On](https://www.curseforge.com/minecraft/mc-mods/carry-on) | Tschipp | 2.2.4.4 | Dec 2025 | - |
+| [Sit](https://www.curseforge.com/minecraft/mc-mods/sit-fabric) | bl4ckscor3 | 1.21-28 | Sep 2024 | - |
+| [Actually Harvest](https://www.curseforge.com/minecraft/mc-mods/actually-harvest) | MorenPlue | 1.1.7.0 | Dec 2025 | - |
+| [Universal Bone Meal](https://www.curseforge.com/minecraft/mc-mods/universal-bone-meal) | Fuzss | 21.1.0 | Oct 2024 | [Patreon](https://www.patreon.com/heyitsfuzs) |
+| [Better Climbing](https://www.curseforge.com/minecraft/mc-mods/better-climbing) | MoriyaShiine | 3 | Jun 2023 | - |
 
 ## Multiplayer Mods
 
 | Mod | Author(s) | Version | Released | Donate |
 |-----|-----------|---------|----------|--------|
 | [Simple Voice Chat](https://modrinth.com/mod/simple-voice-chat) | henkelmax | 2.6.9 | Dec 17, 2025 | - |
+| [Voice Chat Interaction](https://www.curseforge.com/minecraft/mc-mods/voice-chat-interaction) | henkelmax | 1.0.8 | Sep 2024 | - |
+| [Connectivity](https://www.curseforge.com/minecraft/mc-mods/connectivity) | someaddon | 7.6 | Dec 2025 | - |
+| [LuckPerms](https://www.curseforge.com/minecraft/mc-mods/luckperms) | lucko | 5.4.140 | Jun 2024 | - |
 | [Universal Graves](https://modrinth.com/mod/universal-graves) | Patbox | 3.4.4 | Sep 9, 2024 | [Ko-fi](https://ko-fi.com/patbox) |
 | [Flan](https://modrinth.com/mod/flan) | flemmli97 | 1.12.4 | Nov 20, 2025 | [PayPal](https://www.paypal.com/donate/?hosted_button_id=2PNHRS9X7YCDS), [Ko-fi](https://ko-fi.com/flemmli97), [Patreon](https://www.patreon.com/flemmli97) |
 | [Advanced Backups](https://modrinth.com/mod/advanced-backups) | RyanMoodGAMING | 3.7.1 | Dec 2025 | - |
@@ -155,6 +177,22 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | Mod | Author(s) | Version | Released | Donate |
 |-----|-----------|---------|----------|--------|
 | [Minescript](https://modrinth.com/mod/minescript) | maxuser0 | 4.0 | Sep 26, 2024 | [Patreon](https://www.patreon.com/Minescript) |
+
+## Audio & Immersion
+
+| Mod | Author(s) | Version | Released | Donate |
+|-----|-----------|---------|----------|--------|
+| [Sound Physics Remastered](https://www.curseforge.com/minecraft/mc-mods/sound-physics-remastered) | henkelmax | 1.4.10 | Nov 2024 | - |
+| [Subtle Effects](https://www.curseforge.com/minecraft/mc-mods/subtle-effects) | Fzzy | 1.13.2 | Dec 2025 | - |
+
+## Camera & Animation
+
+| Mod | Author(s) | Version | Released | Donate |
+|-----|-----------|---------|----------|--------|
+| [First-person Model](https://www.curseforge.com/minecraft/mc-mods/first-person-model) | tr7zw | 2.6.1 | Dec 2025 | [Ko-fi](https://ko-fi.com/tr7zw) |
+| [Not Enough Animations](https://www.curseforge.com/minecraft/mc-mods/not-enough-animations) | tr7zw | 1.11.1 | Dec 2025 | [Ko-fi](https://ko-fi.com/tr7zw) |
+| [Camera Overhaul](https://www.curseforge.com/minecraft/mc-mods/cameraoverhaul) | Mirsario | 2.0.6 | Dec 2025 | - |
+| [Camera Utils](https://www.curseforge.com/minecraft/mc-mods/camera-utils) | henkelmax | 1.0.16 | Sep 2024 | - |
 
 ---
 

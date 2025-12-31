@@ -1,0 +1,13 @@
+name = "Voice Chat Interaction"
+filename = "vcinteraction-fabric-1.21.1-1.0.8.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "e5facc256ab91bc707419165d15d9e47f67b34f6"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 5610994
+project-id = 687977

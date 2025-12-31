@@ -2,11 +2,11 @@
   <img src="mcc_com.png" alt="MCC Logo" width="100%">
 </p>
 
-# MCC (MinecraftCollege.com) v0.9.42
+# MCC (MinecraftCollege.com) v0.9.45
 
 A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
-**89 mods total** (87 client-side, 3 server-only) — see [Mod Distribution](#mod-distribution) for details.
+**117 mods total** (114 client-side, 3 server-only) — see [Mod Distribution](#mod-distribution) for details.
 
 ## Features
 
@@ -28,6 +28,10 @@ A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packw
 - **ReplayMod** - Timeline-based recording with keyframed cameras and video export (requires FFmpeg)
 - **Better Third Person** - Independent camera rotation, 360° orbit, enhanced third-person controls
 - **Stable Cam** - Stable camera perspective mode for smooth cinematic recordings
+- **First-person Model** - See your own body in first person
+- **Not Enough Animations** - Player animations for eating, map holding, etc.
+- **Camera Overhaul** - Tilting and swaying camera effects
+- **Camera Utils** - Freecam, third-person distance, and camera controls
 
 ### Building & Decoration
 - **Chipped** - 11,000+ decorative block variants with connected textures
@@ -44,10 +48,14 @@ A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packw
 - **Armor Statues** - Pose and customize armor stands with a book interface
 - **Little Joys** - Small ambient details (clovers, rocks, fallen leaves, butterflies)
 - **WindChime** - Decorative wind chimes (bamboo, glass, amethyst, copper, and more)
+- **Diagonal Walls** - Walls connect diagonally
+- **Falling Leaves** - Leaf particles fall from trees
 
 ### Content
 - **Farmer's Delight Refabricated** - Cooking and farming expansion
+- **More Delight** - Additional foods and recipes for Farmer's Delight
 - **Storage Drawers** - Compact item storage system
+- **Traveler's Backpack** - Wearable backpacks with fluid storage and tool slots
 - **Universal Sawmill** - Sawmill workstation with Carpenter villager
 - **[Let's Do] Bakery** - Pastries, cakes, and baking stations (includes Farm & Charm)
 - **[Let's Do] Vinery** - Vineyard and wine themed content
@@ -55,6 +63,7 @@ A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packw
 - **Joy of Painting** - Paint custom pictures on canvases and display them like vanilla paintings
 - **Camerapture** - Take in-game photos and hang them as pictures
 - **WaterFrames** - Display images and videos from URLs on in-game frames and projectors
+- **Lootr** - Per-player loot in chests, barrels, and minecarts (no stealing!)
 
 ### Web Map
 - **BlueMap** - Live 3D web map of the server world (port 8100)
@@ -65,19 +74,34 @@ A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packw
 - **WTHIT** - Block/entity tooltips (what am I looking at?)
 - **AppleSkin** - Food/hunger visualization
 - **Mouse Tweaks** - Enhanced inventory controls
+- **Mouse Wheelie** - Scroll to move items, sort inventories
 - **Controlling** - Searchable keybinds with conflict detection
 - **Just Zoom** - Configurable camera zoom (C key by default)
 - **ItemSwapper** - Quick item palette for swapping similar blocks
 - **Gamemode Unrestrictor** - Use F3+F4 gamemode menu even when cheats are disabled
+- **InvMove** - Move while inventory is open
+- **Mod Menu** - Browse and configure mods from the title screen
+- **Carry On** - Pick up and carry blocks, chests, and entities
+- **Sit** - Right-click stairs and slabs to sit
+- **Actually Harvest** - Right-click crops to harvest and replant
+- **Universal Bone Meal** - Bone meal works on more plants
+- **Better Climbing** - Enhanced ladder climbing mechanics
 
 ### Scripting & Automation
 - **Minescript** - Python scripting for Minecraft (run scripts from chat with `\scriptname`)
 
+### Audio & Immersion
+- **Sound Physics Remastered** - Realistic reverb and sound occlusion
+- **Subtle Effects** - Ambient environmental particle effects
+
 ### Multiplayer
 - **Simple Voice Chat** - Proximity-based voice communication
+- **Voice Chat Interaction** - Nearby sounds play through voice chat proximity
 - **Universal Graves** - Death item protection (server-side, vanilla client compatible)
 - **Flan** - Land claiming and protection
 - **Better Sleep** - Sleep voting for multiplayer nights
+- **Connectivity** - Improved connection stability and error handling
+- **LuckPerms** - Advanced permissions system (server-side)
 - **Advanced Backups** - Automated world backups with scheduling and retention policies (server-side)
 
 ### Discord Integration

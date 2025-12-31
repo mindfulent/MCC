@@ -2,6 +2,50 @@
 
 All notable changes to MCC will be documented in this file.
 
+## [0.9.45] - 2025-12-31
+
+### Added
+**Content & Gameplay (24 new mods, 117 total):**
+- **More Delight** - Additional foods and recipes for Farmer's Delight
+- **Traveler's Backpack** - Wearable backpacks with fluid storage and tool slots
+- **Lootr** - Per-player loot in chests, barrels, and minecarts (no stealing!)
+- **Carry On** - Pick up and carry blocks, chests, and entities
+- **Sit** - Right-click stairs and slabs to sit
+- **Better Climbing** - Enhanced ladder climbing mechanics
+- **Actually Harvest** - Right-click crops to harvest and replant
+- **Universal Bone Meal** - Bone meal works on more plants
+
+**Building & Decoration:**
+- **Diagonal Walls** - Walls connect diagonally
+- **Falling Leaves** - Leaf particles fall from trees
+
+**Audio & Immersion:**
+- **Sound Physics Remastered** - Realistic reverb and sound occlusion
+- **Voice Chat Interaction** - Nearby sounds play through voice chat proximity
+- **Subtle Effects** - Ambient environmental particle effects
+
+**Camera & Animation:**
+- **First-person Model** - See your own body in first person
+- **Not Enough Animations** - Player animations for eating, map holding, etc.
+- **Camera Overhaul** - Tilting and swaying camera effects
+- **Camera Utils** - Freecam, third-person distance, and camera controls
+
+**QoL & UI:**
+- **Mouse Wheelie** - Scroll to move items, sort inventories
+- **InvMove** - Move while inventory is open
+- **Mod Menu** - Browse and configure mods from the title screen
+
+**Server Administration:**
+- **LuckPerms** - Advanced permissions system
+- **Connectivity** - Improved connection stability and error handling
+
+**Dependencies (auto-installed):**
+- Cardinal Components API (for Traveler's Backpack)
+- Fzzy Config (for Subtle Effects)
+- Cupboard (for Connectivity)
+- Entity Model Features + Entity Texture Features (OptiFine entity model/texture support)
+- Text Placeholder API (for Mod Menu)
+
 ## [0.9.44] - 2025-12-31
 
 ### Changed
