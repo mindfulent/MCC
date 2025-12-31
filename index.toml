@@ -1116,3 +1116,7 @@ hash = "b6e79a4f5746bd0b2bd8d54bb4c430539e7e747e8679ac985bc07368422e4e09"
 [[files]]
 file = "shaderpacks/ComplementaryReimagined_r5.6.1.zip"
 hash = "33153747d25fbee470acb42ccf4f26b03cc551bb900d4c6d3389b5500dd84839"
+
+[[files]]
+file = "shaderpacks/Solas_Shader_v3.1c.zip"
+hash = "188d2b058210d3e4df1f98c770df3d7022fba930f7c0cfc6ca4490efb0bc2f88"

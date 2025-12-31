@@ -2,7 +2,7 @@
   <img src="mcc_com.png" alt="MCC Logo" width="100%">
 </p>
 
-# MCC (MinecraftCollege.com) v0.9.46
+# MCC (MinecraftCollege.com) v0.9.47
 
 A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
@@ -113,6 +113,7 @@ A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packw
 ### Bundled Shaders
 - **BSL v10.0** - High visual quality (enabled by default)
 - **Complementary Reimagined r5.6.1** - Vanilla-enhanced aesthetic with "Potato" to "Ultra" presets
+- **Solas Shader v3.1c** - Fantasy stylized with colored lighting and fancy visuals
 
 ### Default Settings
 The modpack comes pre-configured with sensible defaults:

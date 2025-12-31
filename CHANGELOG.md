@@ -2,6 +2,15 @@
 
 All notable changes to MCC will be documented in this file.
 
+## [0.9.47] - 2025-12-31
+
+### Added
+- **Solas Shader v3.1c** - Fantasy stylized shaderpack with colored lighting (bundled in shaderpacks/)
+
+### Notes
+- Mod count: 121 total (unchanged)
+- Now includes 3 bundled shaders: BSL, Complementary Reimagined, Solas
+
 ## [0.9.46] - 2025-12-31
 
 ### Added
