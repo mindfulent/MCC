@@ -1,0 +1,13 @@
+name = "Fox Nap"
+filename = "fox-nap-0.2.0-0-1.21.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "b2277d72c54e8e45e78f82adc7b6e103fd86e490"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 5428348
+project-id = 746497

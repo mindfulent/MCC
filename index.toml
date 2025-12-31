@@ -632,6 +632,11 @@ hash = "9e21cc4fae5ed88e306b4601c5e1533f883aa8b60c6e36dedeec82718be87059"
 metafile = true
 
 [[files]]
+file = "mods/collective.pw.toml"
+hash = "42c658ecafe98b802924b2a8a10bfc995d743efdc2cf7a1965274d302380f1e7"
+metafile = true
+
+[[files]]
 file = "mods/connectiblechains.pw.toml"
 hash = "7ec9fd19e018b8bb8f6e6aae2ee691c4c843d363a650d52d40fa300b329d6ac9"
 metafile = true
@@ -649,6 +654,11 @@ metafile = true
 [[files]]
 file = "mods/craterlib.pw.toml"
 hash = "68baa76bba0cca586ce73f60b6c525b1e1c53a4d086efe069c814b9c4a961d54"
+metafile = true
+
+[[files]]
+file = "mods/creative-block-replacer.pw.toml"
+hash = "4b61a93f99c50db1d89cc49e15b06c8cffaf7d437f4f72ac622890d24486cc61"
 metafile = true
 
 [[files]]
@@ -747,6 +757,11 @@ hash = "d0e586bf4b4f9f003b1de1a3e18f67540233a0295b487009047056198f694f0f"
 metafile = true
 
 [[files]]
+file = "mods/fox-nap.pw.toml"
+hash = "dbe389da03f9c3d31a0f898df36dc8e7e83a1ce720c4690101fb0ff95d4e675a"
+metafile = true
+
+[[files]]
 file = "mods/fzzy-config.pw.toml"
 hash = "ead97a80bf8d23771fcae23bb2b019f512b0c83f6cce0b7b62858cfe22a440cb"
 metafile = true
@@ -764,6 +779,11 @@ metafile = true
 [[files]]
 file = "mods/handcrafted.pw.toml"
 hash = "00eaafc399810122b7522b172e12aec41f8d8b787192a78362f77e1274c21451"
+metafile = true
+
+[[files]]
+file = "mods/immersive-paintings.pw.toml"
+hash = "e3c346611662384c86c7a94b0c7f3063b571129b72d5fd944e9ba1e0e56407c1"
 metafile = true
 
 [[files]]

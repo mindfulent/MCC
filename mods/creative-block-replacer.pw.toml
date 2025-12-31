@@ -1,0 +1,13 @@
+name = "Creative Block Replacer"
+filename = "creativeblockreplacer-1.21.1-2.6.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "b32bb88d68777303d6774703e801949f86c3f263"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6186285
+project-id = 346110

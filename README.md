@@ -2,11 +2,11 @@
   <img src="mcc_com.png" alt="MCC Logo" width="100%">
 </p>
 
-# MCC (MinecraftCollege.com) v0.9.47
+# MCC (MinecraftCollege.com) v0.9.48
 
 A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
-**121 mods total** (118 client-side, 3 server-only) — see [Mod Distribution](#mod-distribution) for details.
+**125 mods total** (122 client-side, 3 server-only) — see [Mod Distribution](#mod-distribution) for details.
 
 ## Features
 
@@ -64,6 +64,8 @@ A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packw
 - **Joy of Painting** - Paint custom pictures on canvases and display them like vanilla paintings
 - **Camerapture** - Take in-game photos and hang them as pictures
 - **WaterFrames** - Display images and videos from URLs on in-game frames and projectors
+- **Immersive Paintings** - Upload custom images as paintings in any size
+- **Fox Nap** - Custom music discs with Maestro villager profession (trade tonewood for discs)
 - **Lootr** - Per-player loot in chests, barrels, and minecarts (no stealing!)
 
 ### Web Map
@@ -79,6 +81,7 @@ A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packw
 - **Just Zoom** - Configurable camera zoom (C key by default)
 - **ItemSwapper** - Quick item palette for swapping similar blocks
 - **Gamemode Unrestrictor** - Use F3+F4 gamemode menu even when cheats are disabled
+- **Creative Block Replacer** - Replace blocks in creative mode by clicking with replacement block
 - **InvMove** - Move while inventory is open
 - **Mod Menu** - Browse and configure mods from the title screen
 - **Carry On** - Pick up and carry blocks, chests, and entities
@@ -263,8 +266,8 @@ The modpack has two exports for different purposes:
 
 | Export | Format | For | Mod Count |
 |--------|--------|-----|-----------|
-| `MCC-X.Y.Z.zip` | CurseForge | CurseForge App users | 118 mods |
-| `MCC-X.Y.Z.mrpack` | Modrinth | Prism Launcher + Server | 121 mods |
+| `MCC-X.Y.Z.zip` | CurseForge | CurseForge App users | 122 mods |
+| `MCC-X.Y.Z.mrpack` | Modrinth | Prism Launcher + Server | 125 mods |
 
 **Server-only mods** (included in `.mrpack`, excluded from `.zip`):
 - **AutoWhitelist** - Discord `/register` command for whitelist
@@ -281,7 +284,7 @@ These run on the server only — players don't need them installed.
 |------|------|
 | **Client-only** | Better Third Person |
 | **Server-only** | AutoWhitelist, Better Sleep, Fabricord |
-| **Both** | Most mods (117 total) |
+| **Both** | Most mods (121 total) |
 
 ### Not Available for 1.21.1
 - **Create** - NeoForge only (no Fabric port)

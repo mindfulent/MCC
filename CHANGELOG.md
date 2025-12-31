@@ -2,6 +2,17 @@
 
 All notable changes to MCC will be documented in this file.
 
+## [0.9.48] - 2025-12-31
+
+### Added
+- **Fox Nap** v0.2.0 - Custom music discs with a new "Maestro" villager profession (uses jukeboxes as job site). Trade tonewood and goat horns for discs.
+- **Creative Block Replacer** v2.6 - Replace blocks in creative mode by clicking on them with the replacement block
+- **Collective** v8.13 - Library dependency for Creative Block Replacer
+- **Immersive Paintings** v0.7.4 - Upload custom images as paintings in any size
+
+### Notes
+- Mod count: 125 total (122 client, 3 server-only)
+
 ## [0.9.47] - 2025-12-31
 
 ### Added

@@ -3,7 +3,7 @@
 This document credits all mod creators whose work makes this modpack possible. Thank you for your incredible contributions to the Minecraft modding community!
 
 **Last Updated:** December 31, 2025
-**Modpack Version:** 0.9.47 (121 mods total — 118 client, 3 server-only)
+**Modpack Version:** 0.9.48 (125 mods total — 122 client, 3 server-only)
 
 ---
 
@@ -58,6 +58,7 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [YetAnotherConfigLib](https://www.curseforge.com/minecraft/mc-mods/yacl) | isXander | 3.8.1 | Dec 2025 | [Ko-fi](https://ko-fi.com/isxander) |
 | [playerAnimator](https://www.curseforge.com/minecraft/mc-mods/playeranimator) | KosmX | 2.0.4 | Dec 2025 | - |
 | [GeckoLib](https://www.curseforge.com/minecraft/mc-mods/geckolib) | Tslat, Gecko, AzureDoom | 4.8.2 | Dec 2025 | [Ko-fi](https://ko-fi.com/geckolib) |
+| [Collective](https://www.curseforge.com/minecraft/mc-mods/collective) | Serilum | 8.13 | Dec 2025 | - |
 
 ## Map Mods
 
@@ -121,6 +122,8 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Traveler's Backpack](https://www.curseforge.com/minecraft/mc-mods/travelers-backpack-fabric) | Tiviacz1337 | 10.1.29 | Dec 2025 | - |
 | [Lootr](https://www.curseforge.com/minecraft/mc-mods/lootr-fabric) | noobanidus | 1.11.36.108 | Dec 2025 | - |
 | [Brewin' And Chewin'](https://modrinth.com/mod/brewin-and-chewin) | ThatGravyBoat (port) | 4.4.1 | Dec 2025 | - |
+| [Fox Nap](https://www.curseforge.com/minecraft/mc-mods/fox-nap) | OpenBagTwo | 0.2.0 | Jun 2024 | - |
+| [Immersive Paintings](https://www.curseforge.com/minecraft/mc-mods/immersive-paintings) | Conczin | 0.7.4 | Dec 2025 | - |
 
 ## Quality of Life Mods
 
@@ -141,6 +144,7 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Actually Harvest](https://www.curseforge.com/minecraft/mc-mods/actually-harvest) | MorenPlue | 1.1.7.0 | Dec 2025 | - |
 | [Universal Bone Meal](https://www.curseforge.com/minecraft/mc-mods/universal-bone-meal) | Fuzss | 21.1.0 | Oct 2024 | [Patreon](https://www.patreon.com/heyitsfuzs) |
 | [Better Climbing](https://www.curseforge.com/minecraft/mc-mods/better-climbing) | MoriyaShiine | 3 | Jun 2023 | - |
+| [Creative Block Replacer](https://www.curseforge.com/minecraft/mc-mods/creative-block-replacer) | Serilum | 2.6 | Dec 2025 | - |
 
 ## Multiplayer Mods
 
