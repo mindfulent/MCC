@@ -2,6 +2,17 @@
 
 All notable changes to MCC will be documented in this file.
 
+## [0.9.50] - 2025-12-31
+
+### Added
+- **VinURL** v2.2.0 - Play audio from URLs on note blocks (YouTube, SoundCloud, direct links)
+- **owo-lib** v0.12.15.4 - Library dependency for VinURL
+- **Photon Shader** v1.2a - Gameplay-focused shader with semi-realistic style, colored lighting, detailed clouds
+
+### Notes
+- Mod count: 126 total (123 client, 3 server-only)
+- Now includes 4 bundled shaders: BSL, Complementary Reimagined, Photon, Solas
+
 ## [0.9.49] - 2025-12-31
 
 ### Removed

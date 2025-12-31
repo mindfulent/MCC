@@ -1,0 +1,13 @@
+name = "VinURL"
+filename = "vinurl-2.2.0+mc1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "3eae9705e1dae628133c7993fcf333bd78eb6715"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7394792
+project-id = 1326616

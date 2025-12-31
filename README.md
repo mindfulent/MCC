@@ -2,11 +2,11 @@
   <img src="mcc_com.png" alt="MCC Logo" width="100%">
 </p>
 
-# MCC (MinecraftCollege.com) v0.9.48
+# MCC (MinecraftCollege.com) v0.9.50
 
 A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
-**125 mods total** (122 client-side, 3 server-only) — see [Mod Distribution](#mod-distribution) for details.
+**126 mods total** (123 client-side, 3 server-only) — see [Mod Distribution](#mod-distribution) for details.
 
 ## Features
 
@@ -65,7 +65,7 @@ A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packw
 - **Camerapture** - Take in-game photos and hang them as pictures
 - **WaterFrames** - Display images and videos from URLs on in-game frames and projectors
 - **Immersive Paintings** - Upload custom images as paintings in any size
-- **Fox Nap** - Custom music discs with Maestro villager profession (trade tonewood for discs)
+- **VinURL** - Play audio from URLs on note blocks (YouTube, SoundCloud, direct links)
 - **Lootr** - Per-player loot in chests, barrels, and minecarts (no stealing!)
 
 ### Web Map
@@ -116,6 +116,7 @@ A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packw
 ### Bundled Shaders
 - **BSL v10.0** - High visual quality (enabled by default)
 - **Complementary Reimagined r5.6.1** - Vanilla-enhanced aesthetic with "Potato" to "Ultra" presets
+- **Photon v1.2a** - Gameplay-focused with semi-realistic style and colored lighting
 - **Solas Shader v3.1c** - Fantasy stylized with colored lighting and fancy visuals
 
 ### Default Settings
@@ -266,8 +267,8 @@ The modpack has two exports for different purposes:
 
 | Export | Format | For | Mod Count |
 |--------|--------|-----|-----------|
-| `MCC-X.Y.Z.zip` | CurseForge | CurseForge App users | 122 mods |
-| `MCC-X.Y.Z.mrpack` | Modrinth | Prism Launcher + Server | 125 mods |
+| `MCC-X.Y.Z.zip` | CurseForge | CurseForge App users | 123 mods |
+| `MCC-X.Y.Z.mrpack` | Modrinth | Prism Launcher + Server | 126 mods |
 
 **Server-only mods** (included in `.mrpack`, excluded from `.zip`):
 - **AutoWhitelist** - Discord `/register` command for whitelist
@@ -284,7 +285,7 @@ These run on the server only — players don't need them installed.
 |------|------|
 | **Client-only** | Better Third Person |
 | **Server-only** | AutoWhitelist, Better Sleep, Fabricord |
-| **Both** | Most mods (121 total) |
+| **Both** | Most mods (122 total) |
 
 ### Not Available for 1.21.1
 - **Create** - NeoForge only (no Fabric port)

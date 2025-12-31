@@ -947,6 +947,11 @@ hash = "ae0783f3455e72023fac34f0ebe965ad1b3dbd813f155e2f7fb97e2da029e103"
 metafile = true
 
 [[files]]
+file = "mods/owo-lib.pw.toml"
+hash = "59f3b2e1679e710e694b04e712b2f79be11ec4f1591d831c3adaa86e16d0c1ef"
+metafile = true
+
+[[files]]
 file = "mods/playeranimator.pw.toml"
 hash = "0d3e127187193d803aa350bc5843fa7c794433afbc994fe5de9d5ff8d61e6031"
 metafile = true
@@ -1077,6 +1082,11 @@ hash = "8876ed7fdc1ad94eb650e0ce6b1dc45b35c3b7b607d0b51c4d58b839335894c0"
 metafile = true
 
 [[files]]
+file = "mods/vinurl.pw.toml"
+hash = "498e8cb09f3a692d89057ba7d64cf75b348219ff3d21bae4fabddd9eb0b63ef9"
+metafile = true
+
+[[files]]
 file = "mods/voice-chat-interaction.pw.toml"
 hash = "ddc991d370938f2b198bd31746535c49eacbd78dc70e908c093173e836db7ddf"
 metafile = true
@@ -1135,3 +1145,7 @@ hash = "33153747d25fbee470acb42ccf4f26b03cc551bb900d4c6d3389b5500dd84839"
 [[files]]
 file = "shaderpacks/Solas_Shader_v3.1c.zip"
 hash = "188d2b058210d3e4df1f98c770df3d7022fba930f7c0cfc6ca4490efb0bc2f88"
+
+[[files]]
+file = "shaderpacks/photon_v1.2a.zip"
+hash = "a7134a10138f6e5fe523dafa23bd266ba2e53621ac65a5e23294fe9a125b9d73"
