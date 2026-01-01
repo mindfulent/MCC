@@ -142,11 +142,13 @@ class RichProgressTracker:
         if success:
             self.files_succeeded += 1
             if self.current_file_task_id is not None:
-                task = self.progress.tasks[self.current_file_task_id]
-                if task.completed < task.total:
+                # Access task by ID using internal dict (not list index)
+                task = self.progress._tasks.get(self.current_file_task_id)
+                if task and task.completed < task.total:
                     remaining = task.total - task.completed
                     self.total_bytes_transferred += remaining
-                self.progress.update(self.current_file_task_id, completed=task.total)
+                if task:
+                    self.progress.update(self.current_file_task_id, completed=task.total)
                 self.progress.remove_task(self.current_file_task_id)
                 self.current_file_task_id = None
 
@@ -159,8 +161,20 @@ class RichProgressTracker:
         else:
             self.files_failed += 1
             if self.current_file_task_id is not None:
+                # Update overall progress to account for skipped file size
+                task = self.progress._tasks.get(self.current_file_task_id)
+                if task:
+                    self.total_bytes_transferred += task.total  # Count as "done" for progress
                 self.progress.remove_task(self.current_file_task_id)
                 self.current_file_task_id = None
+
+            # Update overall progress bar even on failure
+            if self.overall_task_id is not None:
+                self.progress.update(
+                    self.overall_task_id,
+                    completed=min(self.total_bytes_transferred, self.total_size),
+                    description=f"[cyan]Overall Progress ({self.files_succeeded + self.files_failed}/{self.total_files} files)"
+                )
 
 
 def progress_callback(tracker):
@@ -958,13 +972,14 @@ def interactive_menu():
         table.add_row("b", "[cyan]Backup Menu →[/cyan]")
         table.add_row("", "")
         table.add_row("8", "[red]Regenerate World[/red]")
+        table.add_row("9", "Download Production World")
         table.add_row("", "")
         table.add_row("q", "Quit")
 
         console.print(table)
         console.print()
 
-        choice = Prompt.ask("Select", choices=["1", "2", "3", "4", "5", "6", "7", "8", "b", "q"], default="q")
+        choice = Prompt.ask("Select", choices=["1", "2", "3", "4", "5", "6", "7", "8", "9", "b", "q"], default="q")
 
         if choice == "1":
             deploy_mrpack4server()
@@ -1002,6 +1017,10 @@ def interactive_menu():
 
         elif choice == "8":
             regenerate_world()
+            Prompt.ask("\n[dim]Press Enter to continue[/dim]")
+
+        elif choice == "9":
+            download_world()
             Prompt.ask("\n[dim]Press Enter to continue[/dim]")
 
         elif choice == "q":
@@ -1401,6 +1420,243 @@ def backup_restore(backup_index=None, auto_confirm=False):
 
 
 # =============================================================================
+# World Download Functions
+# =============================================================================
+
+def get_remote_directory_info(sftp, path):
+    """
+    Calculate total size and file count of a remote directory recursively.
+    Returns (file_count, total_size) or (0, 0) if path doesn't exist.
+    """
+    total_size = 0
+    file_count = 0
+
+    def scan_recursive(remote_path):
+        nonlocal total_size, file_count
+        try:
+            for item in sftp.listdir_attr(remote_path):
+                item_path = f"{remote_path}/{item.filename}"
+                if item.st_mode & 0o40000:  # Directory
+                    scan_recursive(item_path)
+                else:
+                    total_size += item.st_size
+                    file_count += 1
+        except IOError:
+            pass
+
+    try:
+        sftp.stat(path)
+        scan_recursive(path)
+    except IOError:
+        pass
+
+    return file_count, total_size
+
+
+def download_directory_recursive(sftp, remote_path, local_path, tracker, base_path=None):
+    """Download a remote directory recursively to local path with progress tracking."""
+    if base_path is None:
+        base_path = local_path
+
+    os.makedirs(local_path, exist_ok=True)
+
+    try:
+        for item in sftp.listdir_attr(remote_path):
+            remote_item = f"{remote_path}/{item.filename}"
+            local_item = os.path.join(local_path, item.filename)
+
+            if item.st_mode & 0o40000:  # Directory
+                download_directory_recursive(sftp, remote_item, local_item, tracker, base_path)
+            else:
+                try:
+                    rel_path = os.path.relpath(local_item, base_path)
+                    tracker.start_file(rel_path, item.st_size)
+                    sftp.get(remote_item, local_item, callback=progress_callback(tracker))
+                    tracker.file_complete(success=True)
+                except Exception as e:
+                    tracker.file_complete(success=False)
+                    console.print(f"[red]Error downloading {item.filename}: {e}[/red]")
+    except IOError as e:
+        console.print(f"[red]Error accessing {remote_path}: {e}[/red]")
+
+
+def backup_local_world(world_dirs):
+    """
+    Backup existing local world directories before overwriting.
+    Creates a timestamped backup folder.
+    Returns the backup directory path or None if no backup was needed.
+    """
+    import shutil
+
+    # Check if any directories exist
+    existing_dirs = [d for d in world_dirs if os.path.exists(d)]
+    if not existing_dirs:
+        return None
+
+    # Create timestamped backup folder
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    backup_base = os.path.join(os.path.dirname(existing_dirs[0]), f"world-backup-{timestamp}")
+    os.makedirs(backup_base, exist_ok=True)
+
+    for world_dir in existing_dirs:
+        dir_name = os.path.basename(world_dir)
+        backup_dest = os.path.join(backup_base, dir_name)
+        console.print(f"[cyan]Backing up {dir_name}...[/cyan]")
+        shutil.copytree(world_dir, backup_dest)
+        console.print(f"[green]✓ Backed up {dir_name}[/green]")
+
+    return backup_base
+
+
+def download_world(destination_dir=None, backup_existing=True, auto_confirm=False):
+    """
+    Download world data from production server to local directory.
+
+    Args:
+        destination_dir: Base path for download (default: ../LocalServer/)
+        backup_existing: Whether to backup existing local world first
+        auto_confirm: Skip confirmation prompts
+    """
+    from rich.prompt import Confirm
+
+    # Determine destination directory
+    if destination_dir is None:
+        destination_dir = os.path.join(SCRIPT_DIR, "..", "LocalServer")
+    destination_dir = os.path.abspath(destination_dir)
+
+    # World folders mapping: (remote_path, local_folder_name)
+    WORLD_FOLDERS = [
+        ("/world", "world-production"),
+        ("/world_nether", "world-production_nether"),
+        ("/world_the_end", "world-production_the_end"),
+    ]
+
+    console.print(Panel(
+        "[bold]Download Production World[/bold]\n\n"
+        "This will download world data from the production server\n"
+        "to your local test environment.",
+        title="[cyan]World Sync[/cyan]",
+        border_style="cyan"
+    ))
+
+    if not check_credentials():
+        return False
+
+    # Connect and scan remote folders
+    console.print(f"\n[cyan]Connecting to {hostname}:{port}...[/cyan]")
+
+    ssh, sftp = get_sftp_connection()
+    if not sftp:
+        return False
+
+    console.print("[green]Connected![/green]")
+    console.print("\n[cyan]Scanning remote world folders...[/cyan]")
+
+    # Gather info about each world folder
+    folder_info = []
+    total_files = 0
+    total_size = 0
+
+    for remote_path, local_name in WORLD_FOLDERS:
+        file_count, size = get_remote_directory_info(sftp, remote_path)
+        if file_count > 0:
+            folder_info.append({
+                'remote': remote_path,
+                'local': local_name,
+                'files': file_count,
+                'size': size
+            })
+            total_files += file_count
+            total_size += size
+        else:
+            console.print(f"[dim]  {remote_path} (not found, skipping)[/dim]")
+
+    if not folder_info:
+        console.print("[red]No world folders found on remote server![/red]")
+        sftp.close()
+        ssh.close()
+        return False
+
+    # Display summary
+    size_str = f"{total_size/(1024*1024*1024):.2f} GB" if total_size > 1024*1024*1024 else f"{total_size/(1024*1024):.1f} MB"
+
+    table = Table(title="Remote World Folders", box=box.ROUNDED)
+    table.add_column("Folder", style="cyan")
+    table.add_column("Files", style="white", justify="right")
+    table.add_column("Size", style="green", justify="right")
+
+    for info in folder_info:
+        folder_size = f"{info['size']/(1024*1024*1024):.2f} GB" if info['size'] > 1024*1024*1024 else f"{info['size']/(1024*1024):.1f} MB"
+        table.add_row(info['remote'], str(info['files']), folder_size)
+
+    table.add_row("", "", "", style="dim")
+    table.add_row("[bold]Total[/bold]", f"[bold]{total_files}[/bold]", f"[bold]{size_str}[/bold]")
+
+    console.print()
+    console.print(table)
+    console.print(f"\n[bold]Destination:[/bold] {destination_dir}")
+
+    # Check for local server running
+    session_lock = os.path.join(destination_dir, "world-production", "session.lock")
+    if os.path.exists(session_lock):
+        console.print("\n[yellow]⚠ Warning: Local server may be running (session.lock exists)[/yellow]")
+        if not auto_confirm and not Confirm.ask("Continue anyway?"):
+            console.print("[yellow]Cancelled.[/yellow]")
+            sftp.close()
+            ssh.close()
+            return False
+
+    # Confirm download
+    if not auto_confirm:
+        console.print()
+        if not Confirm.ask(f"Download {size_str} from production server?"):
+            console.print("[yellow]Cancelled.[/yellow]")
+            sftp.close()
+            ssh.close()
+            return False
+
+    # Backup existing local world
+    if backup_existing:
+        local_world_dirs = [os.path.join(destination_dir, info['local']) for info in folder_info]
+        existing_dirs = [d for d in local_world_dirs if os.path.exists(d)]
+        if existing_dirs:
+            console.print("\n[bold]Backing up existing world...[/bold]")
+            backup_path = backup_local_world(local_world_dirs)
+            if backup_path:
+                console.print(f"[green]✓ Backup saved to: {os.path.basename(backup_path)}/[/green]")
+
+    # Download each folder
+    console.print("\n[bold]Downloading world data...[/bold]\n")
+
+    with RichProgressTracker(total_files=total_files, total_size=total_size) as tracker:
+        for info in folder_info:
+            local_path = os.path.join(destination_dir, info['local'])
+
+            # Clear existing directory if it exists
+            if os.path.exists(local_path):
+                import shutil
+                shutil.rmtree(local_path)
+
+            console.print(f"[cyan]Downloading {info['remote']}...[/cyan]")
+            download_directory_recursive(sftp, info['remote'], local_path, tracker)
+
+    sftp.close()
+    ssh.close()
+
+    # Summary
+    console.print("\n" + "="*50)
+    console.print("[bold green]✓ World download complete![/bold green]")
+    console.print(f"\n[cyan]Downloaded {total_files} files ({size_str})[/cyan]")
+    console.print(f"\n[bold]Files saved to:[/bold]")
+    for info in folder_info:
+        console.print(f"  {destination_dir}\\{info['local']}\\")
+    console.print("\n[dim]To use this world, set level-name=world-production in server.properties[/dim]")
+    console.print("="*50)
+
+    return True
+
+
+# =============================================================================
 # Main
 # =============================================================================
 
@@ -1449,6 +1705,14 @@ if __name__ == "__main__":
         elif command == "update-pack" and len(sys.argv) > 2:
             version = sys.argv[2]
             update_modpack_info(version)
+        elif command == "download-world":
+            # Parse args: download-world [destination] [--no-backup] [-y]
+            args = sys.argv[2:]
+            auto_yes = "-y" in args or "--yes" in args
+            no_backup = "--no-backup" in args
+            args = [a for a in args if a not in ("-y", "--yes", "--no-backup")]
+            destination = args[0] if args else None
+            download_world(destination_dir=destination, backup_existing=not no_backup, auto_confirm=auto_yes)
         elif command == "backup":
             # Backup subcommands
             if len(sys.argv) < 3:
@@ -1502,6 +1766,7 @@ if __name__ == "__main__":
             console.print("  python server-config.py backup restore [number]  # Restore from backup")
             console.print("")
             console.print("[yellow]World Management:[/yellow]")
+            console.print("  python server-config.py download-world [path] [--no-backup] [-y]  # Download production world")
             console.print("  python server-config.py regenerate [preset] [seed] [-y]  # Regenerate world")
             console.print("  python server-config.py presets      # List world presets")
     else:
