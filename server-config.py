@@ -972,14 +972,18 @@ def interactive_menu():
         table.add_row("b", "[cyan]Backup Menu →[/cyan]")
         table.add_row("", "")
         table.add_row("8", "[red]Regenerate World[/red]")
+        table.add_row("", "")
+        table.add_row("", "[dim]── Local Server ──[/dim]")
         table.add_row("9", "Download Production World")
+        table.add_row("10", "Switch Local to Production Mode")
+        table.add_row("11", "Switch Local to Test Mode")
         table.add_row("", "")
         table.add_row("q", "Quit")
 
         console.print(table)
         console.print()
 
-        choice = Prompt.ask("Select", choices=["1", "2", "3", "4", "5", "6", "7", "8", "9", "b", "q"], default="q")
+        choice = Prompt.ask("Select", choices=["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "b", "q"], default="q")
 
         if choice == "1":
             deploy_mrpack4server()
@@ -1021,6 +1025,14 @@ def interactive_menu():
 
         elif choice == "9":
             download_world()
+            Prompt.ask("\n[dim]Press Enter to continue[/dim]")
+
+        elif choice == "10":
+            switch_local_production_mode()
+            Prompt.ask("\n[dim]Press Enter to continue[/dim]")
+
+        elif choice == "11":
+            switch_local_test_mode()
             Prompt.ask("\n[dim]Press Enter to continue[/dim]")
 
         elif choice == "q":
@@ -1420,6 +1432,129 @@ def backup_restore(backup_index=None, auto_confirm=False):
 
 
 # =============================================================================
+# Local Server Mode Functions
+# =============================================================================
+
+def get_local_server_dir():
+    """Get the LocalServer directory path"""
+    return os.path.abspath(os.path.join(SCRIPT_DIR, "..", "LocalServer"))
+
+
+def switch_local_production_mode():
+    """Switch local server to production mode"""
+    import shutil
+
+    local_dir = get_local_server_dir()
+
+    console.print(Panel(
+        "[bold]Production Mode Setup[/bold]\n\n"
+        "This mode replicates production settings:\n"
+        "  • Normal world generation (not superflat)\n"
+        "  • Mobs enabled\n"
+        "  • Configs synced from MCC\n"
+        "  • Production-like server.properties",
+        title="[cyan]Local Server Mode[/cyan]",
+        border_style="cyan"
+    ))
+
+    # Check paths exist
+    props_production = os.path.join(local_dir, "server.properties.production")
+    if not os.path.exists(props_production):
+        console.print(f"[red]Error: {props_production} not found![/red]")
+        return False
+
+    # Step 1: Switch server.properties
+    console.print("\n[bold]Step 1/3: Switching to production server.properties...[/bold]")
+    props_file = os.path.join(local_dir, "server.properties")
+    shutil.copy(props_production, props_file)
+    console.print("[green]✓ server.properties updated[/green]")
+
+    # Step 2: Sync configs from MCC
+    console.print("\n[bold]Step 2/3: Syncing configs from MCC...[/bold]")
+    mcc_config = os.path.join(SCRIPT_DIR, "config")
+    local_config = os.path.join(local_dir, "config")
+
+    if os.path.exists(mcc_config):
+        os.makedirs(local_config, exist_ok=True)
+        config_count = 0
+        for item in os.listdir(mcc_config):
+            src = os.path.join(mcc_config, item)
+            dst = os.path.join(local_config, item)
+            if os.path.isdir(src):
+                if os.path.exists(dst):
+                    shutil.rmtree(dst)
+                shutil.copytree(src, dst)
+            else:
+                shutil.copy2(src, dst)
+            config_count += 1
+        console.print(f"[green]✓ Synced {config_count} config items[/green]")
+    else:
+        console.print("[yellow]⚠ MCC config folder not found, skipping sync[/yellow]")
+
+    # Step 3: World status
+    console.print("\n[bold]Step 3/3: World setup...[/bold]")
+    world_production = os.path.join(local_dir, "world-production")
+    if os.path.exists(world_production):
+        console.print("[green]✓ Using existing world-production folder[/green]")
+        console.print("[dim]  To reset, delete world-production folder manually[/dim]")
+    else:
+        console.print("[yellow]⚠ world-production will be generated on first start[/yellow]")
+        console.print("[dim]  Or run 'download-world' to sync from production[/dim]")
+
+    # Summary
+    console.print("\n" + "="*50)
+    console.print("[bold green]✓ Production Mode Ready[/bold green]")
+    console.print("\n[bold]Settings applied:[/bold]")
+    console.print("  • server.properties: production mode")
+    console.print("  • Configs: synced from MCC")
+    console.print("  • World: world-production (normal generation)")
+    console.print("\n[dim]To start: cd ../LocalServer && start.bat[/dim]")
+    console.print("="*50)
+
+    return True
+
+
+def switch_local_test_mode():
+    """Switch local server to test mode"""
+    import shutil
+
+    local_dir = get_local_server_dir()
+
+    console.print(Panel(
+        "[bold]Test Mode Setup[/bold]\n\n"
+        "Switching back to test settings:\n"
+        "  • Superflat world\n"
+        "  • Peaceful difficulty\n"
+        "  • No mobs",
+        title="[cyan]Local Server Mode[/cyan]",
+        border_style="cyan"
+    ))
+
+    # Check paths exist
+    props_test = os.path.join(local_dir, "server.properties.test")
+    if not os.path.exists(props_test):
+        console.print(f"[red]Error: {props_test} not found![/red]")
+        return False
+
+    # Switch server.properties
+    console.print("\n[bold]Switching to test server.properties...[/bold]")
+    props_file = os.path.join(local_dir, "server.properties")
+    shutil.copy(props_test, props_file)
+    console.print("[green]✓ server.properties updated[/green]")
+
+    # Summary
+    console.print("\n" + "="*50)
+    console.print("[bold green]✓ Test Mode Ready[/bold green]")
+    console.print("\n[bold]Settings applied:[/bold]")
+    console.print("  • server.properties: test mode (superflat, peaceful)")
+    console.print("  • World: world-test")
+    console.print("\n[dim]To start: cd ../LocalServer && start.bat[/dim]")
+    console.print("="*50)
+
+    return True
+
+
+# =============================================================================
 # World Download Functions
 # =============================================================================
 
@@ -1713,6 +1848,10 @@ if __name__ == "__main__":
             args = [a for a in args if a not in ("-y", "--yes", "--no-backup")]
             destination = args[0] if args else None
             download_world(destination_dir=destination, backup_existing=not no_backup, auto_confirm=auto_yes)
+        elif command == "local-production":
+            switch_local_production_mode()
+        elif command == "local-test":
+            switch_local_test_mode()
         elif command == "backup":
             # Backup subcommands
             if len(sys.argv) < 3:
@@ -1766,8 +1905,12 @@ if __name__ == "__main__":
             console.print("  python server-config.py backup restore [number]  # Restore from backup")
             console.print("")
             console.print("[yellow]World Management:[/yellow]")
-            console.print("  python server-config.py download-world [path] [--no-backup] [-y]  # Download production world")
             console.print("  python server-config.py regenerate [preset] [seed] [-y]  # Regenerate world")
             console.print("  python server-config.py presets      # List world presets")
+            console.print("")
+            console.print("[yellow]Local Server:[/yellow]")
+            console.print("  python server-config.py download-world [path] [--no-backup] [-y]  # Download production world")
+            console.print("  python server-config.py local-production  # Switch local to production mode")
+            console.print("  python server-config.py local-test        # Switch local to test mode")
     else:
         interactive_menu()
