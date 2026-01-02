@@ -1,12 +1,12 @@
 name = "MCC"
 author = "Slash"
-version = "0.9.53"
+version = "0.9.54"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "e7347105a0d8709c531a4591c5775791e648489dc72ec087ee9a237b50057d04"
+hash = "41f1c22465389b170e32d7c1cae2750b2550466c2413e448963d0d58d2475cbc"
 
 [versions]
 fabric = "0.18.3"

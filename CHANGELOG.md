@@ -2,6 +2,15 @@
 
 All notable changes to MCC will be documented in this file.
 
+## [0.9.54] - 2026-01-01
+
+### Removed
+- **Universal Graves** - Removed to fix creative mode crash (DecoderException on set_creative_mode_slot packet when using Immersive Paintings items)
+
+### Notes
+- Mod count: 122 total (119 client, 3 server-only)
+- Players' items now drop normally on death (vanilla behavior)
+
 ## [0.9.53] - 2026-01-01
 
 ### Fixed

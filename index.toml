@@ -1067,11 +1067,6 @@ hash = "3503ec478e84cfe8351db1cf03018a3dfcf38ebc7505234ad4e8d51a075457b0"
 metafile = true
 
 [[files]]
-file = "mods/universal-graves.pw.toml"
-hash = "e1fd930b1fbe41e9a60b78b379de4758aae1c319d24db5e2e8c2ab934b7539ce"
-metafile = true
-
-[[files]]
 file = "mods/voice-chat-interaction.pw.toml"
 hash = "ddc991d370938f2b198bd31746535c49eacbd78dc70e908c093173e836db7ddf"
 metafile = true
