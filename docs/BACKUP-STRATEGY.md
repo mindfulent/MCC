@@ -70,12 +70,31 @@ This will:
 
 **Storage location:** `../LocalServer/world-production/` (and `_nether`, `_the_end`)
 
+### Local Testing with Backup Preservation
+
+When you run LocalServer in production mode, **the backup is preserved**:
+
+```
+world-production/  ← Pristine backup (never modified by LocalServer)
+world-local/       ← Working copy for local testing
+```
+
+**Workflow:**
+1. `world-download` (MCC) → Downloads to `world-production/`
+2. `mode production` (LocalServer) → Copies to `world-local/` if needed
+3. Server runs on `world-local/` - backup stays clean
+4. To reset: `reset-local` (LocalServer) → Re-copies from backup
+
+This means you can break things locally, then reset to the clean backup state anytime.
+
 ### Upload World to Production
 
 ```bash
 cd MCC
 python server-config.py world-upload
 ```
+
+**Important:** This uploads from `world-production/` (the backup), NOT `world-local/`. Local test changes are not pushed to production.
 
 This performs a **two-phase upload** to minimize downtime:
 
