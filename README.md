@@ -247,12 +247,12 @@ python server-config.py status                      # Check server status
 python server-config.py restart                     # Restart server
 python server-config.py cmd "say Hello"             # Send console command
 
-# World sync (backup/restore)
+# World Sync (primary backup strategy)
 python server-config.py world-download              # Download production → LocalServer
 python server-config.py world-upload                # Upload LocalServer → production
 
-# Backup management (requires Advanced Backups mod)
-python server-config.py backup list                 # List all backups
+# Advanced Backups (secondary - on-server backups)
+python server-config.py backup list                 # List server backups
 python server-config.py backup create               # Create manual backup
 ```
 

@@ -1497,7 +1497,7 @@ def interactive_menu():
         table.add_row("5", "Upload configs only")
         table.add_row("6", "List server files")
         table.add_row("", "")
-        table.add_row("b", "[cyan]Backup Menu →[/cyan]")
+        table.add_row("b", "[cyan]Backup & World Sync →[/cyan]")
         table.add_row("", "")
         table.add_row("7", "[red]Regenerate World[/red]")
         table.add_row("", "")
@@ -1554,8 +1554,8 @@ def backup_menu():
     while True:
         console.clear()
         console.print(Panel.fit(
-            "[bold cyan]Backup Management[/bold cyan]\n"
-            "[dim]Advanced Backups Control[/dim]",
+            "[bold cyan]Backup & World Sync[/bold cyan]\n"
+            "[dim]Primary: World Sync | Secondary: Advanced Backups[/dim]",
             border_style="cyan"
         ))
 
@@ -1566,33 +1566,49 @@ def backup_menu():
         table.add_column("Key", style="bold yellow")
         table.add_column("Action", style="white")
 
-        table.add_row("1", "List Backups")
-        table.add_row("2", "Create Backup")
-        table.add_row("3", "Create Snapshot (immune to purge)")
-        table.add_row("4", "[yellow]Restore from Backup[/yellow]")
+        # Primary strategy - World Sync
+        table.add_row("", "[bold green]World Sync (Primary)[/bold green]")
+        table.add_row("1", "Download World (Production → LocalServer)")
+        table.add_row("2", "[yellow]Upload World (LocalServer → Production)[/yellow]")
+        table.add_row("", "")
+
+        # Secondary strategy - Advanced Backups
+        table.add_row("", "[bold blue]Advanced Backups (Secondary)[/bold blue]")
+        table.add_row("3", "List Server Backups")
+        table.add_row("4", "Create Server Backup")
+        table.add_row("5", "Create Snapshot (immune to purge)")
+        table.add_row("6", "[yellow]Restore from Server Backup[/yellow]")
         table.add_row("", "")
         table.add_row("b", "← Back to Main Menu")
 
         console.print(table)
         console.print()
 
-        choice = Prompt.ask("Select", choices=["1", "2", "3", "4", "b"], default="b")
+        choice = Prompt.ask("Select", choices=["1", "2", "3", "4", "5", "6", "b"], default="b")
 
         if choice == "1":
-            backup_list()
+            world_download(auto_confirm=False)
             Prompt.ask("\n[dim]Press Enter to continue[/dim]")
 
         elif choice == "2":
+            world_upload(auto_confirm=False)
+            Prompt.ask("\n[dim]Press Enter to continue[/dim]")
+
+        elif choice == "3":
+            backup_list()
+            Prompt.ask("\n[dim]Press Enter to continue[/dim]")
+
+        elif choice == "4":
             comment = Prompt.ask("Backup comment (optional)", default="")
             backup_create(comment)
             Prompt.ask("\n[dim]Press Enter to continue[/dim]")
 
-        elif choice == "3":
+        elif choice == "5":
             comment = Prompt.ask("Snapshot comment (optional)", default="")
             backup_snapshot(comment)
             Prompt.ask("\n[dim]Press Enter to continue[/dim]")
 
-        elif choice == "4":
+        elif choice == "6":
             backup_restore()
             Prompt.ask("\n[dim]Press Enter to continue[/dim]")
 
@@ -2045,15 +2061,15 @@ if __name__ == "__main__":
             console.print("  python server-config.py configs      # Upload config directory to production")
             console.print("  python server-config.py list         # List production server files")
             console.print("")
-            console.print("[yellow]Backup Management:[/yellow]")
-            console.print("  python server-config.py backup list              # List all backups")
-            console.print("  python server-config.py backup create [comment]  # Create manual backup")
-            console.print("  python server-config.py backup snapshot [comment] # Create snapshot (immune to purge)")
-            console.print("  python server-config.py backup restore [number]  # Restore from backup")
-            console.print("")
-            console.print("[yellow]World Sync:[/yellow]")
+            console.print("[yellow]World Sync (Primary Backup):[/yellow]")
             console.print("  python server-config.py world-download [--no-backup] [-y]  # Download production → LocalServer")
             console.print("  python server-config.py world-upload [-y]                  # Upload LocalServer → production")
+            console.print("")
+            console.print("[yellow]Advanced Backups (Secondary):[/yellow]")
+            console.print("  python server-config.py backup list              # List server backups")
+            console.print("  python server-config.py backup create [comment]  # Create manual backup")
+            console.print("  python server-config.py backup snapshot [comment] # Create snapshot (immune to purge)")
+            console.print("  python server-config.py backup restore [number]  # Restore from server backup")
             console.print("")
             console.print("[yellow]World Management:[/yellow]")
             console.print("  python server-config.py regenerate [preset] [seed] [-y]  # Regenerate world")

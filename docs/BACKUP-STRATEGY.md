@@ -13,6 +13,18 @@ We have multiple layers of backup protection:
 | GitHub Releases | `.mrpack` | Per release | GitHub | No | Yes | Yes |
 | Bloom.host | Panel backups | Varies | Bloom.host | Yes | Yes | Yes |
 
+### Interactive Menu
+
+All backup operations are available through the interactive menu:
+
+```bash
+python server-config.py    # Then press 'b' for Backup & World Sync
+```
+
+The menu organizes options by priority:
+1. **World Sync (Primary)** - Download/upload between production and LocalServer
+2. **Advanced Backups (Secondary)** - On-server backups via the mod
+
 ## Primary Strategy: World Sync
 
 The recommended backup strategy uses `world-download` and `world-upload` commands which sync world data between production (Bloom.host) and LocalServer.
