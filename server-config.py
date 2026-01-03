@@ -1622,8 +1622,8 @@ def interactive_menu():
         table.add_row("3", "Restart Server")
         table.add_row("4", "Send Console Command")
         table.add_row("", "")
-        table.add_row("5", "Upload configs only")
-        table.add_row("6", "List server files")
+        table.add_row("5", "Update Pack (upload modpack-info.json)")
+        table.add_row("6", "Upload configs only")
         table.add_row("", "")
         table.add_row("b", "[cyan]Backup & World Sync →[/cyan]")
         table.add_row("", "")
@@ -1656,11 +1656,13 @@ def interactive_menu():
             Prompt.ask("\n[dim]Press Enter to continue[/dim]")
 
         elif choice == "5":
-            deploy_configs()
+            version = Prompt.ask("Enter version (e.g., 0.9.54)")
+            if version:
+                update_modpack_info(version, production=True)
             Prompt.ask("\n[dim]Press Enter to continue[/dim]")
 
         elif choice == "6":
-            list_remote_files()
+            deploy_configs()
             Prompt.ask("\n[dim]Press Enter to continue[/dim]")
 
         elif choice == "b":
