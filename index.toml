@@ -521,7 +521,7 @@ metafile = true
 
 [[files]]
 file = "mods/advanced-backups.pw.toml"
-hash = "b9268b1a200cfed3feb35f35139fec9cb431ca8c2d75c90f7d9b3981d995018a"
+hash = "b6c4585879dea820ccb1efb21f1f1c305b62ce142eca82c8a0c299f7e997931d"
 metafile = true
 
 [[files]]
@@ -561,7 +561,7 @@ metafile = true
 
 [[files]]
 file = "mods/autowhitelist.pw.toml"
-hash = "3a631fd09fe5973933295b7ad068366d6015c10c97a4d098c4993b3e4e77ce2a"
+hash = "90e48bb495c93120a6721ac99da1f471ccc6185078c096b841c4d1579af78b85"
 metafile = true
 
 [[files]]
@@ -586,7 +586,7 @@ metafile = true
 
 [[files]]
 file = "mods/better-sleep.pw.toml"
-hash = "d583c95064e14827a70131c4d4515c2ca61fed7692cee825692b895516463708"
+hash = "642e862f4be77db00a3afd2105efb10b81d874e0afc32c621cf1bb7f087fe410"
 metafile = true
 
 [[files]]
@@ -731,7 +731,7 @@ metafile = true
 
 [[files]]
 file = "mods/fabricord.pw.toml"
-hash = "5749724ac7f1331ec4bd6469e93b650501e3d4e455c750c7b9068f99c9574c9d"
+hash = "5ceb08cc1ae97b4cd14641b74a3aaeb539ec033a93737c9e59cb3bdb71fbee44"
 metafile = true
 
 [[files]]

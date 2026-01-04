@@ -1,6 +1,6 @@
 name = "Fabricord"
 filename = "Fabricord-4.2.1.jar"
-side = "server"
+side = "both"
 
 [download]
 url = "https://cdn.modrinth.com/data/xU8Bn98V/versions/Sp4G3fHk/Fabricord-4.2.1.jar"

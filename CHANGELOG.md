@@ -2,6 +2,14 @@
 
 All notable changes to MCC will be documented in this file.
 
+## [0.9.61] - 2026-01-03
+
+### Fixed
+- **Server-side mods not installing** - Fixed Advanced Backups, AutoWhitelist, Better Sleep, and Fabricord not being installed on the server. Root cause: mrpack4server doesn't support the `server-overrides` folder from mrpack format. Changed these mods from `side = "server"` to `side = "both"` so they're included in regular `overrides/` folder.
+
+### Notes
+- Mod count: 126 total (all mods now install correctly on both client and server)
+
 ## [0.9.60] - 2026-01-03
 
 ### Added

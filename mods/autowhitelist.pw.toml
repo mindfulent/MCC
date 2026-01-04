@@ -1,6 +1,6 @@
 name = "AutoWhitelist"
 filename = "autowhitelist-1.3.2+1.21.jar"
-side = "server"
+side = "both"
 
 [download]
 url = "https://cdn.modrinth.com/data/BMaqFQAd/versions/1dtgNXYd/autowhitelist-1.3.2%2B1.21.jar"

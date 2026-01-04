@@ -1,6 +1,6 @@
 name = "Better Sleep"
 filename = "better-sleep-2.2.2.jar"
-side = "server"
+side = "both"
 
 [download]
 url = "https://cdn.modrinth.com/data/C7yTiELM/versions/TXsou15A/better-sleep-2.2.2.jar"

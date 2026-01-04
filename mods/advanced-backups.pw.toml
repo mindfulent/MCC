@@ -1,6 +1,6 @@
 name = "Advanced Backups"
 filename = "AdvancedBackups-fabric-1.21-3.7.1.jar"
-side = "server"
+side = "both"
 
 [download]
 hash-format = "sha1"
