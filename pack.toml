@@ -1,6 +1,6 @@
 name = "TBA"
 author = "Slash"
-version = "0.9.61"
+version = "0.9.62"
 pack-format = "packwiz:1.1.0"
 
 [index]

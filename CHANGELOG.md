@@ -2,6 +2,18 @@
 
 All notable changes to TBA will be documented in this file.
 
+## [0.9.62] - 2026-01-05
+
+### Changed
+- **Rebrand from MCC to TBA** - Full rebrand from "Minecraft College" to "The Block Academy"
+  - Updated pack name, assets, and all documentation
+  - New banner and square logo images
+  - Server address: `play.theblock.academy`
+
+### Notes
+- Mod count: 126 total (unchanged from 0.9.61)
+- This release marks the official transition to The Block Academy branding
+
 ## [0.9.61] - 2026-01-03
 
 ### Fixed
