@@ -1,13 +1,13 @@
 name = "AutoWhitelist"
-filename = "autowhitelist-1.3.2+1.21.jar"
+filename = "autowhitelist-1.3.3+1.21.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/BMaqFQAd/versions/1dtgNXYd/autowhitelist-1.3.2%2B1.21.jar"
-hash-format = "sha512"
-hash = "c929ab1a535b97e250e24f89331d003b9270ce4726ddf40579c27451fcdff2e151d3aac4f1d08901c4bfc3a15961eb20758926af60e6f7d5bd535abf0ea4e5d5"
+hash-format = "sha1"
+hash = "b511f519bdeca767916d30bfb3f984e9acb920b1"
+mode = "metadata:curseforge"
 
 [update]
-[update.modrinth]
-mod-id = "BMaqFQAd"
-version = "1dtgNXYd"
+[update.curseforge]
+file-id = 7386107
+project-id = 575422

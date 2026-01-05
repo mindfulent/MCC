@@ -494,7 +494,7 @@ hash = "605ef244f96db8bc88c65d08644243e4ae980e2b08b40e7963118051c0135757"
 
 [[files]]
 file = "modpack-info.json"
-hash = "0f1876643cee2df05fddfb94ccb26a5a123f221c7faac09987fd7ac5d615f96e"
+hash = "364d7fb16c0cbe0707025e0b3012f038b5b3c2c36c64ebf940770fae5e687b70"
 
 [[files]]
 file = "mods/accurate-block-placement-reborn.pw.toml"
@@ -553,7 +553,7 @@ metafile = true
 
 [[files]]
 file = "mods/autowhitelist.pw.toml"
-hash = "c11ed03ce48de5dd4bf344340bc374b3aa77bde9612ae8a725ea305e2b1caafa"
+hash = "070db28dc60f5d70f226038e34a639cb49385dfd2e0229b15f4aab0f20a51d51"
 metafile = true
 
 [[files]]
