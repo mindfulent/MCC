@@ -1,4 +1,4 @@
-# MCC Modpack Credits
+# TBA Modpack Credits
 
 This document credits all mod creators whose work makes this modpack possible. Thank you for your incredible contributions to the Minecraft modding community!
 

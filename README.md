@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="mcc_com.png" alt="MCC Logo" width="100%">
+  <img src="tba_banner.png" alt="TBA Logo" width="100%">
 </p>
 
-# MCC (MinecraftCollege.com) v0.9.59
+# TBA (TheBlock.Academy) v0.9.61
 
-A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
+A curated Fabric 1.21.1 modpack for The Block Academy CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
 **119 mods total** (116 client-side, 3 server-only) — see [Mod Distribution](#mod-distribution) for details.
 
@@ -130,7 +130,7 @@ The modpack comes pre-configured with sensible defaults:
 ### For Players
 
 1. Download [Prism Launcher](https://prismlauncher.org/)
-2. Get the latest `.mrpack` from [Releases](https://github.com/mindfulent/MCC/releases)
+2. Get the latest `.mrpack` from [Releases](https://github.com/mindfulent/TBA/releases)
 3. In Prism: **Add Instance** → **Import** → Select the `.mrpack`
 4. Allocate 4-6GB RAM (Edit Instance → Settings → Memory)
 5. **Get whitelisted:** Use `/register <your-minecraft-username>` in our Discord
@@ -146,12 +146,12 @@ Place the downloaded `DistantHorizons.sqlite` file in your Prism Launcher instan
 
 **Windows** (Win+R, paste, replace `{username}` with your Windows username):
 ```
-C:\Users\{username}\AppData\Roaming\PrismLauncher\instances\MCC\minecraft
+C:\Users\{username}\AppData\Roaming\PrismLauncher\instances\TBA\minecraft
 ```
 
 **macOS** (Finder → Go → Go to Folder, replace `{username}`):
 ```
-/Users/{username}/Library/Application Support/PrismLauncher/instances/MCC/minecraft
+/Users/{username}/Library/Application Support/PrismLauncher/instances/TBA/minecraft
 ```
 
 **Alternative:** In Prism Launcher, right-click the instance → "Folder" → drop the file there.
@@ -160,8 +160,8 @@ C:\Users\{username}\AppData\Roaming\PrismLauncher\instances\MCC\minecraft
 
 ```bash
 # Clone the repository
-git clone https://github.com/mindfulent/MCC.git
-cd MCC
+git clone https://github.com/mindfulent/TBA.git
+cd TBA
 
 # Download Packwiz (Windows)
 # Get from: https://github.com/packwiz/packwiz/releases
@@ -194,7 +194,7 @@ cd MCC
 ## Project Structure
 
 ```
-MCC/
+TBA/
 ├── pack.toml                 # Pack metadata (name, version, MC version, loader)
 ├── index.toml                # File index with hashes
 ├── options.txt               # Default game options
@@ -209,7 +209,7 @@ MCC/
 └── docs/
     ├── CREDITS.md            # Mod creators and donation links
     ├── server-plan.md        # Mod ecosystem research
-    └── minecraft-college-setup-guide.md  # Deployment guide
+    └── setup-guide.md        # Deployment guide
 ```
 
 ## Server Deployment
@@ -222,7 +222,7 @@ The server uses **mrpack4server** which downloads modpacks from GitHub releases.
 # After making changes:
 ./packwiz.exe modrinth export
 git add -A && git commit -m "v0.9.X - description" && git push
-gh release create v0.9.X MCC-0.9.X.mrpack --title "v0.9.X"
+gh release create v0.9.X TBA-0.9.X.mrpack --title "v0.9.X"
 
 # Test locally first (recommended)
 python server-config.py update-pack 0.9.X           # Updates LocalServer
@@ -292,8 +292,8 @@ The modpack has two exports for different purposes:
 
 | Export | Format | For | Mod Count |
 |--------|--------|-----|-----------|
-| `MCC-X.Y.Z.zip` | CurseForge | CurseForge App users | 123 mods |
-| `MCC-X.Y.Z.mrpack` | Modrinth | Prism Launcher + Server | 126 mods |
+| `TBA-X.Y.Z.zip` | CurseForge | CurseForge App users | 123 mods |
+| `TBA-X.Y.Z.mrpack` | Modrinth | Prism Launcher + Server | 126 mods |
 
 **Server-only mods** (included in `.mrpack`, excluded from `.zip`):
 - **AutoWhitelist** - Discord `/register` command for whitelist

@@ -1,6 +1,6 @@
 # Backup Strategy
 
-This document outlines the backup and restore strategies for the MCC Minecraft server.
+This document outlines the backup and restore strategies for the TBA (The Block Academy) Minecraft server.
 
 ## Overview
 
@@ -22,10 +22,10 @@ cd LocalServer
 python server-config.py    # Interactive menu with World Sync section
 ```
 
-Server management and Advanced Backups are in **MCC**:
+Server management and Advanced Backups are in **TBA**:
 
 ```bash
-cd MCC
+cd TBA
 python server-config.py    # Then press 'b' for Backup & World Sync
 ```
 
@@ -144,27 +144,27 @@ Uploads from `distant-horizons-cold/` to production. Players may not see distant
 
 ### Standard Restore Workflow
 
-1. **Stop production server** (via Bloom.host panel or MCC commands)
+1. **Stop production server** (via Bloom.host panel or TBA commands)
 2. `upload-world` - Upload world data (server offline)
 3. **Start production server**
 4. `upload-dh` - (Optional) Upload DistantHorizons while server runs
 
-## Alternative: MCC World Sync Commands
+## Alternative: TBA World Sync Commands
 
-MCC also has world sync commands that download/upload everything including DH:
+TBA also has world sync commands that download/upload everything including DH:
 
 ```bash
-cd MCC
+cd TBA
 python server-config.py world-status     # View backup status
 python server-config.py world-download   # Download ALL data (including DH)
 python server-config.py world-upload     # Two-phase upload
 ```
 
-**MCC's `world-upload`** performs a two-phase upload:
+**TBA's `world-upload`** performs a two-phase upload:
 - Phase 1 (server offline): Critical world data
 - Phase 2 (server online): DistantHorizons and BlueMap
 
-**When to use MCC commands:** When you want a complete backup/restore including all DH data in one operation.
+**When to use TBA commands:** When you want a complete backup/restore including all DH data in one operation.
 
 **When to use LocalServer commands:** When you want control over DH handling (recommended for routine backups).
 
@@ -191,10 +191,10 @@ Located at `config/AdvancedBackups.properties`:
 /backup snapshot        # Create snapshot (immune to auto-purge)
 ```
 
-### CLI Commands (from MCC)
+### CLI Commands (from TBA)
 
 ```bash
-cd MCC
+cd TBA
 python server-config.py backup list              # List all backups
 python server-config.py backup create [comment]  # Trigger manual backup
 python server-config.py backup snapshot [comment] # Create snapshot
@@ -220,7 +220,7 @@ Every modpack version is preserved as a GitHub release containing:
 
 To restore mods/configs to a specific version:
 ```bash
-cd MCC
+cd TBA
 python server-config.py update-pack 0.9.X -p
 python server-config.py restart
 ```
@@ -243,7 +243,7 @@ python server-config.py upload-dh -y      # Optional, server can be online
 If Advanced Backups mod is working:
 
 ```bash
-cd MCC
+cd TBA
 python server-config.py backup list
 python server-config.py backup restore 1    # Restore most recent
 ```
@@ -253,7 +253,7 @@ python server-config.py backup restore 1    # Restore most recent
 If world is fine but mods are broken:
 
 ```bash
-cd MCC
+cd TBA
 python server-config.py update-pack 0.9.X -p
 python server-config.py restart
 ```
@@ -263,7 +263,7 @@ python server-config.py restart
 If everything is lost:
 
 1. Set up fresh server with mrpack4server
-2. Restore mods: `cd MCC && python server-config.py update-pack <latest-version> -p`
+2. Restore mods: `cd TBA && python server-config.py update-pack <latest-version> -p`
 3. Restore world: `cd LocalServer && python server-config.py upload-world -y`
 4. Start server
 5. (Optional) Upload DH: `python server-config.py upload-dh -y`
@@ -274,7 +274,7 @@ If everything is lost:
 |--------|-----------|----------------------------|
 | World download | Weekly or before major changes | `download-world` |
 | DH cold storage | Once, then rarely | `download-dh` |
-| Manual snapshot | Before risky operations | (MCC) `backup snapshot "pre-update"` |
+| Manual snapshot | Before risky operations | (TBA) `backup snapshot "pre-update"` |
 | Verify backups | Monthly | Test restore to LocalServer |
 
 ## File Locations
@@ -287,7 +287,7 @@ If everything is lost:
 | - The End | `/world/DIM1/` | `LocalServer/world-production/DIM1/` |
 | DistantHorizons | `/world/*/data/` | `LocalServer/distant-horizons-cold/` |
 | Advanced Backups | `/backups/world/` | N/A (on-server only) |
-| Mods/Configs | GitHub releases | MCC repo |
+| Mods/Configs | GitHub releases | TBA repo |
 
 **Note:** Vanilla Minecraft stores all dimensions inside the main world folder (DIM-1 = Nether, DIM1 = The End).
 
@@ -322,7 +322,7 @@ distant-horizons-cold/
 
 The mod may not be installed. Check:
 ```bash
-cd MCC
+cd TBA
 python server-config.py update-pack <current-version> -p
 python server-config.py restart
 ```
@@ -350,7 +350,7 @@ For DH uploads:
 
 ### SFTP credentials not configured
 
-Both MCC and LocalServer need `.env` files with SFTP credentials:
+Both TBA and LocalServer need `.env` files with SFTP credentials:
 
 ```bash
 # Copy template and fill in credentials

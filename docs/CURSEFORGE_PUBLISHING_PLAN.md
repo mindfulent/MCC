@@ -1,13 +1,13 @@
-# MCC CurseForge Publishing Plan
+# TBA CurseForge Publishing Plan
 
-**Goal:** Publish MCC modpack to CurseForge for broader distribution
+**Goal:** Publish TBA modpack to CurseForge for broader distribution
 **Current Version:** 0.9.36 (87 mods)
 
 ---
 
 ## Executive Summary
 
-MCC is currently distributed via GitHub releases for Modrinth/Prism Launcher users. Publishing to CurseForge will:
+TBA is currently distributed via GitHub releases for Modrinth/Prism Launcher users. Publishing to CurseForge will:
 - Reach the larger CurseForge user base
 - Enable one-click installs via CurseForge App
 - Potentially generate CurseForge Rewards points
@@ -23,7 +23,7 @@ MCC is currently distributed via GitHub releases for Modrinth/Prism Launcher use
 ### Steps
 
 ```bash
-cd /c/Users/slash/Projects/MCC
+cd /c/Users/slash/Projects/TBA
 
 # Run CurseForge detection
 ./packwiz.exe curseforge detect
@@ -191,7 +191,7 @@ Or create a custom metadata field and filter during export.
 1. Go to https://www.curseforge.com/project/create
 2. Select: Modpacks → Minecraft
 3. Fill in:
-   - **Name:** MCC (MinecraftCollege.com)
+   - **Name:** TBA (TheBlock.Academy)
    - **Summary:** Curated Fabric 1.21.1 modpack for building, performance, and multiplayer
    - **Description:** (Use README.md content, adapted for CF formatting)
    - **Categories:** Building, Multiplayer, Performance
@@ -201,10 +201,10 @@ Or create a custom metadata field and filter during export.
 
 ```bash
 # Export CurseForge format
-./packwiz.exe curseforge export -o MCC-0.9.36-curseforge.zip
+./packwiz.exe curseforge export -o TBA-0.9.36-curseforge.zip
 
 # Verify structure
-unzip -l MCC-0.9.36-curseforge.zip
+unzip -l TBA-0.9.36-curseforge.zip
 # Should contain:
 # - manifest.json (mod references)
 # - modlist.html (optional)
@@ -248,13 +248,13 @@ When updating the modpack:
 
 # 3. Export both formats
 ./packwiz.exe modrinth export
-./packwiz.exe curseforge export -o MCC-X.Y.Z-curseforge.zip
+./packwiz.exe curseforge export -o TBA-X.Y.Z-curseforge.zip
 
 # 4. Commit and push
 git add -A && git commit -m "vX.Y.Z - description" && git push
 
 # 5. Create GitHub release (for Modrinth users)
-gh release create vX.Y.Z MCC-X.Y.Z.mrpack --title "vX.Y.Z"
+gh release create vX.Y.Z TBA-X.Y.Z.mrpack --title "vX.Y.Z"
 
 # 6. Update server
 python server-config.py update-pack X.Y.Z

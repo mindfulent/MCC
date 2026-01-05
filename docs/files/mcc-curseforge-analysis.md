@@ -1,6 +1,6 @@
-# MCC Modpack CurseForge Compatibility Analysis
+# TBA Modpack CurseForge Compatibility Analysis
 
-**Modpack:** MCC v0.9.36 (88 mods)  
+**Modpack:** TBA v0.9.36 (88 mods)  
 **Analysis Date:** December 27, 2025
 
 ---
@@ -115,7 +115,7 @@ These mods typically have CurseForge presence - verify and reference via manifes
 Run `packwiz curseforge detect` on your existing pack to auto-identify CurseForge equivalents:
 
 ```bash
-cd C:\Users\slash\Projects\MCC
+cd C:\Users\slash\Projects\TBA
 packwiz curseforge detect
 ```
 
@@ -143,10 +143,10 @@ For mods not on CurseForge AND not on approved list:
 
 ```bash
 # Export CurseForge version
-packwiz curseforge export -o MCC-curseforge.zip
+packwiz curseforge export -o TBA-curseforge.zip
 
 # Verify structure
-unzip -l MCC-curseforge.zip
+unzip -l TBA-curseforge.zip
 # Should show:
 # - manifest.json (with CF mod references)
 # - overrides/mods/ (only approved non-CF mods)
@@ -202,4 +202,4 @@ unzip -l MCC-curseforge.zip
 
 ---
 
-*Generated for Minecraft College modpack CurseForge compatibility assessment*
+*Generated for The Block Academy modpack CurseForge compatibility assessment*

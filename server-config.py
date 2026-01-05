@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-MCC Server Manager
+TBA Server Manager
 Bloom.host Server Control & Modpack Deployment
 
 Usage:

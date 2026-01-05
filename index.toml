@@ -485,12 +485,12 @@ file = "journeymap/config/6.0/journeymap.minimap2.config"
 hash = "408e7f0df62763aa355abbca8293e5e4ee8fe3ac687657768fd51fd96f164d78"
 
 [[files]]
-file = "mcc_com.png"
-hash = "5f863af43a9d70fb16869d49f51f1df91677140da84b09f4bdc17815e3c9c34f"
+file = "tba_banner.png"
+hash = "placeholder"
 
 [[files]]
-file = "mcc_square.png"
-hash = "58f04aaad383a08b9ddbe72280b1db0acf995ec1c3510581db49b7bb87c0778d"
+file = "tba_square.png"
+hash = "placeholder"
 
 [[files]]
 file = "minescript/config.txt"

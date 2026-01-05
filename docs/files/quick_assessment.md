@@ -1,4 +1,4 @@
-# Quick Assessment: MCC → CurseForge
+# Quick Assessment: TBA → CurseForge
 
 Based on cross-referencing your CREDITS.md against the approved non-CurseForge mods spreadsheet:
 

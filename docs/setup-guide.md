@@ -1,4 +1,4 @@
-# Minecraft College 1.21.1 Fabric Server & Modpack Setup Guide
+# The Block Academy 1.21.1 Fabric Server & Modpack Setup Guide
 
 A complete walkthrough for setting up your Bloom.host server with Fabric 1.21.1, optimized JVM flags for 12GB RAM, and creating/distributing a custom modpack via Modrinth.
 
@@ -101,7 +101,7 @@ pvp=true
 enable-command-block=false
 
 # MOTD (shows in server list)
-motd=\u00A7b\u00A7lMinecraft College\u00A7r \u00A77| \u00A7fWhere Creativity Meets Community
+motd=\u00A7b\u00A7lThe Block Academy\u00A7r \u00A77| \u00A7fWhere Creativity Meets Community
 ```
 
 ### Step 1.6: Pre-generate the World (Recommended)
@@ -173,7 +173,7 @@ packwiz init
 ```
 
 When prompted:
-- **Pack name:** `Minecraft College`
+- **Pack name:** `The Block Academy`
 - **Pack version:** `1.0.0`
 - **Pack author:** `Slash`
 - **Minecraft version:** `1.21.1`
@@ -328,8 +328,8 @@ This creates `Minecraft-College-1.0.0.mrpack` with:
 2. Click **Create a project**
 3. Select **Modpack**
 4. Fill in details:
-   - **Name:** Minecraft College
-   - **Slug:** `minecraft-college`
+   - **Name:** The Block Academy
+   - **Slug:** `the-block-academy`
    - **Summary:** "Where Creativity Meets Community - A Fabric 1.21.1 modpack for learning and mastering creative crafts"
    - **Categories:** Education, Lightweight, Multiplayer
 5. Upload your `.mrpack` file as a version
@@ -394,7 +394,7 @@ Create this guide for your community:
 
 ---
 
-#### Installing Minecraft College Modpack
+#### Installing The Block Academy Modpack
 
 **Step 1: Download Prism Launcher**
 - Visit [prismlauncher.org](https://prismlauncher.org)
@@ -410,7 +410,7 @@ Create this guide for your community:
 *Option A: From Modrinth (if published)*
 1. Click **Add Instance**
 2. Select **Modrinth** on the left
-3. Search "Minecraft College"
+3. Search "The Block Academy"
 4. Click the modpack → **OK**
 5. Wait for download
 
@@ -439,7 +439,7 @@ Create this guide for your community:
 **Step 6: Launch & Connect**
 1. Double-click the instance to launch
 2. In Minecraft, click **Multiplayer** → **Add Server**
-3. Server Address: `smp.minecraftcollege.com`
+3. Server Address: `play.theblock.academy`
 4. Click **Done** → Connect!
 
 ---
@@ -508,7 +508,7 @@ Initialize git in your packwiz folder:
 ```bash
 git init
 git add .
-git commit -m "Initial Minecraft College modpack v1.0.0"
+git commit -m "Initial The Block Academy modpack v1.0.0"
 ```
 
 Create `.gitattributes` to prevent line-ending issues:
