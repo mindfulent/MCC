@@ -49,24 +49,134 @@ Lookup Tables:
 
 ---
 
-## Implementation Phases
+## Strategic Decision: Integrate with theblockacademy
 
-### Phase 1: Read-Only Dashboard
+After analyzing `theblockacademy`, the recommended approach is to **integrate the Ledger Dashboard into the existing app** rather than creating a standalone project.
 
-**Goal:** Provide visibility into server activity without modifying anything.
+### Why Integration Makes Sense
+
+| Aspect | Standalone | Integrated (Recommended) |
+|--------|------------|--------------------------|
+| **Authentication** | Build from scratch (Discord OAuth) | Already have Microsoft OAuth + `is_admin` flag |
+| **Data Sync** | New GitHub Actions workflow | Copy existing pattern from `stats-exporter.py` |
+| **Backend** | New Express app | Add routes to existing Express API |
+| **Frontend** | New React app | Add pages to existing React app (same stack) |
+| **Deployment** | New DO App Platform app | Already deployed, just add routes |
+| **Styling** | Recreate design system | Reuse Tailwind + shadcn/ui + theme |
+| **Maintenance** | Two codebases | One codebase |
+
+### What theblockacademy Already Has
+
+**Data Sync Infrastructure:**
+- `scripts/stats-exporter.py` - Syncs player stats every 15 minutes via Pterodactyl API
+- `scripts/backup-sync.py` - Syncs backups every 6 hours to DO Spaces
+- GitHub Actions workflows with all required secrets already configured
+
+**Authentication System:**
+- Microsoft OAuth (personal accounts) with Xbox/Minecraft verification
+- Three permission levels: Authenticated → Allowlisted → Admin
+- `is_admin` flag on users table
+- Admin middleware: `backend/src/middleware/admin.ts`
+- Cross-domain session handling (minecraftcollege.com ↔ theblock.academy)
+
+**Admin Infrastructure:**
+- Admin routes: `backend/src/routes/admin.ts`
+- Admin page: `src/pages/Admin.tsx`
+- Protected route component: `src/components/auth/ProtectedRoute.tsx`
+- Auth context with `isAdmin` flag
+
+**Tech Stack (matches our plan):**
+- Express.js backend with PostgreSQL
+- React 18 + TypeScript + Vite
+- Tailwind CSS + shadcn/ui
+- TanStack React Query
+- Deployed on DigitalOcean App Platform
+
+---
+
+## Revised Implementation Phases
+
+### Phase 1: Read-Only Dashboard (Integrated)
+
+**Goal:** Add Ledger visibility to theblockacademy's admin section.
 
 #### 1.1 Data Sync Pipeline
 
-Sync the SQLite database from production to a location accessible by the web app.
+Add a new script following the `stats-exporter.py` pattern.
 
-**Option A: GitHub Actions (Recommended)**
+**New File:** `theblockacademy/scripts/ledger-sync.py`
+```python
+#!/usr/bin/env python3
+"""
+Sync Ledger SQLite database from Minecraft server to DigitalOcean Spaces.
+Runs every 6 hours via GitHub Actions.
+"""
+
+import os
+import boto3
+from botocore.config import Config
+import paramiko
+from datetime import datetime
+
+def download_ledger_via_sftp():
+    """Download ledger.sqlite from Bloom.host via SFTP."""
+    transport = paramiko.Transport((
+        os.environ['PTERODACTYL_SFTP_HOST'],
+        int(os.environ.get('PTERODACTYL_SFTP_PORT', 2022))
+    ))
+    transport.connect(
+        username=os.environ['PTERODACTYL_SFTP_USERNAME'],
+        password=os.environ['PTERODACTYL_SFTP_PASSWORD']
+    )
+    sftp = paramiko.SFTPClient.from_transport(transport)
+
+    local_path = '/tmp/ledger.sqlite'
+    sftp.get('/world/ledger.sqlite', local_path)
+    sftp.close()
+    transport.close()
+
+    return local_path
+
+def upload_to_spaces(local_path):
+    """Upload to DigitalOcean Spaces."""
+    s3 = boto3.client(
+        's3',
+        endpoint_url=os.environ['DO_SPACES_URL'],
+        aws_access_key_id=os.environ['DO_SPACES_KEY'],
+        aws_secret_access_key=os.environ['DO_SPACES_SECRET'],
+        config=Config(signature_version='s3v4')
+    )
+
+    s3.upload_file(
+        local_path,
+        os.environ['DO_SPACES_BUCKET'],
+        'ledger/ledger.sqlite',
+        ExtraArgs={'ACL': 'private'}  # Not public!
+    )
+
+    # Also upload timestamp file
+    s3.put_object(
+        Bucket=os.environ['DO_SPACES_BUCKET'],
+        Key='ledger/last-sync.txt',
+        Body=datetime.utcnow().isoformat(),
+        ACL='private'
+    )
+
+if __name__ == '__main__':
+    print(f"[{datetime.now()}] Starting Ledger sync...")
+    local_path = download_ledger_via_sftp()
+    print(f"Downloaded ledger.sqlite ({os.path.getsize(local_path)} bytes)")
+    upload_to_spaces(local_path)
+    print("Uploaded to DigitalOcean Spaces")
+```
+
+**New Workflow:** `theblockacademy/.github/workflows/sync-ledger.yml`
 ```yaml
-# .github/workflows/ledger-sync.yml
 name: Sync Ledger Database
 on:
   schedule:
-    - cron: '0 */6 * * *'  # Every 6 hours
-  workflow_dispatch:        # Manual trigger
+    - cron: '30 */6 * * *'  # Every 6 hours, offset from backups
+  workflow_dispatch:
 
 jobs:
   sync:
@@ -74,101 +184,192 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Download ledger.sqlite via SFTP
-        uses: wangyucode/sftp-upload-action@v2.0.2
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          host: ${{ secrets.SFTP_HOST }}
-          port: ${{ secrets.SFTP_PORT }}
-          username: ${{ secrets.SFTP_USERNAME }}
-          password: ${{ secrets.SFTP_PASSWORD }}
-          localDir: ./data/
-          remoteDir: /world/
-          download: true
-          include: 'ledger.sqlite'
+          python-version: '3.11'
 
-      - name: Upload to DigitalOcean Spaces
-        uses: BetaHuhn/do-spaces-action@v2
-        with:
-          access_key: ${{ secrets.DO_SPACES_ACCESS_KEY }}
-          secret_key: ${{ secrets.DO_SPACES_SECRET_KEY }}
-          space_name: ${{ secrets.DO_SPACES_BUCKET }}
-          space_region: nyc3
-          source: data/ledger.sqlite
-          out_dir: ledger/
+      - name: Install dependencies
+        run: pip install paramiko boto3
+
+      - name: Sync Ledger database
+        env:
+          PTERODACTYL_SFTP_HOST: ${{ secrets.PTERODACTYL_SFTP_HOST }}
+          PTERODACTYL_SFTP_PORT: ${{ secrets.PTERODACTYL_SFTP_PORT }}
+          PTERODACTYL_SFTP_USERNAME: ${{ secrets.PTERODACTYL_SFTP_USERNAME }}
+          PTERODACTYL_SFTP_PASSWORD: ${{ secrets.PTERODACTYL_SFTP_PASSWORD }}
+          DO_SPACES_URL: ${{ secrets.DO_SPACES_URL }}
+          DO_SPACES_BUCKET: ${{ secrets.DO_SPACES_BUCKET }}
+          DO_SPACES_KEY: ${{ secrets.DO_SPACES_KEY }}
+          DO_SPACES_SECRET: ${{ secrets.DO_SPACES_SECRET }}
+        run: python scripts/ledger-sync.py
 ```
 
-**Storage Options:**
-| Option | Pros | Cons |
-|--------|------|------|
-| DigitalOcean Spaces | Already used for backups, CDN | Extra cost |
-| GitHub Release artifact | Free, versioned | 100MB limit |
-| Direct to backend server | Simplest | Larger app footprint |
+**Note:** May need to add SFTP-specific secrets if different from Pterodactyl API credentials.
 
 #### 1.2 Backend API
 
-Express.js API to query the synced SQLite database.
+Add new routes to theblockacademy's Express backend.
 
-**Endpoints:**
+**New File:** `theblockacademy/backend/src/routes/ledger.ts`
+```typescript
+import { Router } from 'express';
+import { requireAuth, requireAdmin } from '../middleware/auth';
+import { getLedgerDatabase } from '../services/ledger-db';
+
+const router = Router();
+
+// All ledger routes require admin
+router.use(requireAuth, requireAdmin);
+
+// GET /ledger/actions - List actions with filters
+router.get('/actions', async (req, res) => {
+  const db = await getLedgerDatabase();
+  const { player, action, object, world, after, before, page = 1, limit = 50 } = req.query;
+  // Build query with filters...
+  // Return paginated results
+});
+
+// GET /ledger/players - List all players with stats
+router.get('/players', async (req, res) => {
+  const db = await getLedgerDatabase();
+  // Query players table with action counts
+});
+
+// GET /ledger/stats - Aggregate statistics
+router.get('/stats', async (req, res) => {
+  const db = await getLedgerDatabase();
+  // Return counts by action type, time series data, etc.
+});
+
+// POST /ledger/sync - Trigger manual sync (rate-limited)
+router.post('/sync', async (req, res) => {
+  // Check last sync time, download fresh copy if allowed
+});
+
+export default router;
 ```
-GET /api/ledger/actions
-  ?player=<name>           Filter by player
-  ?action=<type>           Filter by action type (block-break, etc.)
-  ?object=<id>             Filter by block/item
-  ?world=<dimension>       Filter by dimension
-  ?after=<timestamp>       After date
-  ?before=<timestamp>      Before date
-  ?x=<n>&y=<n>&z=<n>       Exact coordinates
-  ?range=<n>               Radius around coordinates
-  ?page=<n>&limit=<n>      Pagination
-  ?sort=<field>&order=asc|desc
 
-GET /api/ledger/actions/:id
-  Full details for a single action
+**New Service:** `theblockacademy/backend/src/services/ledger-db.ts`
+```typescript
+import Database from 'better-sqlite3';
+import { S3Client, GetObjectCommand } from '@aws-sdk/client-s3';
+import { createWriteStream } from 'fs';
+import { pipeline } from 'stream/promises';
 
-GET /api/ledger/players
-  List all players with action counts
+let db: Database.Database | null = null;
+let lastDownload: Date | null = null;
 
-GET /api/ledger/players/:name
-  Player details with recent activity
+export async function getLedgerDatabase(): Promise<Database.Database> {
+  // Download from Spaces if not cached or stale (> 1 hour)
+  const now = new Date();
+  if (!db || !lastDownload || (now.getTime() - lastDownload.getTime() > 3600000)) {
+    await downloadFromSpaces();
+    db = new Database('./data/ledger.sqlite', { readonly: true });
+    lastDownload = now;
+  }
+  return db;
+}
 
-GET /api/ledger/stats
-  Aggregate statistics (actions/day, top players, etc.)
+async function downloadFromSpaces() {
+  const s3 = new S3Client({
+    endpoint: process.env.DO_SPACES_URL,
+    region: 'nyc3',
+    credentials: {
+      accessKeyId: process.env.DO_SPACES_KEY!,
+      secretAccessKey: process.env.DO_SPACES_SECRET!,
+    },
+  });
 
-GET /api/ledger/stats/timeline
-  Actions over time for charting
+  const response = await s3.send(new GetObjectCommand({
+    Bucket: process.env.DO_SPACES_BUCKET!,
+    Key: 'ledger/ledger.sqlite',
+  }));
 
-GET /api/ledger/objects
-  Most common objects interacted with
+  await pipeline(
+    response.Body as NodeJS.ReadableStream,
+    createWriteStream('./data/ledger.sqlite')
+  );
+}
 ```
 
-**Tech Stack:**
-- Express.js (matches minecraftcollege backend)
-- better-sqlite3 (fast synchronous SQLite for Node.js)
-- Node.js 18+
+**Mount in backend/src/index.ts:**
+```typescript
+import ledgerRouter from './routes/ledger';
+// ...
+app.use('/ledger', ledgerRouter);
+```
 
 #### 1.3 Frontend UI
 
-React dashboard with the following views:
+Add new pages to theblockacademy's React frontend.
 
-**Activity Feed**
+**New Pages:**
+```
+src/pages/admin/
+├── Ledger.tsx           # Main dashboard (activity feed + stats)
+├── LedgerSearch.tsx     # Advanced search with filters
+├── LedgerPlayer.tsx     # Player detail view
+└── LedgerAnalytics.tsx  # Charts and visualizations
+```
+
+**Route Updates in App.tsx:**
+```tsx
+// Add to admin routes
+<Route path="/:lang/admin/ledger" element={
+  <ProtectedRoute requireAdmin>
+    <Ledger />
+  </ProtectedRoute>
+} />
+<Route path="/:lang/admin/ledger/search" element={
+  <ProtectedRoute requireAdmin>
+    <LedgerSearch />
+  </ProtectedRoute>
+} />
+<Route path="/:lang/admin/ledger/player/:name" element={
+  <ProtectedRoute requireAdmin>
+    <LedgerPlayer />
+  </ProtectedRoute>
+} />
+```
+
+**Navigation Update:**
+Add "Ledger" link to admin sidebar/navigation.
+
+**Component Reuse:**
+- Use existing `Card`, `Table`, `Button` from shadcn/ui
+- Use existing color scheme (`ice`, `frost`, `night-sky`)
+- Add Recharts for visualizations (already in dependencies or easy to add)
+
+**UI Views:**
+
+**Activity Feed (Main Dashboard)**
 - Real-time-ish scrolling feed of recent actions
-- Color-coded by action type
+- Color-coded by action type (block-break: red, block-place: green, etc.)
 - Click to expand details
-- Filter bar at top
+- Quick filters at top
+- "Last synced X minutes ago" indicator with refresh button
 
 **Search**
-- Advanced search form with all filter options
+- Advanced search form with all filter options:
+  - Player (dropdown of known players)
+  - Action type (block-break, block-place, item-insert, etc.)
+  - Object (searchable block/item list)
+  - World (overworld, nether, end)
+  - Time range (after/before date pickers)
+  - Coordinates (x, y, z with optional range)
 - Results table with sorting
 - Export to CSV
 - Pagination
 
 **Player Profiles**
-- List of all players
+- List of all tracked players
 - Click into player detail:
   - Total actions by type (pie chart)
-  - Activity timeline (line chart)
+  - Activity timeline (line chart - actions over time)
   - Recent actions list
   - First/last seen dates
+  - Most modified blocks
 
 **Analytics Dashboard**
 - Actions per day (bar chart)
@@ -183,114 +384,94 @@ React dashboard with the following views:
 - Filter by time range
 - Click dot for details
 
-**Tech Stack:**
-- React 18 + TypeScript
-- Tailwind CSS + shadcn/ui (matches minecraftcollege)
-- Recharts or Chart.js for visualizations
-- TanStack Query for data fetching
-- React Router for navigation
-
 #### 1.4 Deployment
 
-**Option A: Extend minecraftcollege**
-- Add `/ledger` routes to existing app
-- Share authentication (if added later)
-- Single deployment
+No new infrastructure needed! Just push changes to main branch.
 
-**Option B: Standalone App (Recommended for Phase 1)**
-- Separate repo: `mindfulent/ledger-dashboard`
-- Deploy to DigitalOcean App Platform
-- Can move fast without affecting main site
-
-**Infrastructure:**
+**Updated Infrastructure Diagram:**
 ```
-┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
-│  Bloom.host     │     │ GitHub Actions  │     │ DO App Platform │
-│  /world/        │────▶│ (every 6 hours) │────▶│ ledger-dashboard│
-│  ledger.sqlite  │     │                 │     │                 │
-└─────────────────┘     └─────────────────┘     │ ┌─────────────┐ │
-                                                │ │ Frontend    │ │
-                                                │ │ React SPA   │ │
-                                                │ └─────────────┘ │
-                                                │ ┌─────────────┐ │
-                                                │ │ Backend     │ │
-                                                │ │ Express API │ │
-                                                │ │ + SQLite    │ │
-                                                │ └─────────────┘ │
-                                                └─────────────────┘
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────────────────┐
+│  Bloom.host     │     │ GitHub Actions  │     │  DigitalOcean App Platform  │
+│  /world/        │     │                 │     │  (theblockacademy)          │
+│                 │     │ ┌─────────────┐ │     │                             │
+│  ledger.sqlite ─┼────▶│ │ledger-sync  │ │     │  ┌────────────────────────┐ │
+│                 │     │ │(every 6hrs) │─┼────▶│  │ DO Spaces              │ │
+│  player stats  ─┼────▶│ │stats-export │ │     │  │ └─ ledger/ledger.sqlite│ │
+│                 │     │ │(every 15min)│ │     │  │ └─ server-backups/     │ │
+│  backups       ─┼────▶│ │backup-sync  │ │     │  └────────────────────────┘ │
+│                 │     │ │(every 6hrs) │ │     │              ↓              │
+└─────────────────┘     │ └─────────────┘ │     │  ┌────────────────────────┐ │
+                        └─────────────────┘     │  │ API Service            │ │
+                                                │  │ └─ /auth, /events      │ │
+                                                │  │ └─ /admin, /upload     │ │
+                                                │  │ └─ /ledger (NEW)       │ │
+                                                │  └────────────────────────┘ │
+                                                │              ↓              │
+                                                │  ┌────────────────────────┐ │
+                                                │  │ Frontend Static Site   │ │
+                                                │  │ └─ /admin/ledger (NEW) │ │
+                                                │  └────────────────────────┘ │
+                                                └─────────────────────────────┘
 ```
 
 ---
 
 ### Phase 2: Live Connection
 
-**Goal:** Query production database in real-time instead of periodic sync.
+**Goal:** Fresher data with on-demand sync.
 
 #### 2.1 On-Demand Refresh
 
-Add a "Refresh" button that triggers an immediate sync:
+Since the backend already downloads from DO Spaces, add a manual sync endpoint.
 
-```
-POST /api/ledger/sync
-  - Downloads fresh ledger.sqlite via SFTP
-  - Replaces local copy
-  - Returns new stats
-```
+**Add to ledger.ts:**
+```typescript
+// POST /ledger/sync - Trigger fresh download from Spaces
+router.post('/sync', async (req, res) => {
+  const lastSync = await getLastSyncTime();
+  const now = new Date();
 
-**Implementation:**
-```javascript
-// Backend: SFTP download on-demand
-const Client = require('ssh2-sftp-client');
+  // Rate limit: 5 minutes between syncs
+  if (lastSync && (now.getTime() - lastSync.getTime() < 300000)) {
+    return res.status(429).json({
+      error: 'Rate limited',
+      nextSyncAvailable: new Date(lastSync.getTime() + 300000)
+    });
+  }
 
-async function syncLedgerDatabase() {
-  const sftp = new Client();
-  await sftp.connect({
-    host: process.env.SFTP_HOST,
-    port: process.env.SFTP_PORT,
-    username: process.env.SFTP_USERNAME,
-    password: process.env.SFTP_PASSWORD
-  });
-
-  await sftp.fastGet('/world/ledger.sqlite', './data/ledger.sqlite');
-  await sftp.end();
-
-  // Reopen database connection
+  await downloadFromSpaces();
   reopenDatabase();
-}
+
+  res.json({ success: true, syncedAt: now });
+});
 ```
 
-**Rate Limiting:**
-- Max 1 sync per 5 minutes
-- Show "last synced" timestamp in UI
-- Auto-sync on first load if data > 1 hour old
+**UI Updates:**
+- Add "Refresh" button to Ledger dashboard header
+- Show "Last synced: X minutes ago" indicator
+- Auto-refresh when dashboard is active (every 5 minutes)
+- Disable refresh button during cooldown, show countdown
 
-#### 2.2 WebSocket Updates (Optional)
+#### 2.2 Direct SFTP Sync (Optional)
 
-For true real-time updates, we'd need a component on the server. Since Ledger doesn't expose an API, options are:
+For more immediate data, add endpoint that syncs directly from Bloom.host:
 
-1. **Poll-based pseudo-realtime**: Sync every 60 seconds when dashboard is open
-2. **File watcher on server**: Not practical without server-side code
-3. **Ledger extension**: Write a Fabric mod that pushes events (complex)
+```typescript
+// POST /ledger/sync/live - Sync directly from server (admin only, rate limited)
+router.post('/sync/live', async (req, res) => {
+  // This is slower but gets absolute latest data
+  // Rate limit to 1 per 5 minutes
+  await downloadViaSftp();  // Uses ssh2-sftp-client
+  await uploadToSpaces();   // Cache for other instances
+  reopenDatabase();
+  res.json({ success: true });
+});
+```
 
-**Recommendation:** Stick with on-demand refresh + auto-refresh every 5 minutes when dashboard is active.
-
-#### 2.3 Direct Database Queries
-
-If SFTP download becomes a bottleneck (large database), consider:
-
-**Option A: SQLite on Spaces with SQL.js**
-- Store SQLite on DO Spaces
-- Load into browser with SQL.js (WebAssembly SQLite)
-- Query client-side
-- Pro: No backend needed for queries
-- Con: Downloads entire DB to browser
-
-**Option B: Read Replica**
-- Set up PostgreSQL on DigitalOcean
-- Sync Ledger SQLite → PostgreSQL periodically
-- Query PostgreSQL from backend
-- Pro: Scales better, supports concurrent queries
-- Con: More infrastructure
+**Dependencies to add:**
+```bash
+cd backend && npm install ssh2-sftp-client @types/ssh2-sftp-client
+```
 
 ---
 
@@ -298,38 +479,53 @@ If SFTP download becomes a bottleneck (large database), consider:
 
 **Goal:** Perform admin actions (rollback, restore, purge) from the web.
 
-#### 3.1 Authentication
+#### 3.1 Authentication (Already Done!)
 
-Add admin authentication before enabling write operations.
+theblockacademy already has exactly what we need:
 
-**Options:**
-| Method | Pros | Cons |
-|--------|------|------|
-| Discord OAuth | Players already on Discord | Need to map to MC accounts |
-| Simple password | Easy to implement | Shared credential |
-| GitHub OAuth | Admins have GitHub | Extra step |
+| Requirement | theblockacademy Solution |
+|-------------|--------------------------|
+| Admin-only access | `requireAdmin` middleware |
+| User identification | Microsoft OAuth → email + optional MC username |
+| Session management | Cookie-based sessions with 7-day expiry |
+| Audit trail | Can log admin actions to PostgreSQL |
 
-**Recommendation:** Discord OAuth with role-based access:
-- `@Admin` role → Full access (rollback, purge)
-- `@Moderator` role → View + search only
-- Public → No access (or limited read-only)
+**No new auth work needed.** Just use existing `requireAdmin` on all ledger routes.
 
-#### 3.2 RCON Integration
+#### 3.2 Permission Levels
 
-Ledger commands must be run in-game or via server console. Use RCON to send commands.
+Extend the existing system for granular ledger permissions:
 
-**Note:** Bloom.host Pterodactyl panel exposes console commands via API, which we already use in `server-config.py`.
+**Option A: Use Existing Admin Flag (Recommended for Phase 1-2)**
+- `is_admin = true` → Full ledger access (view, rollback, purge)
+- Everyone else → No access
 
-```javascript
-// Send command via Pterodactyl API
-async function sendServerCommand(command) {
+**Option B: Add Ledger-Specific Permissions (Future)**
+If we need moderator-level access, add to users table:
+```sql
+ALTER TABLE users ADD COLUMN ledger_access TEXT DEFAULT 'none';
+-- Values: 'none', 'view', 'full'
+```
+
+**Recommendation:** Start with Option A. Add granular permissions only if needed.
+
+#### 3.3 RCON Integration
+
+Ledger commands must be run in-game or via server console. Use Pterodactyl API (already used by backup-sync.py).
+
+**New Service:** `theblockacademy/backend/src/services/server-command.ts`
+```typescript
+const PTERODACTYL_URL = 'https://game.bloom.host';
+
+export async function sendServerCommand(command: string): Promise<boolean> {
   const response = await fetch(
-    `${PTERODACTYL_URL}/api/client/servers/${SERVER_ID}/command`,
+    `${PTERODACTYL_URL}/api/client/servers/${process.env.PTERODACTYL_SERVER_ID}/command`,
     {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${API_KEY}`,
-        'Content-Type': 'application/json'
+        'Authorization': `Bearer ${process.env.PTERODACTYL_API_KEY}`,
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
       },
       body: JSON.stringify({ command })
     }
@@ -337,139 +533,222 @@ async function sendServerCommand(command) {
   return response.ok;
 }
 
-// Example: Rollback player actions
-await sendServerCommand('ledger rollback source:GrieferName after:1h');
+// Example usage:
+// await sendServerCommand('ledger rollback source:GrieferName after:1h');
 ```
 
-#### 3.3 Admin Actions
+#### 3.4 Admin Actions
 
-**Preview Rollback**
-1. User selects filters (player, time range, area)
-2. Backend queries database for matching actions
-3. Display preview: "X blocks will be restored"
-4. User confirms
-5. Backend sends `/ledger rollback` command via RCON
+**Preview Rollback Flow:**
+1. User selects filters (player, time range, area) in UI
+2. Backend queries SQLite for matching actions
+3. Display preview: "X blocks will be restored" with list
+4. User confirms with "type ROLLBACK to confirm" pattern
+5. Backend sends `/ledger rollback` command via Pterodactyl API
+6. Log action to audit table
 
-**Restore**
-- Same flow as rollback, but for previously rolled-back actions
+**Restore Flow:**
+- Same as rollback, but for previously rolled-back actions
+- Uses `rolledback:true` filter
 
-**Purge**
+**Purge Flow (Dangerous!):**
 - Delete old records from database
-- Requires highest permission level
-- Confirmation with "type to confirm" pattern
+- Requires confirmation: "type DELETE FOREVER to confirm"
+- Limited to records older than X days
+- Log action with full parameters
 
-#### 3.4 Audit Log
+**API Endpoints:**
+```typescript
+// POST /ledger/actions/preview-rollback
+// Body: { filters: {...} }
+// Returns: { count: 123, actions: [...preview...] }
 
-Track all admin actions:
-```sql
-CREATE TABLE admin_actions (
-  id INTEGER PRIMARY KEY,
-  timestamp TEXT,
-  admin_discord_id TEXT,
-  admin_name TEXT,
-  action_type TEXT,  -- 'rollback', 'restore', 'purge'
-  parameters TEXT,   -- JSON of filters used
-  affected_count INTEGER,
-  status TEXT        -- 'success', 'failed'
-);
+// POST /ledger/actions/rollback
+// Body: { filters: {...}, confirmation: "ROLLBACK" }
+// Returns: { success: true, command: "ledger rollback ...", affectedCount: 123 }
+
+// POST /ledger/actions/restore
+// Body: { filters: {...}, confirmation: "RESTORE" }
+
+// POST /ledger/actions/purge
+// Body: { olderThanDays: 30, confirmation: "DELETE FOREVER" }
 ```
 
-#### 3.5 Alerts & Notifications
+#### 3.5 Audit Log
+
+Track all admin actions in PostgreSQL (not SQLite - we want this in our main DB).
+
+**Migration:** `backend/src/db/migrations/XXX_ledger_audit.sql`
+```sql
+CREATE TABLE ledger_audit_log (
+  id SERIAL PRIMARY KEY,
+  timestamp TIMESTAMPTZ DEFAULT NOW(),
+  admin_user_id INTEGER REFERENCES users(id),
+  admin_email TEXT NOT NULL,
+  action_type TEXT NOT NULL,  -- 'rollback', 'restore', 'purge', 'sync'
+  parameters JSONB,           -- Filters used
+  affected_count INTEGER,
+  command_sent TEXT,          -- Actual command sent to server
+  status TEXT NOT NULL        -- 'success', 'failed', 'pending'
+);
+
+CREATE INDEX idx_ledger_audit_timestamp ON ledger_audit_log(timestamp);
+CREATE INDEX idx_ledger_audit_admin ON ledger_audit_log(admin_user_id);
+```
+
+**Display in Admin UI:**
+- Add "Audit Log" tab to Ledger dashboard
+- Show recent admin actions with who/what/when
+- Filterable by action type and admin
+
+#### 3.6 Alerts & Notifications
 
 **Discord Webhook Integration:**
-- Alert on suspicious activity patterns
-- Notify when rollback is performed
-- Daily/weekly summary reports
+
+Add to existing slashAI Discord bot or use webhooks directly.
+
+**Alert Types:**
+- Admin performed rollback (notify #admin-log)
+- Suspicious activity detected (notify #alerts)
+- Daily summary (notify #server-stats)
 
 **Example Alert Rules:**
 - Player breaks > 100 blocks in 5 minutes
 - Diamond ore broken (track rare blocks)
-- Actions near protected areas
 - New player breaks blocks within 10 minutes of joining
+- Large area cleared (> 50 blocks in small radius)
+
+**Implementation:** Add background job or GitHub Action that:
+1. Queries ledger.sqlite for suspicious patterns
+2. Posts to Discord webhook if threshold exceeded
 
 ---
 
-## Technical Decisions
+## Technical Considerations
 
-### Repository Structure
+### SQLite in Node.js
 
-**Option A: Monorepo in TBA**
-```
-TBA/
-├── dashboard/
-│   ├── frontend/
-│   └── backend/
-├── config/
-├── mods/
-└── ...
+**Package:** `better-sqlite3` (synchronous, fast, widely used)
+
+**Installation:**
+```bash
+cd backend && npm install better-sqlite3 @types/better-sqlite3
 ```
 
-**Option B: Separate Repository (Recommended)**
-```
-ledger-dashboard/
-├── frontend/          # React app
-├── backend/           # Express API
-├── scripts/           # Sync scripts
-├── .github/workflows/ # GitHub Actions
-└── ...
+**Note:** `better-sqlite3` requires native compilation. DigitalOcean App Platform handles this, but may need build dependencies:
+```yaml
+# In .do/app.yaml, add to build_command if needed:
+build_command: apt-get update && apt-get install -y python3 make g++ && npm install && npm run build
 ```
 
-Separate repo keeps concerns isolated and allows independent deployment.
+**Alternative:** If native compilation is problematic, use `sql.js` (pure JavaScript, WebAssembly-based SQLite).
 
-### Database Considerations
+### Database Caching Strategy
 
-**SQLite Limitations:**
-- Single-writer (not an issue for read-only)
-- File-based (needs sync mechanism)
-- No built-in replication
+```typescript
+// In ledger-db.ts
+const CACHE_TTL_MS = 60 * 60 * 1000; // 1 hour
 
-**When to Migrate to PostgreSQL:**
-- Database exceeds 100MB
-- Need concurrent write access
-- Want real-time sync via logical replication
+let db: Database.Database | null = null;
+let lastDownload: Date | null = null;
+let dbPath = './data/ledger.sqlite';
+
+export async function getLedgerDatabase(): Promise<Database.Database> {
+  const now = new Date();
+  const isStale = !lastDownload || (now.getTime() - lastDownload.getTime() > CACHE_TTL_MS);
+
+  if (!db || isStale) {
+    // Close existing connection
+    if (db) {
+      db.close();
+      db = null;
+    }
+
+    // Download fresh copy
+    await downloadFromSpaces();
+
+    // Open new connection
+    db = new Database(dbPath, { readonly: true });
+    lastDownload = now;
+  }
+
+  return db;
+}
+
+export function getLastSyncTime(): Date | null {
+  return lastDownload;
+}
+
+export async function forceRefresh(): Promise<void> {
+  lastDownload = null; // Force next call to download
+  await getLedgerDatabase();
+}
+```
 
 ### Security
 
-- Never expose raw database file publicly
-- API should sanitize all query parameters
-- Admin actions require authentication
-- Rate limit all endpoints
-- Log all access for audit
+- **SQLite file:** Never expose publicly. Keep in Spaces with `ACL: private`.
+- **API sanitization:** All query parameters must be validated and escaped.
+- **Rate limiting:** Sync endpoints limited to prevent abuse.
+- **Audit logging:** All admin actions logged with user identity.
+- **RCON commands:** Only send via backend, never expose credentials to frontend.
 
 ---
 
-## Timeline Estimate
+## File Structure (New Files in theblockacademy)
 
-| Phase | Scope | Effort |
-|-------|-------|--------|
-| Phase 1.1 | Data sync pipeline | 2-3 hours |
-| Phase 1.2 | Backend API | 4-6 hours |
-| Phase 1.3 | Frontend UI (basic) | 8-12 hours |
-| Phase 1.4 | Deployment | 2-3 hours |
-| **Phase 1 Total** | **Read-only dashboard** | **~20 hours** |
-| Phase 2.1 | On-demand refresh | 2-3 hours |
-| Phase 2.2 | Auto-refresh | 1-2 hours |
-| **Phase 2 Total** | **Live connection** | **~5 hours** |
-| Phase 3.1 | Authentication | 4-6 hours |
-| Phase 3.2 | RCON integration | 3-4 hours |
-| Phase 3.3 | Admin actions UI | 6-8 hours |
-| Phase 3.4 | Audit logging | 2-3 hours |
-| Phase 3.5 | Alerts | 4-6 hours |
-| **Phase 3 Total** | **Full admin panel** | **~25 hours** |
-
-**Grand Total: ~50 hours**
+```
+theblockacademy/
+├── .github/workflows/
+│   └── sync-ledger.yml          # NEW: GitHub Action for sync
+├── scripts/
+│   └── ledger-sync.py           # NEW: Sync script
+├── backend/src/
+│   ├── routes/
+│   │   └── ledger.ts            # NEW: Ledger API routes
+│   ├── services/
+│   │   ├── ledger-db.ts         # NEW: SQLite connection manager
+│   │   └── server-command.ts    # NEW: Pterodactyl command sender
+│   └── db/migrations/
+│       └── XXX_ledger_audit.sql # NEW: Audit log table
+└── src/pages/admin/
+    ├── Ledger.tsx               # NEW: Main dashboard
+    ├── LedgerSearch.tsx         # NEW: Advanced search
+    ├── LedgerPlayer.tsx         # NEW: Player detail
+    └── LedgerAnalytics.tsx      # NEW: Charts
+```
 
 ---
 
 ## Next Steps
 
-1. **Create repository**: `mindfulent/ledger-dashboard`
-2. **Set up project structure**: Vite + React frontend, Express backend
-3. **Implement sync pipeline**: GitHub Action to download SQLite
-4. **Build basic API**: `/actions`, `/players`, `/stats` endpoints
-5. **Create UI**: Activity feed and search page
-6. **Deploy**: DigitalOcean App Platform
-7. **Iterate**: Add features based on usage
+1. **Set up sync pipeline:**
+   - Create `scripts/ledger-sync.py`
+   - Create `.github/workflows/sync-ledger.yml`
+   - Add any missing secrets to GitHub repository
+   - Test workflow manually
+
+2. **Add backend routes:**
+   - Install `better-sqlite3`
+   - Create `ledger-db.ts` service
+   - Create `ledger.ts` routes
+   - Mount routes in `index.ts`
+
+3. **Build frontend:**
+   - Add Ledger link to admin navigation
+   - Create main dashboard page
+   - Add search functionality
+   - Add player detail view
+
+4. **Deploy:**
+   - Push to main branch
+   - Verify DigitalOcean build succeeds
+   - Test in production
+
+5. **Iterate:**
+   - Add analytics charts
+   - Add on-demand refresh
+   - Add admin actions (Phase 3)
 
 ---
 
@@ -499,3 +778,20 @@ Parameters:
   after:<time>              After duration
   rolledback:true|false     Filter by rollback status
 ```
+
+---
+
+## Appendix: theblockacademy Architecture Reference
+
+**Key files for integration:**
+
+| Component | File | Purpose |
+|-----------|------|---------|
+| Auth middleware | `backend/src/middleware/admin.ts` | `requireAdmin` function |
+| Existing admin routes | `backend/src/routes/admin.ts` | Pattern to follow |
+| DO Spaces client | `backend/src/services/spaces.ts` | S3 client setup |
+| Protected routes | `src/components/auth/ProtectedRoute.tsx` | Wrap admin pages |
+| Auth context | `src/contexts/AuthContext.tsx` | `isAdmin` flag |
+| API client | `src/lib/api.ts` | Add `ledgerApi` object |
+| Backup sync | `scripts/backup-sync.py` | Pattern for sync script |
+| Stats export | `scripts/stats-exporter.py` | Pattern for sync script |
