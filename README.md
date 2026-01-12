@@ -2,11 +2,11 @@
   <img src="tba_banner.png" alt="TBA Logo" width="100%">
 </p>
 
-# TBA (TheBlock.Academy) v0.9.63
+# TBA (TheBlock.Academy) v0.9.66
 
 A curated Fabric 1.21.1 modpack for The Block Academy CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
-**126 mods total** — see [Mod Distribution](#mod-distribution) for details.
+**149 mods total** — see [Mod Distribution](#mod-distribution) for details.
 
 ## Features
 
@@ -32,6 +32,10 @@ A curated Fabric 1.21.1 modpack for The Block Academy CMP, built with [Packwiz](
 - **Not Enough Animations** - Player animations for eating, map holding, etc.
 - **Camera Overhaul** - Tilting and swaying camera effects
 - **Camera Utils** - Freecam, third-person distance, and camera controls
+- **3D Skin Layers** - Renders skin layers with depth
+- **Eating Animation** - Visible eating and drinking actions
+- **AutoHUD** - Auto-hiding HUD for cleaner gameplay
+- **Even More Instruments** - Keyboard, violin, guitar, saxophone with MIDI support
 
 ### Building & Decoration
 - **Chipped** - 11,000+ decorative block variants with connected textures
@@ -50,6 +54,13 @@ A curated Fabric 1.21.1 modpack for The Block Academy CMP, built with [Packwiz](
 - **WindChime** - Decorative wind chimes (bamboo, glass, amethyst, copper, and more)
 - **Diagonal Walls** - Walls connect diagonally
 - **Falling Leaves** - Leaf particles fall from trees
+- **Beautify Refabricated** - Decorative blocks (ropes, blinds, trellises)
+- **Sooty Chimneys** - Chimneys with realistic smoke particle effects
+- **Clutter** - Small decorative objects for detailed builds
+- **Fetzi's Asian Decoration** - Asian-themed decor blocks
+- **Dusty Decorations** - Aged and weathered block variants
+- **NiftyCarts** - Decorative market and farm carts
+- **Diagonal Windows** - Angled window placements
 
 ### Content
 - **Farmer's Delight Refabricated** - Cooking and farming expansion
@@ -65,6 +76,10 @@ A curated Fabric 1.21.1 modpack for The Block Academy CMP, built with [Packwiz](
 - **WaterFrames** - Display images and videos from URLs on in-game frames and projectors
 - **Immersive Paintings** - Upload custom images as paintings in any size
 - **Lootr** - Per-player loot in chests, barrels, and minecarts (no stealing!)
+- **[Let's Do] Brewery** - Brewing equipment and alcoholic drinks
+- **[Let's Do] Meadow** - Alpine cottage aesthetic and content
+- **[Let's Do] Beach Party** - Beach furniture and decorations
+- **Friends and Foes** - Mob vote mobs (Copper Golem, Tuff Golem, Mooblooms, and more)
 
 ### Web Map
 - **BlueMap** - Live 3D web map of the server world (port 8100)
@@ -93,6 +108,9 @@ A curated Fabric 1.21.1 modpack for The Block Academy CMP, built with [Packwiz](
 - **Sound Physics Remastered** - Realistic reverb and sound occlusion
 - **AmbientSounds** - Dynamic ambient soundscapes based on biome, weather, and time of day
 - **Subtle Effects** - Ambient environmental particle effects
+- **Presence Footsteps** - Material-aware footstep sounds
+- **Visuality** - Additional ambient particles
+- **Particle Rain** - Enhanced rain and snow particle effects
 
 ### Multiplayer
 - **Simple Voice Chat** - Proximity-based voice communication
@@ -102,6 +120,7 @@ A curated Fabric 1.21.1 modpack for The Block Academy CMP, built with [Packwiz](
 - **Better Sleep** - Sleep voting for multiplayer nights
 - **Connectivity** - Improved connection stability and error handling
 - **LuckPerms** - Advanced permissions system (server-side)
+- **Essential Permissions** - Adds permission nodes to vanilla commands for LuckPerms integration (server-side)
 - **Advanced Backups** - Automated world backups with scheduling and retention policies (server-side)
 
 ### Discord Integration

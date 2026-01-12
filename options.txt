@@ -225,6 +225,13 @@ key_key.firstperson.toggle:key.keyboard.unknown
 key_key.travelersbackpack.inventory:key.keyboard.b
 key_key.travelersbackpack.cycle_tool:key.keyboard.unknown
 key_key.travelersbackpack.toggle_tank:key.keyboard.unknown
+key_key.autohud.toggle-hud:key.keyboard.unknown
+key_key.autohud.peek-hud:key.keyboard.unknown
+key_genshinstrument.keymaps.transpose_up_modifier:key.keyboard.right.bracket
+key_genshinstrument.keymaps.transpose_down_modifier:key.keyboard.left.bracket
+key_evenmoreinstruments.keymaps.instrument_type_modifier:key.keyboard.right.bracket
+key_key.niftycarts.action:key.keyboard.g
+key_key.niftycarts.slow:key.keyboard.unknown
 soundCategory_master:1.0
 soundCategory_music:0.0
 soundCategory_record:1.0

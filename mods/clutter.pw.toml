@@ -1,0 +1,13 @@
+name = "Clutter"
+filename = "clutter-1.21.1-0.6.5.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "107981e053f9d929774fd85b8082873957d56ce7"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6211358
+project-id = 826060

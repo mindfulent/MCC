@@ -1,0 +1,13 @@
+name = "Macaw's Paintings"
+filename = "mcw-paintings-1.0.5-1.21.1fabric.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "548f360d4b9e8ba9edfe449c2f6c4ebc5e121b69"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 5681189
+project-id = 438116

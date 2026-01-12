@@ -498,7 +498,7 @@ hash = "605ef244f96db8bc88c65d08644243e4ae980e2b08b40e7963118051c0135757"
 
 [[files]]
 file = "modpack-info.json"
-hash = "700b59cc1cfd0d28614a9186269b3e12201b940e4563b67f11125add1eb985a9"
+hash = "30a62d4cbf8b92da3091e139ccac10180dd053e03345d282d47a688b7d8134a1"
 
 [[files]]
 file = "mods/accurate-block-placement-reborn.pw.toml"
@@ -556,6 +556,11 @@ hash = "9291a703bee9ba90c6347d31e5d9d01ee5eb52e9c0c4ad17bcd9d2ab51d7c4a2"
 metafile = true
 
 [[files]]
+file = "mods/auto-hud.pw.toml"
+hash = "8a9d150fc3189d8b5fda9b1e13c91bdcdbd4d1477523f13a4e242e6637b4d81b"
+metafile = true
+
+[[files]]
 file = "mods/autowhitelist.pw.toml"
 hash = "070db28dc60f5d70f226038e34a639cb49385dfd2e0229b15f4aab0f20a51d51"
 metafile = true
@@ -573,6 +578,11 @@ metafile = true
 [[files]]
 file = "mods/balm-fabric.pw.toml"
 hash = "07fba719069577abb913118c7d8dae4fc6ee43f13c0fb730f1f4532df09c2e70"
+metafile = true
+
+[[files]]
+file = "mods/beautify-refabricated.pw.toml"
+hash = "82ead9857bbba5cd8885a603a0f0d4cd2e33cad2370d064b05536bfed76e16f8"
 metafile = true
 
 [[files]]
@@ -641,6 +651,11 @@ hash = "90950d188905b9472877ab8b3dbdbb778f37716f5e356178d12804cef90c3280"
 metafile = true
 
 [[files]]
+file = "mods/clutter.pw.toml"
+hash = "687533345ba43a886c1b4508ef2c8f4365debb7e7f7c922ce664330b97782884"
+metafile = true
+
+[[files]]
 file = "mods/connectiblechains.pw.toml"
 hash = "d557a08271666b4b928f4b7c8595fa54242d3428b46bf3ae417e1c2e5bbcc08f"
 metafile = true
@@ -676,8 +691,23 @@ hash = "96f1b71ca5468a241d14b3dfa6ce743a6e903d14585a7a167196f6359de20f89"
 metafile = true
 
 [[files]]
+file = "mods/diagonal-windows.pw.toml"
+hash = "04ede8fe1821a7781da660bafea1f45764d9c77254dcf9a45ff420a2585a3229"
+metafile = true
+
+[[files]]
 file = "mods/distant-horizons.pw.toml"
 hash = "b7e36eacfad8731ad993ffbba158e33a013b736b48e271eb05143d00d99eeb4e"
+metafile = true
+
+[[files]]
+file = "mods/dusty-decorations.pw.toml"
+hash = "8d4f506e459f564f10324fc39237434b1b8e13ddb68e4ef3d558811f8705ea12"
+metafile = true
+
+[[files]]
+file = "mods/eating-animation-fabric.pw.toml"
+hash = "ca66d992b56e2993288195caadd2a9ce2eb2dd0bfceeb396747da712bdb933bd"
 metafile = true
 
 [[files]]
@@ -698,6 +728,16 @@ metafile = true
 [[files]]
 file = "mods/entityculling.pw.toml"
 hash = "309620d873a53504197b9c3d37d4b431d539346b8f8a6d7b1f77f74d7a2104d5"
+metafile = true
+
+[[files]]
+file = "mods/essential-permissions.pw.toml"
+hash = "d64e5252a06df94acdc7d1b4ea3f5435df5ee1789691e0cc1b05e3eca9b04549"
+metafile = true
+
+[[files]]
+file = "mods/even-more-instruments.pw.toml"
+hash = "da215694376b28d0eb2a94edb956316ba8cd5dce2d3a0c5ff6d65a5d0c47feff"
 metafile = true
 
 [[files]]
@@ -746,6 +786,11 @@ hash = "8c7b41abfa08d27d963da7327deb3ff3695b0f1ac9f5343cf59db1d2be12bad2"
 metafile = true
 
 [[files]]
+file = "mods/fetzis-asian-decoration.pw.toml"
+hash = "3ef931ecac18c048ec6f31094032205390303fe3cb6fdb7db7f6a5a3c6ae08b6"
+metafile = true
+
+[[files]]
 file = "mods/first-person-model.pw.toml"
 hash = "71d8ba110affa729005f16b15598882f4c759b6935ab96fa0ad2d31d767a33af"
 metafile = true
@@ -758,6 +803,11 @@ metafile = true
 [[files]]
 file = "mods/forge-config-api-port.pw.toml"
 hash = "c983c82dca8021666fe2aa4d1f96af383ce905d09ae284472e7cd5aa87582d41"
+metafile = true
+
+[[files]]
+file = "mods/friends-and-foes.pw.toml"
+hash = "b4cdd06c59b01823f66897869ea7fdc6a7b17713a1db4bbe0f28dc3f4617a1a6"
 metafile = true
 
 [[files]]
@@ -841,8 +891,23 @@ hash = "5bb8122eac453a973c0315686b3a8f9980714d8a6c4b5ccd3e5a3a6c1489f342"
 metafile = true
 
 [[files]]
+file = "mods/lets-do-beachparty.pw.toml"
+hash = "2ab4c1719cb9cd0c45e81f694d1431ad2193aa77420aed7f173ac285975e2a62"
+metafile = true
+
+[[files]]
+file = "mods/lets-do-brewery-farm-charm-compat.pw.toml"
+hash = "ce92488f37c9356a0160bcde8a3384a5c30b25ec98b1faeac0b4d38c7b640fd6"
+metafile = true
+
+[[files]]
 file = "mods/lets-do-farm-charm.pw.toml"
 hash = "429f5598617276c19b7e310ec1f3a78e37f92ca6a6899eb412a40d1177a95f29"
+metafile = true
+
+[[files]]
+file = "mods/lets-do-meadow.pw.toml"
+hash = "5fa26bab666db3335d38e9539ba5fcd816a8c7defbf1f220981305b92f4d27f6"
 metafile = true
 
 [[files]]
@@ -901,8 +966,23 @@ hash = "71b741ec3ff1b2c98780a7a3a5eb2a509b38f8763494dba3742e75a1634ebd47"
 metafile = true
 
 [[files]]
+file = "mods/macaws-holidays.pw.toml"
+hash = "78609db2df7197faa5e253fd16a726fe9947bd85f0fed1e22f3c9ebc36da5e77"
+metafile = true
+
+[[files]]
 file = "mods/macaws-lights-and-lamps.pw.toml"
 hash = "a4e7ca278c7055efb2bbb1c03f9f4398fca579e2b4c6197738351e7d4820bd79"
+metafile = true
+
+[[files]]
+file = "mods/macaws-paintings.pw.toml"
+hash = "347f3e885eeafe50a4824c21dd211ccc2198f55d0e93ec0118c4b0b6ca065d71"
+metafile = true
+
+[[files]]
+file = "mods/macaws-paths-and-pavings.pw.toml"
+hash = "1e351be3ac26846f922568c1a447d0a6afecad3979bd796cff41de011178e1ec"
 metafile = true
 
 [[files]]
@@ -951,6 +1031,11 @@ hash = "05e5a83af6880241cf3eab0cc18044cd51a13f07a44efc0a35f3c379243966f2"
 metafile = true
 
 [[files]]
+file = "mods/niftycarts.pw.toml"
+hash = "c380081c42e1af92db4c44b820912931b52cccd2fde3d38ebb7fce122f67c5b7"
+metafile = true
+
+[[files]]
 file = "mods/not-enough-animations.pw.toml"
 hash = "29dc45e85f75a0b4d4f3e914fe63e593ece25b60026f28f73a7dd23bbb1bbbce"
 metafile = true
@@ -961,6 +1046,11 @@ hash = "e9ac614b0f97282de2ce2e9e84a065ce8733cbf21543a410de4972f7f9a88afc"
 metafile = true
 
 [[files]]
+file = "mods/particle-rain.pw.toml"
+hash = "e6b97a131f21e98497a0d72d4c40a3d47fdc226ab391c7050d62d26b40e799b8"
+metafile = true
+
+[[files]]
 file = "mods/playeranimator.pw.toml"
 hash = "3b1106b99b9b6dd06e8598b5980c841bbf5d67241e1a64d0be830715bbba0675"
 metafile = true
@@ -968,6 +1058,11 @@ metafile = true
 [[files]]
 file = "mods/polymer.pw.toml"
 hash = "ae806e7ab54c4fe2fb8d1408bac7730c895451ea0bcbe2a0920a5cce4ef194ba"
+metafile = true
+
+[[files]]
+file = "mods/presence-footsteps.pw.toml"
+hash = "326a6de0170cc13b983119690ec173cb2bc6aed1e4a4ac5070bf98893d1587da"
 metafile = true
 
 [[files]]
@@ -1031,8 +1126,18 @@ hash = "c668d729f316cf8f073f5371afa4e6c18a685ae7c1ee37e59146a74be723e959"
 metafile = true
 
 [[files]]
+file = "mods/skin-layers-3d.pw.toml"
+hash = "bd4cfd8701633c013cacde0c311a24261020abdce657e3760166d6af8660f745"
+metafile = true
+
+[[files]]
 file = "mods/sodium.pw.toml"
-hash = "22fd61f6293caddb2178f6dbff04ff2e28df7757850139336e77c34b283c7374"
+hash = "f73a48751e13380b87296e5b9627c9f6669efda386bd646fd5c499b344570f46"
+metafile = true
+
+[[files]]
+file = "mods/sooty-chimneys.pw.toml"
+hash = "986f5951bd0caf0b493811276d078e57fa6015245efd43b9229cc0c387b4059f"
 metafile = true
 
 [[files]]
@@ -1076,6 +1181,11 @@ hash = "ec360172eeb6536b4e784a364c8aa5bd050a3cf053279b361107e5ebf9a03f68"
 metafile = true
 
 [[files]]
+file = "mods/trinkets.pw.toml"
+hash = "7b5e8074a47ad6a9e453a29853bb1527906ae0ced0d714fcd386c75ef1f0f00a"
+metafile = true
+
+[[files]]
 file = "mods/underlay.pw.toml"
 hash = "7c765697ee5a024835b0e85c8e158eb4368254e562aa0b414e0c0e6de48148fa"
 metafile = true
@@ -1088,6 +1198,11 @@ metafile = true
 [[files]]
 file = "mods/vinurl.pw.toml"
 hash = "ed28419375d935f70281417f06cac8619843daaee939953962f51946be2c123a"
+metafile = true
+
+[[files]]
+file = "mods/visuality.pw.toml"
+hash = "5d6abaadd99d9e779849c989017e752b93b5ad023d0a51ff84628c4bc22377fb"
 metafile = true
 
 [[files]]
@@ -1132,7 +1247,7 @@ metafile = true
 
 [[files]]
 file = "options.txt"
-hash = "9df959fad0598d92a7c1aee718731e9d23b27e93d201a2edbaac4d14c86c5e46"
+hash = "3b155e518e4492084de096985b0a7b1642a20a5253ac943c6bb3f6e34daa70fe"
 
 [[files]]
 file = "server.properties"
@@ -1169,3 +1284,359 @@ hash = "df2d43db577460f7513260b0941d73146eedbe56072aa16e617b713ef1dafc86"
 [[files]]
 file = "temp_stats_f36cf7dc-9742-45ba-862d-0597d523fda1.json"
 hash = "ec2fcef186414e0f37e4ea7fbbd401f849993f43bec618b83d1538c51ac59576"
+
+[[files]]
+file = "tmpclaude-0794-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-08d4-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-0d16-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-0de5-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-0ea2-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-13d7-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-150b-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-1568-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-15a4-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-16f0-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-17a1-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-1a32-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-1e3e-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-22ab-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-246b-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-28d1-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-2a67-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-2c6a-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-2cdb-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-2cf8-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-32a7-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-3545-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-3fef-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-415a-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-445e-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-4671-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-4d47-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-4d76-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-52af-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-5384-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-5705-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-5814-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-589a-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-5c75-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-5ff1-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-6231-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-639e-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-71d3-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-7276-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-72b7-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-7aba-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-7f6c-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-7fb6-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-8220-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-844d-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-8575-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-85fd-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-8b45-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-9247-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-981e-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-9a27-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-9ae1-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-9b18-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-9c6d-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-9f5f-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-a185-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-aaf2-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-acf7-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-af2f-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-b470-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-b966-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-bab9-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-bc94-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-bfe1-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-c2d3-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-c3fd-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-c6a9-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-c78e-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-c994-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-c9e6-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-ca46-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-cd79-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-d2a8-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-d3e0-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-d4d6-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-d736-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-d7a7-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-d93e-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-db60-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-e47e-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-e7c4-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-edee-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-ef7e-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-f09f-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-f6b7-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-f98e-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-f9a9-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-faf2-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"
+
+[[files]]
+file = "tmpclaude-febb-cwd"
+hash = "4f31ead50d3f977dc5ddf4f116d27f02083fa215b0c895ad3ec8cf4b8ac52739"

@@ -3,7 +3,7 @@
 This document credits all mod creators whose work makes this modpack possible. Thank you for your incredible contributions to the Minecraft modding community!
 
 **Last Updated:** January 3, 2026
-**Modpack Version:** 0.9.60 (126 mods total — 123 client, 3 server-only)
+**Modpack Version:** 0.9.66 (149 mods total — 146 client, 3 server-only)
 
 ---
 

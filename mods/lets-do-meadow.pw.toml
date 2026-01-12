@@ -1,0 +1,13 @@
+name = "[Let's Do] Meadow"
+filename = "letsdo-meadow-fabric-1.4.4.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "7ccafa2f9d0cbbc69bf156b4fdf460de0646b764"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7321785
+project-id = 821483

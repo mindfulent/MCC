@@ -2,6 +2,68 @@
 
 All notable changes to TBA will be documented in this file.
 
+
+## [0.9.66] - 2026-01-11
+
+### Added - Season 1 Content Update
+
+**Visual & Audio (6 new mods):**
+- **Visuality** v0.7.7 - Additional ambient particles (block breaking, hits, etc.)
+- **3D Skin Layers** v1.10.1 - Renders skin layers with depth instead of flat
+- **Particle Rain** v4.0.0 - Enhanced rain and snow particle effects
+- **Presence Footsteps** v1.10.2 - Material-aware footstep sounds
+- **Eating Animation** v1.9.72 - Visible eating and drinking actions
+- **AutoHUD** v8.11 - Auto-hiding HUD for cleaner gameplay/recording
+
+**Resource Packs (1):**
+- **Gentler Weather Sounds** - Softer rain and thunder audio
+
+**Building & Decoration (11 new mods):**
+- **Macaw's Paintings** v1.0.5 - Additional painting variants
+- **Macaw's Holidays** v1.1.2 - Seasonal decorations (Christmas, Halloween, etc.)
+- **Macaw's Paths and Pavings** v1.1.1 - Path and road blocks
+- **Sooty Chimneys** v1.3.2 - Chimneys with smoke particle effects
+- **Diagonal Windows** v21.1.1 - Angled window placements
+- **Beautify Refabricated** v1.3.0 - Decorative blocks (ropes, blinds, trellises)
+- **Clutter** v0.6.5 - Small decorative objects
+- **Fetzi's Asian Decoration** v1.7.2a - Asian-themed decor blocks
+- **Dusty Decorations** v1.1 - Aged/weathered block variants
+- **NiftyCarts** v21.1.1 - Decorative market and farm carts
+- **Trinkets** v3.10.0 - Accessory slots (dependency for Let's Do mods)
+
+**Let's Do Series (3 new mods):**
+- **[Let's Do] Brewery** v2.1.5 - Brewing equipment and alcoholic drinks
+- **[Let's Do] Meadow** v1.4.4 - Alpine cottage aesthetic and content
+- **[Let's Do] Beach Party** v2.1.2 - Beach furniture and decorations
+
+**Mobs & Creatures (1):**
+- **Friends and Foes** v4.0.19 - Mob vote mobs (Copper Golem, Tuff Golem, Mooblooms, Glare, and more)
+
+**Music & Instruments (1):**
+- **Even More Instruments** v6.1.4 - Keyboard, violin, guitar, saxophone with MIDI support
+
+### Changed
+- **Keybind defaults** - Resolved conflicts between new mods and existing keybinds:
+  - AutoHUD: Toggle HUD -> Unbound (auto-hides anyway)
+  - Genshin/Even More Instruments: Transpose -> [ and ]
+  - NiftyCarts: Attach/Detach -> G
+
+### Notes
+- Mod count: 149 total (+22 from 0.9.65)
+- 8 mods from the original list excluded (not available for 1.21.1 or CurseForge)
+
+## [0.9.65] - 2026-01-11
+
+### Added
+- **Essential Permissions** - Adds permission nodes to vanilla commands, enabling LuckPerms to control `/gamemode` and other vanilla commands
+
+### Fixed
+- **Gamemode switcher not working for non-OP players** - Gamemode Unrestrictor allowed the F3+F4 UI to appear, but switching failed because vanilla commands lack permission nodes. Essential Permissions bridges this gap.
+
+### Notes
+- Mod count: 127 total (+1)
+- Server admins: Run `/lp group default permission set minecraft.command.gamemode true` to enable gamemode switching for all players
+
 ## [0.9.64] - 2026-01-10
 
 ### Fixed

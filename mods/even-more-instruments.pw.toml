@@ -1,0 +1,13 @@
+name = "Even More Instruments!"
+filename = "evenmoreinstruments-fabric-1.21-1.21.1-6.1.4.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "5ecb2d85c066840be2533bcf08454f501545708e"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6414989
+project-id = 898118
