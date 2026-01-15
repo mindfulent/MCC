@@ -3,7 +3,7 @@
 This document credits all mod creators whose work makes this modpack possible. Thank you for your incredible contributions to the Minecraft modding community!
 
 **Last Updated:** January 14, 2026
-**Modpack Version:** 0.9.67 (152 mods total — 147 client, 5 server-only)
+**Modpack Version:** 0.9.69 (153 mods total — 148 client, 5 server-only)
 
 ---
 
@@ -142,6 +142,7 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Actually Harvest](https://www.curseforge.com/minecraft/mc-mods/actually-harvest) | MorenPlue | 1.1.7.0 | Dec 2025 | - |
 | [Universal Bone Meal](https://www.curseforge.com/minecraft/mc-mods/universal-bone-meal) | Fuzss | 21.1.0 | Oct 2024 | [Patreon](https://www.patreon.com/heyitsfuzs) |
 | [Better Climbing](https://www.curseforge.com/minecraft/mc-mods/better-climbing) | MoriyaShiine | 3 | Jun 2023 | - |
+| [Block Runner](https://www.curseforge.com/minecraft/mc-mods/block-runner) | Fuzss | 21.1.2 | Jan 2026 | [Patreon](https://www.patreon.com/heyitsfuzs) |
 | [BetterF3](https://modrinth.com/mod/betterf3) | TreyRuffy | 11.0.3 | Dec 2025 | - |
 | [Accurate Block Placement Reborn](https://modrinth.com/mod/accurate-block-placement-reborn) | schauweg | 1.3.9 | Dec 2025 | - |
 

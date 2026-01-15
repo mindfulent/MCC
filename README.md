@@ -2,11 +2,11 @@
   <img src="tba_banner.png" alt="TBA Logo" width="100%">
 </p>
 
-# TBA (TheBlock.Academy) v0.9.67
+# TBA (TheBlock.Academy) v0.9.69
 
 A curated Fabric 1.21.1 modpack for The Block Academy CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
-**152 mods total** — see [Mod Distribution](#mod-distribution) for details.
+**153 mods total** — see [Mod Distribution](#mod-distribution) for details.
 
 ## Features
 
@@ -100,6 +100,7 @@ A curated Fabric 1.21.1 modpack for The Block Academy CMP, built with [Packwiz](
 - **Actually Harvest** - Right-click crops to harvest and replant
 - **Universal Bone Meal** - Bone meal works on more plants
 - **Better Climbing** - Enhanced ladder climbing mechanics
+- **Block Runner** - Run faster on path blocks and other surfaces
 
 ### Scripting & Automation
 - **Minescript** - Python scripting for Minecraft (run scripts from chat with `\scriptname`)

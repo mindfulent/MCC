@@ -1,0 +1,13 @@
+name = "Block Runner"
+filename = "BlockRunner-v21.1.2-1.21.1-Fabric.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "69e239c520765691a78ccbbd80ae003c735b974f"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6215038
+project-id = 442842

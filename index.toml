@@ -606,6 +606,11 @@ hash = "5b3abb90f4e57d6cc11350d9202ead941d8438432cbce34f69d1b65898bbe4a7"
 metafile = true
 
 [[files]]
+file = "mods/block-runner.pw.toml"
+hash = "4764451d709f750d9fa0fe58e776cfdb27e409a87e9a9a0cf3e19aef4c4a611d"
+metafile = true
+
+[[files]]
 file = "mods/bluemap.pw.toml"
 hash = "0e1affbaa0eca32e3e1d90f6c134ac728aed33c9bc1ebd901b93df7029c98938"
 metafile = true

@@ -3,6 +3,14 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [0.9.69] - 2026-01-14
+
+### Added
+- **Block Runner** v21.1.2 - Run faster on path blocks and other configurable surfaces
+
+### Notes
+- Mod count: 153 total (+1 from 0.9.68)
+
 ## [0.9.68] - 2026-01-14
 
 ### Changed
