@@ -3,6 +3,25 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [0.9.67] - 2026-01-14
+
+### Added - Core Curriculum Recognition System
+
+**Recognition & Titles (3 new mods):**
+- **CoreCurriculum** v0.1.0 - Recognition system for TBA with title management
+  - `/titles` - Browse and activate earned titles by category
+  - `/title set/clear` - Manage active displayed title
+  - `/submit "Build Name"` - Submit builds for AI review
+  - `/feedback "Build Name"` - Request WIP feedback
+  - `/discord link` - Link Minecraft account to Discord
+- **Styled Chat** v2.6.1 - Server-side chat formatting with prefix support
+- **LuckPerms Placeholders** v5.4 - Enables title prefixes in chat via `%luckperms:prefix%`
+
+### Notes
+- Mod count: 152 total (+3 from 0.9.66)
+- Titles appear as colored prefixes in chat (e.g., `[Apprentice Builder] PlayerName`)
+- Build submissions are reviewed by slashAI with results posted to Discord
+
 ## [0.9.66] - 2026-01-11
 
 ### Added - Season 1 Content Update
