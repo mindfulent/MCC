@@ -681,7 +681,7 @@ metafile = true
 
 [[files]]
 file = "mods/core-curriculum.pw.toml"
-hash = "9700ffab8c03cd947129793fb3a6c1c4847b5dd72c6c21acb4fcf3bb7ff774d4"
+hash = "0993922f6dfad0c739978609d053fb618d96088fcd9bdad045e628448f18939a"
 metafile = true
 
 [[files]]

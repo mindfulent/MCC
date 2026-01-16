@@ -3,6 +3,18 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [0.9.71] - 2026-01-15
+
+### Changed
+- **Core Curriculum** v0.1.0 → v0.1.3 - Major update with new features:
+  - `/submissions` - View submission history with status tracking
+  - `/recognitions` - View peer nominations and title progress
+  - `/nominate <player> <category> "reason"` - Recognize peers for mentoring, collaboration, or spirit
+  - Session tracking for event attendance and teaching credits
+
+### Notes
+- Mod count: 153 total (unchanged from 0.9.70)
+
 ## [0.9.70] - 2026-01-15
 
 ### Changed

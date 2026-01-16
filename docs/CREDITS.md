@@ -2,8 +2,8 @@
 
 This document credits all mod creators whose work makes this modpack possible. Thank you for your incredible contributions to the Minecraft modding community!
 
-**Last Updated:** January 14, 2026
-**Modpack Version:** 0.9.69 (153 mods total — 148 client, 5 server-only)
+**Last Updated:** January 15, 2026
+**Modpack Version:** 0.9.71 (153 mods total — 148 client, 5 server-only)
 
 ---
 
@@ -168,7 +168,7 @@ Many mod creators accept donations to support their work. Consider supporting yo
 |-----|-----------|---------|----------|---------|--------|
 | [AutoWhitelist](https://modrinth.com/mod/autowhitelist) | Awakened-Redstone | 1.3.2 | Dec 2025 | Discord `/register` whitelist | - |
 | [Better Sleep](https://modrinth.com/mod/better-sleep) | Giselbaer | 2.2.2 | Aug 6, 2025 | Sleep voting for multiplayer | - |
-| CoreCurriculum | The Block Academy | 0.1.0 | Jan 2026 | Recognition system with titles | - |
+| [Core Curriculum](https://www.curseforge.com/minecraft/mc-mods/core-curriculum) | The Block Academy | 0.1.3 | Jan 2026 | Recognition system with titles | - |
 | [Fabricord](https://modrinth.com/mod/fabricord) | HypherionSA | 4.2.1 | Mar 8, 2025 | Discord ↔ server chat bridge | [Buy Me a Coffee](https://www.buymeacoffee.com/hypherionsa) |
 | [LuckPerms Placeholders](https://github.com/LuckPerms/placeholders) | lucko | 5.4 | Jan 2026 | Enables `%luckperms:prefix%` | - |
 | [Styled Chat](https://www.curseforge.com/minecraft/mc-mods/styled-chat) | Patbox | 2.6.1 | Dec 2024 | Server-side chat formatting | [Ko-fi](https://ko-fi.com/patbox) |
