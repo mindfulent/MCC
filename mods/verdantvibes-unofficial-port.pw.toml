@@ -1,0 +1,13 @@
+name = "VerdantVibes Unofficial Port"
+filename = "verdantvibes-1.0.3-1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/fGT7Bbfc/versions/hygviSF0/verdantvibes-1.0.3-1.21.1.jar"
+hash-format = "sha512"
+hash = "159b4e787b95927646768dd2db4a2410bcd42959bf3ca69fab46db73e974ce67457f1b7e8e81543f033104b8bb478ff520d45953e9e5d2504a112969eb8d0358"
+
+[update]
+[update.modrinth]
+mod-id = "fGT7Bbfc"
+version = "hygviSF0"

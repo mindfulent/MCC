@@ -3,6 +3,16 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [0.9.74] - 2026-01-28
+
+### Added
+- **Enchanted Vertical Slabs** - Place slabs vertically with enchantment support
+- **VerdantVibes Unofficial Port** - Decorative plants and vegetation (Modrinth-only)
+
+### Notes
+- Mod count: 155 total (net +2 from 0.9.73)
+- VerdantVibes is Modrinth-only and will be bundled as an override in CurseForge exports
+
 ## [0.9.73] - 2026-01-17
 
 ### Changed

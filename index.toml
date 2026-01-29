@@ -497,6 +497,14 @@ file = "defaultconfigs/voicechat/voicechat-client.properties"
 hash = "8d10cb5c84c81383401303205083c9a0f97766ab1ca4a6e616182f8354901d09"
 
 [[files]]
+file = "icon-400x400.png"
+hash = "cfea59431e6afb8ca9d4e336607e2e0e94d469f3f0bf8926d350e9122318efbe"
+
+[[files]]
+file = "icon-512x512.png"
+hash = "1eab421ec5ea028a02e86bb09ce14a01805dd3d6532aab30241c5fe99676d321"
+
+[[files]]
 file = "journeymap/config/6.0/journeymap.core.config"
 hash = "5896f87075123ab552dca13dab7af629a64c122829fbc413b233c3a4e08be78a"
 
@@ -743,6 +751,11 @@ metafile = true
 [[files]]
 file = "mods/effortless.pw.toml"
 hash = "11679903810776914b0ae4b6d24f6fa2a3cb43e122f621890c8c00ad4a743f35"
+metafile = true
+
+[[files]]
+file = "mods/enchanted-vertical-slabs.pw.toml"
+hash = "91850893a2c719b3b97c976c682f3897fd73535b04ee92ed214af2d6ebff460a"
 metafile = true
 
 [[files]]
@@ -1233,6 +1246,11 @@ metafile = true
 [[files]]
 file = "mods/universal-bone-meal.pw.toml"
 hash = "2c27095d101e6132452c7e229b7705e7709e1cc0c197fea9c4e384560ec01ae9"
+metafile = true
+
+[[files]]
+file = "mods/verdantvibes-unofficial-port.pw.toml"
+hash = "1b3e57f0cef29eed2e30434718929ecfb99d6354e19e439f8e29e25dd4e09f29"
 metafile = true
 
 [[files]]
