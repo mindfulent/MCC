@@ -2,11 +2,11 @@
   <img src="tba_banner.png" alt="TBA Logo" width="100%">
 </p>
 
-# TBA (TheBlock.Academy) v0.9.72
+# TBA (TheBlock.Academy) v0.9.75
 
 A curated Fabric 1.21.1 modpack for The Block Academy CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
-**153 mods total** — see [Mod Distribution](#mod-distribution) for details.
+**185 mods total** — see [Mod Distribution](#mod-distribution) for details.
 
 ## Features
 
@@ -18,6 +18,11 @@ A curated Fabric 1.21.1 modpack for The Block Academy CMP, built with [Packwiz](
 - **Krypton** - Network stack optimization
 - **Iris Shaders** - OptiFine shader compatibility
 - **Distant Horizons** - LOD rendering for extended view distances
+- **C2ME** - Multi-core chunk generation
+- **ImmediatelyFast** - Immediate mode rendering optimization
+- **BadOptimizations** - Micro-optimizations for various game systems
+- **Clumps** - XP orb merging to reduce entity lag
+- **Enhanced Block Entities** - Faster block entity rendering
 
 ### Building Tools
 - **Axiom** - All-in-one building/editing tool with real-time previews, terraforming, sculpting (Right-Shift for Editor Mode)
@@ -61,6 +66,8 @@ A curated Fabric 1.21.1 modpack for The Block Academy CMP, built with [Packwiz](
 - **Dusty Decorations** - Aged and weathered block variants
 - **NiftyCarts** - Decorative market and farm carts
 - **Diagonal Windows** - Angled window placements
+- **Diagonal Fences** - Fences connect diagonally
+- **Continuity** - Connected textures (glass, bookshelves, etc.)
 
 ### Content
 - **Farmer's Delight Refabricated** - Cooking and farming expansion
@@ -80,6 +87,10 @@ A curated Fabric 1.21.1 modpack for The Block Academy CMP, built with [Packwiz](
 - **[Let's Do] Meadow** - Alpine cottage aesthetic and content
 - **[Let's Do] Beach Party** - Beach furniture and decorations
 - **Friends and Foes** - Mob vote mobs (Copper Golem, Tuff Golem, Mooblooms, and more)
+- **Illager Invasion** - New illager types and boss encounters
+- **Naturally Trimmed** - Mobs spawn wearing armor trims
+- **Trimmable Tools** - Apply armor trims to tools
+- **Do A Barrel Roll** - Enhanced elytra flight control
 
 ### Web Map
 - **BlueMap** - Live 3D web map of the server world (port 8100)
@@ -89,7 +100,7 @@ A curated Fabric 1.21.1 modpack for The Block Academy CMP, built with [Packwiz](
 - **JourneyMap** - Full-featured world map with browser viewing and waypoints
 - **WTHIT** - Block/entity tooltips (what am I looking at?)
 - **AppleSkin** - Food/hunger visualization
-- **Mouse Tweaks** - Enhanced inventory controls
+- **Mouse Wheelie** - Enhanced inventory scrolling, sorting, and refilling
 - **Controlling** - Searchable keybinds with conflict detection
 - **ItemSwapper** - Quick item palette for swapping similar blocks
 - **Gamemode Unrestrictor** - Use F3+F4 gamemode menu even when cheats are disabled
@@ -101,6 +112,15 @@ A curated Fabric 1.21.1 modpack for The Block Academy CMP, built with [Packwiz](
 - **Universal Bone Meal** - Bone meal works on more plants
 - **Better Climbing** - Enhanced ladder climbing mechanics
 - **Block Runner** - Run faster on path blocks and other surfaces
+- **Easy Magic** - Enchanting table QoL
+- **Trade Cycling** - Cycle villager trades easily
+- **Bridging Mod** - Bedrock-style reach-around placement
+- **Crash Assistant** - Helpful GUI after crashes
+- **Leaf Me Alone** - Ride through leaves
+- **Leaves Be Gone** - Quick leaf decay
+- **Paginated Advancements** - Better advancement screen
+- **Stack to Nearby Chests** - Terraria-style deposit into chests
+- **Status Effect Bars** - Duration bars on effect icons
 
 ### Scripting & Automation
 - **Minescript** - Python scripting for Minecraft (run scripts from chat with `\scriptname`)
@@ -112,6 +132,12 @@ A curated Fabric 1.21.1 modpack for The Block Academy CMP, built with [Packwiz](
 - **Presence Footsteps** - Material-aware footstep sounds
 - **Visuality** - Additional ambient particles
 - **Particle Rain** - Enhanced rain and snow particle effects
+- **Cool Rain** - Material-specific rain sounds
+- **Sounds** - 170+ UI and interaction sounds
+- **Blur+** - GUI background blur effect
+- **Inventory Particles** - Item pickup particle effects
+- **Smooth Swapping** - Animated item movement in inventories
+- **Fast Item Frames** - Item frame rendering optimization
 
 ### Multiplayer
 - **Simple Voice Chat** - Proximity-based voice communication

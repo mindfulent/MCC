@@ -2,8 +2,8 @@
 
 This document credits all mod creators whose work makes this modpack possible. Thank you for your incredible contributions to the Minecraft modding community!
 
-**Last Updated:** January 15, 2026
-**Modpack Version:** 0.9.71 (153 mods total — 148 client, 5 server-only)
+**Last Updated:** January 28, 2026
+**Modpack Version:** 0.9.75 (185 mods total)
 
 ---
 
@@ -24,6 +24,11 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Krypton](https://modrinth.com/mod/krypton) | astei | 0.2.8 | Jun 22, 2024 | [PayPal](https://paypal.me/terminalvelocity1), [GitHub Sponsors](https://github.com/sponsors/astei) |
 | [Iris Shaders](https://modrinth.com/mod/iris) | coderbot, IMS | 1.8.8 | Feb 20, 2025 | [Patreon](https://www.patreon.com/ims21) |
 | [Entity Culling](https://modrinth.com/mod/entityculling) | tr7zw | 1.9.5 | Dec 2025 | [Ko-fi](https://ko-fi.com/tr7zw) |
+| [C2ME](https://modrinth.com/mod/c2me-fabric) | ishland | 0.3.0+alpha.0.362 | Jan 2026 | - |
+| [ImmediatelyFast](https://www.curseforge.com/minecraft/mc-mods/immediatelyfast) | RaphiMC | 1.6.10 | Jan 2026 | - |
+| [BadOptimizations](https://www.curseforge.com/minecraft/mc-mods/badoptimizations) | thosea | 2.4.1 | Jan 2026 | - |
+| [Clumps](https://www.curseforge.com/minecraft/mc-mods/clumps) | jaredlll08 | 19.0.0.1 | Jan 2026 | - |
+| [Enhanced Block Entities](https://www.curseforge.com/minecraft/mc-mods/enhanced-block-entities) | FoundationGames | 0.10.2 | Jan 2026 | - |
 
 ## Library/API Mods
 
@@ -60,6 +65,10 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [playerAnimator](https://www.curseforge.com/minecraft/mc-mods/playeranimator) | KosmX | 2.0.4 | Dec 2025 | - |
 | [GeckoLib](https://www.curseforge.com/minecraft/mc-mods/geckolib) | Tslat, Gecko, AzureDoom | 4.8.2 | Dec 2025 | [Ko-fi](https://ko-fi.com/geckolib) |
 | [owo-lib](https://modrinth.com/mod/owo-lib) | glisco | 0.12.15.4 | Dec 2025 | - |
+| [MidnightLib](https://www.curseforge.com/minecraft/mc-mods/midnightlib) | TeamMidnightDust | 1.9.2 | Jan 2026 | - |
+| [MossyLib](https://www.curseforge.com/minecraft/mc-mods/mossylib) | Mossy | 1.1.0 | Jan 2026 | - |
+| [CICADA](https://www.curseforge.com/minecraft/mc-mods/cicada) | Enjarai | 0.14.3 | Jan 2026 | - |
+| [M.R.U](https://modrinth.com/mod/mru) | mineblock11 | 1.0.19 | Jan 2026 | - |
 
 ## Map Mods
 
@@ -105,6 +114,8 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [WindChime Unofficial Continued](https://modrinth.com/mod/windchime-unofficial-continued) | NightEpiphany0401 | 1.3.7 | Dec 2025 | - |
 | [Diagonal Walls](https://www.curseforge.com/minecraft/mc-mods/diagonal-walls) | Fuzss | 21.1.2 | Sep 2024 | [Patreon](https://www.patreon.com/heyitsfuzs) |
 | [Falling Leaves](https://www.curseforge.com/minecraft/mc-mods/falling-leaves-fabric) | RandomMcSomethin | 1.17.1 | Nov 2024 | - |
+| [Diagonal Fences](https://www.curseforge.com/minecraft/mc-mods/diagonal-fences) | Fuzss | 21.1.1 | Jan 2026 | [Patreon](https://www.patreon.com/heyitsfuzs) |
+| [Continuity](https://www.curseforge.com/minecraft/mc-mods/continuity) | PepperCode1 | 3.0.0 | Jan 2026 | - |
 
 ## Content Mods
 
@@ -123,6 +134,10 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Traveler's Backpack](https://www.curseforge.com/minecraft/mc-mods/travelers-backpack-fabric) | Tiviacz1337 | 10.1.29 | Dec 2025 | - |
 | [Lootr](https://www.curseforge.com/minecraft/mc-mods/lootr-fabric) | noobanidus | 1.11.36.108 | Dec 2025 | - |
 | [Immersive Paintings](https://www.curseforge.com/minecraft/mc-mods/immersive-paintings) | Conczin | 0.7.4 | Dec 2025 | - |
+| [Illager Invasion](https://www.curseforge.com/minecraft/mc-mods/illager-invasion) | Fuzss | 21.1.6 | Jan 2026 | [Patreon](https://www.patreon.com/heyitsfuzs) |
+| [Naturally Trimmed](https://www.curseforge.com/minecraft/mc-mods/naturally-trimmed) | Enjarai | 3.1.2 | Jan 2026 | - |
+| [Trimmable Tools](https://www.curseforge.com/minecraft/mc-mods/trimmable-tools) | Trimmable Tools Team | 2.0.5 | Jan 2026 | - |
+| [Do A Barrel Roll](https://www.curseforge.com/minecraft/mc-mods/do-a-barrel-roll) | Enjarai | 3.7.3 | Jan 2026 | - |
 
 ## Quality of Life Mods
 
@@ -131,7 +146,7 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Roughly Enough Items (REI)](https://modrinth.com/mod/rei) | shedaniel | 16.0.799 | Feb 16, 2025 | [Patreon](https://www.patreon.com/shedaniel) |
 | [WTHIT](https://modrinth.com/mod/wthit) | deirn | 12.8.3 | Dec 3, 2025 | [GitHub Sponsors](https://github.com/sponsors/deirn) |
 | [AppleSkin](https://modrinth.com/mod/appleskin) | squeek502 | 3.0.6 | Nov 1, 2024 | [GitHub Sponsors](https://github.com/sponsors/squeek502) |
-| [Mouse Tweaks](https://modrinth.com/mod/mouse-tweaks) | YaLTeR | 2.26 | Jun 17, 2024 | [GitHub Sponsors](https://github.com/sponsors/YaLTeR) |
+| [Mouse Wheelie](https://www.curseforge.com/minecraft/mc-mods/mouse-wheelie) | Siphalor | 1.15.1 | Jan 2026 | - |
 | [Controlling](https://modrinth.com/mod/controlling) | jaredlll08 | 19.0.5 | Mar 30, 2025 | - |
 | [ItemSwapper](https://modrinth.com/plugin/itemswapper) | tr7zw | 0.8.5 | Dec 2025 | [Ko-fi](https://ko-fi.com/tr7zw) |
 | [Gamemode Unrestrictor](https://modrinth.com/mod/gamemode-unrestrictor) | Attie | 1.0.2 | Dec 2025 | - |
@@ -145,6 +160,16 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Block Runner](https://www.curseforge.com/minecraft/mc-mods/block-runner) | Fuzss | 21.1.2 | Jan 2026 | [Patreon](https://www.patreon.com/heyitsfuzs) |
 | [BetterF3](https://modrinth.com/mod/betterf3) | TreyRuffy | 11.0.3 | Dec 2025 | - |
 | [Accurate Block Placement Reborn](https://modrinth.com/mod/accurate-block-placement-reborn) | schauweg | 1.3.9 | Dec 2025 | - |
+| [Easy Magic](https://www.curseforge.com/minecraft/mc-mods/easy-magic) | Fuzss | 21.1.4 | Jan 2026 | [Patreon](https://www.patreon.com/heyitsfuzs) |
+| [Fast Item Frames](https://www.curseforge.com/minecraft/mc-mods/fast-item-frames) | Fuzss | 21.1.6 | Jan 2026 | [Patreon](https://www.patreon.com/heyitsfuzs) |
+| [Trade Cycling](https://www.curseforge.com/minecraft/mc-mods/trade-cycling) | henkelmax | 1.0.20 | Jan 2026 | - |
+| [Bridging Mod](https://www.curseforge.com/minecraft/mc-mods/bridging-mod) | Giselbaer | 2.6.2 | Jan 2026 | - |
+| [Crash Assistant](https://www.curseforge.com/minecraft/mc-mods/crash-assistant) | PandaMods | 1.10.28 | Jan 2026 | - |
+| [Leaf Me Alone](https://modrinth.com/mod/leaf-me-alone) | Leaf Me Alone Team | 1.0.1 | Jan 2026 | - |
+| [Leaves Be Gone](https://www.curseforge.com/minecraft/mc-mods/leaves-be-gone) | Fuzss | 21.1.0 | Jan 2026 | [Patreon](https://www.patreon.com/heyitsfuzs) |
+| [Paginated Advancements](https://www.curseforge.com/minecraft/mc-mods/paginated-advancements) | DaFuqs | 2.5.1 | Jan 2026 | - |
+| [Stack to Nearby Chests](https://www.curseforge.com/minecraft/mc-mods/stack-to-nearby-chests) | Kyrptonaught | 0.5.10 | Jan 2026 | - |
+| [Status Effect Bars](https://www.curseforge.com/minecraft/mc-mods/status-effect-bars) | Neecko5b84 | 1.0.6 | Jan 2026 | - |
 
 ## Multiplayer Mods
 
@@ -196,6 +221,8 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [AmbientSounds](https://www.curseforge.com/minecraft/mc-mods/ambientsounds) | CreativeMD | 6.3.1 | Dec 2025 | [Patreon](https://www.patreon.com/creativemd) |
 | [Subtle Effects](https://www.curseforge.com/minecraft/mc-mods/subtle-effects) | Fzzy | 1.13.2 | Dec 2025 | - |
 | [VinURL](https://modrinth.com/mod/vinurl) | uku3lig | 2.2.1 | Dec 2025 | - |
+| [Cool Rain](https://www.curseforge.com/minecraft/mc-mods/cool-rain) | Cool Rain Team | 1.3.1 | Jan 2026 | - |
+| [Sounds](https://modrinth.com/mod/sounds) | mineblock11 | 2.4.22 | Jan 2026 | - |
 | [Genshin Instruments](https://modrinth.com/mod/genshin-instruments) | StavWasPlayin | 5.0.1 | Dec 2025 | - |
 
 ## Camera & Animation
@@ -206,6 +233,9 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Not Enough Animations](https://www.curseforge.com/minecraft/mc-mods/not-enough-animations) | tr7zw | 1.11.1 | Dec 2025 | [Ko-fi](https://ko-fi.com/tr7zw) |
 | [Camera Overhaul](https://www.curseforge.com/minecraft/mc-mods/cameraoverhaul) | Mirsario | 2.0.6 | Dec 2025 | - |
 | [Camera Utils](https://www.curseforge.com/minecraft/mc-mods/camera-utils) | henkelmax | 1.0.16 | Sep 2024 | - |
+| [Blur+](https://www.curseforge.com/minecraft/mc-mods/blur-fabric) | Motschen | 6.0.0 | Jan 2026 | - |
+| [Inventory Particles](https://www.curseforge.com/minecraft/mc-mods/inventory-particles) | Mossy | 1.3.2 | Jan 2026 | - |
+| [Smooth Swapping](https://www.curseforge.com/minecraft/mc-mods/smooth-swapping) | Schauweg | 0.9.3.2 | Jan 2026 | - |
 
 ---
 

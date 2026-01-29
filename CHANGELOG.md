@@ -3,6 +3,59 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [0.9.75] - 2026-01-28
+
+### Added — Performance
+- **C2ME** - Multi-core chunk generation (Modrinth-only)
+- **ImmediatelyFast** - Immediate mode rendering optimization
+- **BadOptimizations** - Micro-optimizations for various game systems
+- **Clumps** - Merges XP orbs to reduce entity lag
+- **Enhanced Block Entities** - Faster block entity rendering (chests, signs, beds)
+
+### Added — Building & Creative
+- **Diagonal Fences** - Fences connect diagonally (completes diagonal set)
+- **Easy Magic** - Enchanting table QoL (no bookshelves needed to see enchants)
+- **Fast Item Frames** - Item frame rendering optimization
+- **Trade Cycling** - Cycle villager trades without breaking/replacing workstation
+- **Bridging Mod** - Bedrock-style reach-around block placement
+
+### Added — Visual
+- **Continuity** - Connected textures support (glass panes, bookshelves, etc.)
+- **Blur+** - GUI background blur effect
+- **Inventory Particles** - Item pickup particle effects
+- **Smooth Swapping** - Animated item movement in inventories
+
+### Added — Audio
+- **Cool Rain** - Material-specific rain sounds (wood, stone, metal, etc.)
+- **Sounds** - 170+ UI and interaction sounds (Modrinth-only)
+
+### Added — Content
+- **Do A Barrel Roll** - Enhanced elytra flight control with roll mechanics
+- **Illager Invasion** - New illager types and boss encounters
+- **Naturally Trimmed** - Mobs spawn wearing armor trims
+- **Trimmable Tools** - Apply armor trims to tools
+
+### Added — Quality of Life
+- **Crash Assistant** - Helpful GUI after game crashes
+- **Leaf Me Alone** - Ride through leaves on horses/boats (Modrinth-only)
+- **Leaves Be Gone** - Quick leaf decay after tree chopping
+- **Paginated Advancements** - Better advancement screen with pagination
+- **Stack to Nearby Chests** - Terraria-style deposit items into nearby chests
+- **Status Effect Bars** - Duration bars on status effect icons
+
+### Changed
+- **Mouse Wheelie** replaces **Mouse Tweaks** - Better inventory scrolling, sorting, and refilling
+
+### Dependencies Added
+- MidnightLib (for Blur+)
+- MossyLib (for Inventory Particles)
+- CICADA (for Do A Barrel Roll)
+- M.R.U (for Sounds)
+
+### Notes
+- Mod count: 185 total (net +30 from 0.9.74, including 4 new library deps)
+- Modrinth-only mods: C2ME, Sounds, Leaf Me Alone (bundled as overrides in CF export)
+
 ## [0.9.74] - 2026-01-28
 
 ### Added

@@ -1,0 +1,13 @@
+name = "Inventory Particles"
+filename = "InventoryParticles-1.3.2+1.21.1+fabric.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "efbc11fd7b71764eb7c0a710880185bcb9fe5782"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7446974
+project-id = 1339689
