@@ -3,6 +3,14 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [0.9.76] - 2026-01-28
+
+### Added
+- **FallingTree** - Chop the bottom log and the whole tree falls
+
+### Notes
+- Mod count: 186 total (net +1 from 0.9.75)
+
 ## [0.9.75] - 2026-01-28
 
 ### Added — Performance
