@@ -3,6 +3,14 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [0.9.78] - 2026-01-29
+
+### Updated
+- **Core Curriculum** 0.1.15 → 0.1.16 — Fixed `/link status`, `/submissions`, and other commands failing due to missing Accept header
+
+### Notes
+- Mod count: 186 total (unchanged from 0.9.77)
+
 ## [0.9.77] - 2026-01-28
 
 ### Fixed
