@@ -744,8 +744,9 @@ hash = "693d8c86a7a742c504ead1fbf62202d23713c20c4fbdc654b905ba9f6621332f"
 metafile = true
 
 [[files]]
-file = "mods/corecurriculum-0.1.18.jar"
-hash = "40f2e69a8bd2f81e475a6462aa55ec7b81deb01a3fe91e944277815fa145a4f6"
+file = "mods/core-curriculum.pw.toml"
+hash = "df9f5d43484e914d04e9484f0849d68c8f91140cb76641092c1c130f82bbfba6"
+metafile = true
 
 [[files]]
 file = "mods/crash-assistant.pw.toml"
