@@ -2,8 +2,8 @@
 
 This document credits all mod creators whose work makes this modpack possible. Thank you for your incredible contributions to the Minecraft modding community!
 
-**Last Updated:** January 28, 2026
-**Modpack Version:** 0.9.77 (186 mods total)
+**Last Updated:** January 30, 2026
+**Modpack Version:** 0.9.80 (187 mods total)
 
 ---
 
@@ -223,6 +223,7 @@ Many mod creators accept donations to support their work. Consider supporting yo
 |-----|-----------|---------|----------|--------|
 | [Fabric Seasons](https://modrinth.com/mod/fabric-seasons) | D4rkness_King (lucaargolo) | 2.4.2-BETA | Oct 6, 2024 | - |
 | [Fabric Seasons: Extras](https://modrinth.com/mod/fabric-seasons-extras) | D4rkness_King (lucaargolo) | 1.3.2-BETA | Sep 29, 2024 | - |
+| [Fabric Seasons: Delight Compat](https://www.curseforge.com/minecraft/mc-mods/fabric-seasons-delight-compat) | D4rkness_King (lucaargolo) | 1.0 | Jan 2026 | - |
 | [Distant Horizons](https://modrinth.com/mod/distanthorizons) | jeseibel | 2.4.5-b | Dec 25, 2025 | [Ko-fi](https://ko-fi.com/distanthorizons) |
 | [Simple Discord RPC](https://modrinth.com/mod/simple-discord-rpc) | HypherionSA | 4.0.5 | Dec 5, 2025 | [Ko-fi](https://ko-fi.com/hypherionsa) |
 
